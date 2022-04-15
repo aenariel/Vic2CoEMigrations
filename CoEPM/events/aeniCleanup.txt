@@ -1,0 +1,308 @@
+country_event = {
+	id = 262626
+	title = "Colonial retrocession."
+	desc  = "Administration in our most marginal states ran down significantly in recent times and unfortunately we will have to revert to colony status for the time being to keep them running smoothly."
+	
+	trigger = {
+		NOT = {
+			has_global_flag = aeni_colonial_retrocession
+		}
+		any_owned_province = {
+			owned_by = THIS
+			controlled_by = THIS
+			owner = { civilized = yes }
+			is_colonial = no
+			is_capital = no
+			NOT = { state_scope = { any_owned_province = { is_capital = yes } } }
+			OR = {
+				AND = { 
+					OR = {
+						any_neighbor_province = { owned_by = THIS is_colonial = no is_overseas = no OR = { is_primary_culture = yes is_accepted_culture = yes } }
+						port = yes
+					}
+					is_overseas = no
+					state_scope = { NOT = { is_primary_culture = yes } NOT = { total_pops = 5000 } }
+				}
+				AND = { 
+					OR = {
+						any_neighbor_province = { owned_by = THIS is_colonial = no is_overseas = no OR = { is_primary_culture = yes is_accepted_culture = yes } }
+						port = yes
+					}
+					is_overseas = no
+					state_scope = { NOT = { is_primary_culture = yes } NOT = { is_accepted_culture = yes } NOT = { total_pops = 10000 } }
+				}			
+				AND = { 
+					is_overseas = yes 
+					state_scope = { NOT = { is_primary_culture = yes } NOT = { is_accepted_culture = yes } }
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_global_flag = aeni_colonial_retrocession
+	}
+	
+	option = {
+		name = "It will have to do."
+		
+		any_owned = {
+			limit = {
+				owned_by = THIS
+				controlled_by = THIS
+				owner = { civilized = yes }
+				is_colonial = no
+				is_capital = no
+				NOT = { state_scope = { any_owned_province = { is_capital = yes } } }
+				OR = {			
+					AND = { 
+						OR = {
+							any_neighbor_province = { owned_by = THIS is_colonial = no is_overseas = no OR = { is_primary_culture = yes is_accepted_culture = yes } }
+							port = yes
+						}
+						is_overseas = no
+						state_scope = { NOT = { is_primary_culture = yes } NOT = { total_pops = 5000 } } 
+					}
+					AND = { 
+						OR = {
+							any_neighbor_province = { owned_by = THIS is_colonial = no is_overseas = no OR = { is_primary_culture = yes is_accepted_culture = yes } }
+							port = yes
+						}
+						is_overseas = no
+						state_scope = { NOT = { is_primary_culture = yes } NOT = { is_accepted_culture = yes } NOT = { total_pops = 10000 } } 
+					}						
+					AND = { 
+						is_overseas = yes 
+						state_scope = { NOT = { is_primary_culture = yes } NOT = { is_accepted_culture = yes } }
+					}
+				}
+			}		    
+			state_scope = { any_owned = { secede_province = AEN } } 
+		}
+		AEN = { country_event = 262627 }
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+
+	id = 262627
+	title = "Relieve colonial administration."
+	desc = "Giving back colonial province."
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Ok."
+		random_owned = {
+		    owner = { civilized = no }
+		}
+		FROM = { inherit = THIS }
+		clr_global_flag = aeni_colonial_retrocession
+		
+		ai_chance = { factor = 100 }
+		
+	}
+}
+
+country_event = {
+	id = 262628
+	title = "A new state!"
+	desc  = "Administration and standard of living in our colonies have improved so significantly to the point that we can upgrade them to national states!"
+	
+	trigger = {
+		NOT = {
+			has_global_flag = aeni_colonial_retrocession
+		}
+		any_owned_province = {
+			owned_by = THIS
+			controlled_by = THIS
+			owner = { civilized = yes }
+			is_colonial = yes
+			OR = {
+				is_capital = yes
+				AND = { 
+					OR = {
+						any_neighbor_province = { owned_by = THIS is_colonial = no is_overseas = no OR = { is_primary_culture = yes is_accepted_culture = yes } }
+						port = yes
+					}
+					is_overseas = no
+					state_scope = { is_primary_culture = yes total_pops = 10000 }
+				}
+				AND = { 
+					OR = {
+						any_neighbor_province = { owned_by = THIS is_colonial = no is_overseas = no OR = { is_primary_culture = yes is_accepted_culture = yes } }
+						port = yes
+					}
+					is_overseas = no
+					state_scope = { is_accepted_culture = yes total_pops = 25000 }
+				}
+				AND = { 
+					is_overseas = yes 
+					state_scope = { OR = { is_primary_culture = yes is_accepted_culture = yes } total_pops = 50000 } 
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_global_flag = aeni_colonial_retrocession
+	}
+	
+	option = {
+		name = "Cheers!"
+		
+		any_owned = {
+			limit = {
+				owned_by = THIS
+				controlled_by = THIS
+				owner = { civilized = yes }
+				is_colonial = yes
+				OR = { 
+					is_capital = yes
+					AND = { 
+						any_neighbor_province = { owned_by = THIS is_colonial = no is_overseas = no }
+						is_overseas = no
+						state_scope = { is_primary_culture = yes total_pops = 10000 }
+					}
+					AND = { 
+						any_neighbor_province = { owned_by = THIS is_colonial = no is_overseas = no }
+						is_overseas = no
+						state_scope = { is_accepted_culture = yes total_pops = 25000 }
+					}
+					AND = { 
+						is_overseas = yes 
+						state_scope = { OR = { is_primary_culture = yes is_accepted_culture = yes } total_pops = 50000 } 
+					}
+				}				
+			}		    
+			state_scope = { any_owned = { secede_province = AEN } } 
+		}
+		AEN = { country_event = 262629 }
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+
+	id = 262629
+	title = "Create state administration."
+	desc = "Giving back state province."
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Ok."
+		random_owned = {
+		    owner = { civilized = yes }
+		}
+		FROM = { inherit = THIS }
+		clr_global_flag = aeni_colonial_retrocession
+		
+		ai_chance = { factor = 100 }
+		
+	}
+}
+
+country_event = {
+	
+	id = 262526
+	title = "The integration of British India"
+	desc = "British government can take better care of India directly!"
+
+	trigger = { 
+	    	tag = HND
+	    	ENG = { exists = yes }
+		OR = {
+	    		government = prussian_constitutionalism3
+	    		ENG = { has_country_flag = empress_of_india }
+	    	}
+	    	primary_culture = british
+	    	is_vassal = yes
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+		
+
+	option = {
+		name = "Ok!"
+		ENG = { inherit = HND }
+	}
+}
+
+country_event = {
+	
+	id = 262426
+	title = "A House United"
+	desc = "EVTDESC262426"
+	
+	major = yes
+	
+	is_triggered_only = yes
+		
+	option = {
+		name = "We are brothers and shall reunite!"
+		USA = { inherit = CSA }
+		
+		ai_chance = { 
+			factor = 100 
+		}
+	}
+	
+	option = {
+		name = "We will fight for our freedom once again! Advance the flag of Dixie!"
+	}	
+	
+}
+
+country_event = {
+	id = 362628
+	title = "Our new lands!"
+	desc  = "Let's get rid of the old western ways and administer them as part of our great country!"
+	
+	trigger = {
+		NOT = {
+			has_global_flag = aeni_colonial_retrocession
+		}
+		any_owned_province = {
+			owned_by = THIS
+			controlled_by = THIS
+			owner = { civilized = no }
+			is_colonial = yes
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_global_flag = aeni_colonial_retrocession
+	}
+	
+	option = {
+		name = "Cheers!"
+		
+		any_owned = {
+			limit = {
+				owned_by = THIS
+				controlled_by = THIS
+				owner = { civilized = no }
+				is_colonial = yes
+			}		    
+			state_scope = { any_owned = { secede_province = AEN } } 
+		}
+		AEN = { country_event = 262629 }
+		ai_chance = { factor = 100 }
+	}
+}

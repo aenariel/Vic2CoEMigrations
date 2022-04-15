@@ -1,0 +1,8 @@
+owner = NET
+controller = NET
+add_core = BIM
+trade_goods = copper
+life_rating = 15
+terrain = seasonal_jungle_hills
+colonial = 1
+

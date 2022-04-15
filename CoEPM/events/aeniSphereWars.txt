@@ -1,0 +1,434 @@
+### Protectorates and colonial acquisitions
+
+country_event = {
+	id = 262726
+	title = "EVTNAME262726"
+	desc  = "EVTDESC262726"
+	picture = "greatpowers"
+	
+	trigger = {
+		is_greater_power = yes
+		#NOT = { war = yes }
+		NOT = { num_of_revolts = 1 }
+		NOT = { average_militancy = 5 }
+		any_sphere_member = {
+			NOT = { military_score = 25 }
+			NOT = { num_of_cities = 10 }
+			civilized = no
+			is_substate = no
+			OR = {
+				neighbour = THIS
+				any_owned_province = { port = yes }
+			}
+			NOT = { capital_scope = { continent = africa } }
+			NOT = {	has_country_modifier = sphereling_spared }
+			NOT = { truce_with = THIS }
+			OR = {
+				NOT = { number_of_states = 3 }
+				AND = {
+					NOT = { number_of_states = 5 }
+					THIS = { nationalism_n_imperialism = 1 }
+				}
+			}
+
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 48
+		modifier = {
+			factor = 2
+			war = yes
+		}		
+		modifier = {
+			factor = 1.5
+			average_militancy = 1
+		}
+		modifier = {
+			factor = 0.25
+			nationalism_n_imperialism = 1
+		}
+		modifier = {
+			factor = 0.5
+			year = 1880
+		}
+		modifier = {
+			factor = 0.5
+			year = 1885
+		}
+		modifier = {
+			factor = 0.5
+			year = 1890
+		}			
+	}
+	
+	immediate = {
+		random_country = {
+			limit = {
+				OR = {
+					neighbour = THIS
+					any_owned_province = { port = yes }
+				}
+				in_sphere = THIS
+				NOT = { military_score = 25 }
+				NOT = { num_of_cities = 10 }				
+				civilized = no
+				is_substate = no		
+				NOT = { capital_scope = { continent = africa } }
+				NOT = { truce_with = THIS }
+				NOT = {	has_country_modifier = sphereling_spared }
+				OR = {
+					NOT = { number_of_states = 3 }
+					AND = {
+						NOT = { number_of_states = 5 }
+						THIS = { nationalism_n_imperialism = 1 }
+					}
+				}
+			}
+			set_country_flag = sphereling_under_threat
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA262726"
+		random_country = {
+			limit = {
+				has_country_flag = sphereling_under_threat
+			}
+			clr_country_flag = sphereling_under_threat
+			country_event = 262727
+		}
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0.75	
+				average_militancy = 1
+			}
+			modifier = {
+				factor = 0.75
+				war = yes
+			}			
+		}
+	}
+	option = {
+		name = "EVTOPTB262726"
+		prestige = -2
+		random_country = {
+			limit = {
+				has_country_flag = sphereling_under_threat
+			}
+			clr_country_flag = sphereling_under_threat
+			add_country_modifier = {
+				name = sphereling_spared
+				duration = 730
+			}
+		}		
+	}
+}
+
+country_event = {
+	id = 262727
+	title = "EVTNAME262727"
+	desc  = "EVTDESC262727"
+	picture = "Outside_influences" 
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		THIS = { leave_alliance = FROM }
+		relation = {
+			who = FROM
+			value = -175
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA262727"
+		random_country = {
+			limit = {
+				is_sphere_leader_of = THIS
+				NOT = { nationalism_n_imperialism = 1 }
+				
+			}
+			release_vassal = THIS
+			diplomatic_influence = {
+				who = THIS
+				value = -400
+			}
+			THIS = {
+				add_casus_belli = {
+					target = FROM
+					type = establish_protectorate_casus_belli
+					months = 24
+				}
+			}
+			war = {
+				target = THIS
+				attacker_goal = {
+					casus_belli = establish_protectorate_casus_belli
+				}
+			}
+		}
+		random_country = {
+			limit = {
+				is_sphere_leader_of = THIS
+				nationalism_n_imperialism = 1
+				has_global_flag = berlin_conference
+				
+			}
+			release_vassal = THIS
+			diplomatic_influence = {
+				who = THIS
+				value = -400
+			}
+			THIS = {
+				add_casus_belli = {
+					target = FROM
+					type = establish_protectorate_BC_casus_belli
+					months = 24
+				}
+			}
+			war = {
+				target = THIS
+				attacker_goal = {
+					casus_belli = establish_protectorate_BC_casus_belli
+				}
+			}			
+		}
+		random_country = {
+			limit = {
+				is_sphere_leader_of = THIS
+				nationalism_n_imperialism = 1
+				NOT = { has_global_flag = berlin_conference }
+				
+			}
+			release_vassal = THIS
+			diplomatic_influence = {
+				who = THIS
+				value = -400
+			}
+			THIS = {
+				add_casus_belli = {
+					target = FROM
+					type = establish_protectorate_NI_casus_belli
+					months = 24
+				}
+			}
+			war = {
+				target = THIS
+				attacker_goal = {
+					casus_belli = establish_protectorate_NI_casus_belli
+				}
+			}			
+		}
+	}
+}
+
+country_event = {
+	id = 262826
+	title = "EVTNAME262826"
+	desc  = "EVTDESC262826"
+	picture = "greatpowers"
+	
+	trigger = {
+		is_greater_power = yes
+		#NOT = { war = yes }
+		NOT = { num_of_revolts = 1 }
+		NOT = { average_militancy = 5 }
+		any_sphere_member = {
+			civilized = no
+			NOT = { military_score = 25 }
+			NOT = { num_of_cities = 10 }			
+			number_of_states = 3
+			is_substate = no
+			OR = {
+				neighbour = THIS
+				any_owned_province = { port = yes }
+			}		
+			NOT = {	has_country_modifier = sphereling_spared }
+			NOT = { capital_scope = { continent = africa } }
+			NOT = { truce_with = THIS }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 24
+		modifier = {
+			factor = 2
+			war = yes
+		}		
+		modifier = {
+			factor = 1.25
+			average_militancy = 1
+		}
+		modifier = {
+			factor = 0.25
+			nationalism_n_imperialism = 1
+		}
+		modifier = {
+			factor = 0.5
+			year = 1880
+		}
+		modifier = {
+			factor = 0.5
+			year = 1885
+		}		
+		modifier = {
+			factor = 0.5
+			year = 1890
+		}
+	}
+	
+	immediate = {
+		random_country = {
+			limit = {
+				OR = {
+					neighbour = THIS
+					any_owned_province = { port = yes }
+				}
+				in_sphere = THIS
+				civilized = no
+				NOT = { military_score = 25 }
+				NOT = { num_of_cities = 10 }				
+				number_of_states = 3
+				is_substate = no			
+				NOT = {	has_country_modifier = sphereling_spared }
+				NOT = { capital_scope = { continent = africa } }
+				NOT = { truce_with = THIS }
+			}
+			set_country_flag = sphereling_under_threat
+		}
+	}	
+	
+	option = {
+		name = "EVTOPTA262826"
+		random_country = {
+			limit = {
+				has_country_flag = sphereling_under_threat
+			}
+			clr_country_flag = sphereling_under_threat
+			country_event = 262827
+		}
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0.75	
+				average_militancy = 1
+			}
+			modifier = {
+				factor = 0.75
+				war = yes
+			}			
+		}
+	}
+	option = {
+		name = "EVTOPTB262826"
+		prestige = -2
+		random_country = {
+			limit = {
+				has_country_flag = sphereling_under_threat
+			}
+			clr_country_flag = sphereling_under_threat
+			add_country_modifier = {
+				name = sphereling_spared
+				duration = 730
+			}
+		}		
+	}
+}
+
+country_event = {
+	id = 262827
+	title = "EVTNAME262827"
+	desc  = "EVTDESC262827"
+	picture = "Outside_influences" 
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		THIS = { leave_alliance = FROM }
+		relation = {
+			who = FROM
+			value = -175
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA262827"
+		random_country = {
+			limit = {
+				is_sphere_leader_of = THIS
+				NOT = { nationalism_n_imperialism = 1 }
+			}
+			release_vassal = THIS
+			diplomatic_influence = {
+				who = THIS
+				value = -400
+			}
+			THIS = {
+				add_casus_belli = {
+					target = FROM
+					type = demand_concession_casus_belli 
+					months = 120
+				}
+			}
+			#war = {
+			#	target = THIS
+			#	attacker_goal = {
+			#		casus_belli = demand_concession_casus_belli
+			#	}
+			#}				
+			
+		}
+		random_country = {
+			limit = {
+				is_sphere_leader_of = THIS
+				nationalism_n_imperialism = 1
+				has_global_flag = berlin_conference	
+			}
+			release_vassal = THIS
+			diplomatic_influence = {
+				who = THIS
+				value = -400
+			}
+			THIS = {
+				add_casus_belli = {
+					target = FROM
+					type = demand_concession_BC_casus_belli 
+					months = 120
+				}
+			}
+			#war = {
+			#	target = THIS
+			#	attacker_goal = {
+			#		casus_belli = demand_concession_BC_casus_belli
+			#	}
+			#}			
+		}
+		random_country = {
+			limit = {
+				is_sphere_leader_of = THIS
+				nationalism_n_imperialism = 1
+				NOT = { has_global_flag = berlin_conference }
+			}
+			release_vassal = THIS
+			diplomatic_influence = {
+				who = THIS
+				value = -400
+			}
+			THIS = {
+				add_casus_belli = {
+					target = FROM
+					type = demand_concession_NI_casus_belli 
+					months = 120
+				}
+			}
+			#war = {
+			#	target = THIS
+			#	attacker_goal = {
+			#		casus_belli = demand_concession_NI_casus_belli
+			#	}
+			#}				
+		}
+	}
+}

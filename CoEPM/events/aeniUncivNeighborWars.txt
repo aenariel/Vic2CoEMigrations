@@ -1,0 +1,463 @@
+### Protectorates and colonial acquisitions
+
+country_event = {
+	id = 362726
+	title = "EVTNAME362726"
+	desc  = "EVTDESC362726"
+	picture = "greatpowers"
+	
+	trigger = {
+		OR = {
+			is_greater_power = yes
+			is_secondary_power = yes 
+		}
+		#NOT = { war = yes }
+		NOT = { num_of_revolts = 1 }
+		NOT = { average_militancy = 5 }
+		NOT = {	has_country_modifier = sparing_neighbourling }
+		NOT = {	has_country_modifier = threat_to_neighbourling }
+		any_neighbor_country = {
+			NOT = { military_score = 25 }
+			NOT = { num_of_cities = 10 }		
+			NOT = { capital_scope = { continent = africa } }
+			civilized = no
+			is_substate = no
+			NOT = { part_of_sphere = yes }
+			NOT = { truce_with = THIS }
+			NOT = { war_with = THIS }
+			OR = {
+				NOT = { number_of_states = 3 }
+				AND = {
+					NOT = { number_of_states = 5 }
+					THIS = { nationalism_n_imperialism = 1 }
+				}
+			}
+		}
+		NOT = { has_global_flag = neighbourling_takeover }
+	}
+	
+	mean_time_to_happen = {
+		months = 72
+		modifier = {
+			factor = 2
+			war = yes
+		}		
+		modifier = {
+			factor = 1.5
+			average_militancy = 1
+		}
+		modifier = {
+			factor = 0.25
+			nationalism_n_imperialism = 1
+		}
+		modifier = {
+			factor = 0.5
+			year = 1880
+		}
+		modifier = {
+			factor = 0.5
+			year = 1885
+		}
+		modifier = {
+			factor = 0.5
+			year = 1890
+		}			
+	}
+	
+	immediate = {
+		set_global_flag = neighbourling_takeover
+		THIS = { set_country_flag = threatning_neighbourling }
+		random_country = {
+			limit = {
+				NOT = { military_score = 25 }
+				NOT = { num_of_cities = 10 }
+				NOT = { capital_scope = { continent = africa } }				
+				NOT = { part_of_sphere = yes }
+				neighbour = THIS
+				civilized = no
+				is_substate = no
+				NOT = { truce_with = THIS }
+				NOT = { war_with = THIS }
+				OR = {
+					NOT = { number_of_states = 3 }
+					AND = {
+						NOT = { number_of_states = 5 }
+						THIS = { nationalism_n_imperialism = 1 }
+					}
+				}
+			}
+			set_country_flag = neighbourling_under_threat
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA362726"
+		THIS = {
+			add_country_modifier = {
+				name = threat_to_neighbourling
+				duration = 365
+			}
+		}
+		random_country = {
+			limit = {
+				has_country_flag = neighbourling_under_threat
+			}
+			clr_country_flag = neighbourling_under_threat		
+			country_event = 362727
+		}
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0.75	
+				average_militancy = 1
+			}
+			modifier = {
+				factor = 0.75
+				war = yes
+			}			
+		}
+	}
+	option = {
+		name = "EVTOPTB362726"
+		prestige = -2
+		THIS = { 			
+			add_country_modifier = {
+				name = sparing_neighbourling
+				duration = 730
+			}
+		}
+		random_country = {
+			limit = {
+				has_country_flag = neighbourling_under_threat
+			}
+			clr_country_flag = neighbourling_under_threat
+		}	
+		clr_country_flag = threatning_neighbourling
+		clr_global_flag = neighbourling_takeover
+	}
+}
+
+country_event = {
+	id = 362727
+	title = "EVTNAME362727"
+	desc  = "EVTDESC362727"
+	picture = "Outside_influences" 
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		THIS = { leave_alliance = FROM }
+		relation = {
+			who = FROM
+			value = -175
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA362727"
+		clr_global_flag = neighbourling_takeover
+		random_country = {
+			limit = {
+				has_country_flag = threatning_neighbourling
+				NOT = { nationalism_n_imperialism = 1 }
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = -400
+			}
+			THIS = {
+				add_casus_belli = {
+					target = FROM
+					type = establish_protectorate_casus_belli
+					months = 24
+				}
+			}
+			#war = {
+			#	target = THIS
+			#	attacker_goal = {
+			#		casus_belli = establish_protectorate_casus_belli
+			#	}
+			#}
+			clr_country_flag = threatning_neighbourling
+		}
+		random_country = {
+			limit = {
+				has_country_flag = threatning_neighbourling
+				nationalism_n_imperialism = 1
+				has_global_flag = berlin_conference
+				
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = -400
+			}
+			THIS = {
+				add_casus_belli = {
+					target = FROM
+					type = establish_protectorate_BC_casus_belli
+					months = 24
+				}
+			}
+			#war = {
+			#	target = THIS
+			#	attacker_goal = {
+			#		casus_belli = establish_protectorate_BC_casus_belli
+			#	}
+			#}	
+			clr_country_flag = threatning_neighbourling
+		}
+		random_country = {
+			limit = {
+				has_country_flag = threatning_neighbourling
+				nationalism_n_imperialism = 1
+				NOT = { has_global_flag = berlin_conference }
+				
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = -400
+			}
+			THIS = {
+				add_casus_belli = {
+					target = FROM
+					type = establish_protectorate_NI_casus_belli
+					months = 24
+				}
+			}
+			#war = {
+			#	target = THIS
+			#	attacker_goal = {
+			#		casus_belli = establish_protectorate_NI_casus_belli
+			#	}
+			#}	
+			clr_country_flag = threatning_neighbourling
+		}
+	}
+}
+
+country_event = {
+	id = 362826
+	title = "EVTNAME362826"
+	desc  = "EVTDESC362826"
+	picture = "greatpowers"
+	
+	trigger = {
+		OR = {
+			is_greater_power = yes
+			is_secondary_power = yes 
+		}
+		#NOT = { war = yes }
+		NOT = { num_of_revolts = 1 }
+		NOT = { average_militancy = 5 }
+		NOT = {	has_country_modifier = sparing_neighbourling }
+		NOT = {	has_country_modifier = threat_to_neighbourling }		
+		any_neighbor_country = {
+			NOT = { military_score = 25 }
+			NOT = { num_of_cities = 10 }
+			NOT = { capital_scope = { continent = africa } }			
+			civilized = no
+			number_of_states = 3
+			is_substate = no
+			NOT = { part_of_sphere = yes }
+			NOT = { truce_with = THIS }
+			NOT = { war_with = THIS }
+		}
+		NOT = { has_global_flag = neighbourling_takeover }
+	}
+	
+	mean_time_to_happen = {
+		months = 36
+		modifier = {
+			factor = 2
+			war = yes
+		}		
+		modifier = {
+			factor = 1.25
+			average_militancy = 1
+		}
+		modifier = {
+			factor = 0.25
+			nationalism_n_imperialism = 1
+		}
+		modifier = {
+			factor = 0.5
+			year = 1880
+		}
+		modifier = {
+			factor = 0.5
+			year = 1885
+		}		
+		modifier = {
+			factor = 0.5
+			year = 1890
+		}
+	}
+	
+	immediate = {
+		set_global_flag = neighbourling_takeover
+		THIS = { set_country_flag = threatning_neighbourling }
+		random_country = {
+			limit = {
+				NOT = { military_score = 25 }
+				NOT = { num_of_cities = 10 }
+				NOT = { capital_scope = { continent = africa } }				
+				NOT = { part_of_sphere = yes }
+				neighbour = THIS
+				civilized = no
+				number_of_states = 3
+				is_substate = no			
+				NOT = {	has_country_modifier = neighbourling_spared }
+				NOT = { truce_with = THIS }
+				NOT = { war_with = THIS }
+			}
+			set_country_flag = neighbourling_under_threat
+		}
+	}	
+	
+	option = {
+		name = "EVTOPTA362826"
+		THIS = {
+			add_country_modifier = {
+				name = threat_to_neighbourling
+				duration = 365
+			}
+		}		
+		random_country = {
+			limit = {
+				has_country_flag = neighbourling_under_threat
+			}
+			clr_country_flag = neighbourling_under_threat
+			add_country_modifier = {
+				name = neighbourling_spared
+				duration = 365
+			}			
+			country_event = 362827
+		}
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0.75	
+				average_militancy = 1
+			}
+			modifier = {
+				factor = 0.75
+				war = yes
+			}			
+		}
+	}
+	option = {
+		name = "EVTOPTB362826"
+		prestige = -2
+		THIS = { 			
+			add_country_modifier = {
+				name = sparing_neighbourling
+				duration = 730
+			}
+		}		
+		random_country = {
+			limit = {
+				has_country_flag = neighbourling_under_threat
+			}
+			clr_country_flag = neighbourling_under_threat
+		}
+		clr_country_flag = threatning_neighbourling
+		clr_global_flag = neighbourling_takeover
+	}
+}
+
+country_event = {
+	id = 362827
+	title = "EVTNAME262827"
+	desc  = "EVTDESC262827"
+	picture = "Outside_influences" 
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		THIS = { leave_alliance = FROM }
+		relation = {
+			who = FROM
+			value = -175
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA262827"
+		clr_global_flag = neighbourling_takeover
+		random_country = {
+			limit = {
+				has_country_flag = threatning_neighbourling
+				NOT = { nationalism_n_imperialism = 1 }
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = -400
+			}
+			THIS = {
+				add_casus_belli = {
+					target = FROM
+					type = demand_concession_casus_belli 
+					months = 120
+				}
+			}
+			#war = {
+			#	target = THIS
+			#	attacker_goal = {
+			#		casus_belli = demand_concession_casus_belli
+			#	}
+			#}	
+			clr_country_flag = threatning_neighbourling
+			
+		}
+		random_country = {
+			limit = {
+				has_country_flag = threatning_neighbourling
+				nationalism_n_imperialism = 1
+				has_global_flag = berlin_conference	
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = -400
+			}
+			THIS = {
+				add_casus_belli = {
+					target = FROM
+					type = demand_concession_BC_casus_belli 
+					months = 120
+				}
+			}
+			#war = {
+			#	target = THIS
+			#	attacker_goal = {
+			#		casus_belli = demand_concession_BC_casus_belli
+			#	}
+			#}	
+			clr_country_flag = threatning_neighbourling
+		}
+		random_country = {
+			limit = {
+				has_country_flag = threatning_neighbourling
+				nationalism_n_imperialism = 1
+				NOT = { has_global_flag = berlin_conference }
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = -400
+			}
+			THIS = {
+				add_casus_belli = {
+					target = FROM
+					type = demand_concession_NI_casus_belli 
+					months = 120
+				}
+			}
+			#war = {
+			#	target = THIS
+			#	attacker_goal = {
+			#		casus_belli = demand_concession_NI_casus_belli
+			#	}
+			#}	
+			clr_country_flag = threatning_neighbourling
+		}
+	}
+}

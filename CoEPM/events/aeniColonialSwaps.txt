@@ -1,0 +1,223 @@
+### Protectorates and colonial acquisitions
+#
+#province_event = {
+#	id = 264526
+#	title = "Lonely $PROVINCENAME$"
+#	desc  = "Our colony in $PROVINCENAME$ is completely isolated from our other colonial possessions. Maybe it is time to trade it with one of the greater powers?"
+#	picture = "greatpowers"
+#	
+#	trigger = {
+#		owner = { 
+#			#is_greater_power = yes
+#			#ai = no
+#			NOT = { war = yes }
+#		}
+#		is_colonial = yes
+#		OR = {
+#			AND = {
+#				any_neighbor_province = {
+#					NOT = { owned_by = THIS }
+#					owner = { is_greater_power = yes }
+#				}
+#				NOT = {
+#					any_neighbor_province = { owned_by = THIS }
+#					is_coastal = yes
+#				}
+#			}
+#			AND = {
+#				NOT = { is_coastal = yes }
+#				state_scope = {
+#					NOT = { any_owned_province = { owned_by = THIS } }		
+#				}
+#			}
+#		}
+#	}
+#	
+#	mean_time_to_happen = {
+#		days = 1	
+#	}
+#	
+#	option = {
+#		name = "Ok"
+#		
+#		ai_chance = {
+#			factor = 100
+#		}
+#	}
+#}
+
+#The Gabu Exchange
+country_event = {
+    id = 26955181
+    title = "The Senegal-Guinea Border Treaty"
+    desc = "EVTDESC955181"
+    picture = "scramble_for_africa"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "The deal seems fair."
+        relation = { who = FROM value = 50 }
+        random_owned = {
+            limit = { province_id = 1792 }
+            secede_province = FROM
+        }
+        random_country = {
+            limit = {
+                tag = FROM
+                owns = 1878
+            }
+            random_owned = {
+                limit = { province_id = 1878 }
+                secede_province = THIS
+            }
+        }
+        ai_chance = {
+            factor = 95
+            modifier = {
+                factor = 0.5
+                is_greater_power = yes
+            }
+        }
+    }
+
+    option = {
+        name = "We would never agree to such proposal."
+        relation = { who = FROM value = -150 }
+        casus_belli = {
+            target = FROM
+            type = place_in_the_sun
+            months = 30
+        }
+        add_casus_belli = {
+            target = THIS
+            type = place_in_the_sun
+            months = 30
+        }
+        ai_chance = {
+            factor = 5
+            modifier = {
+                factor = 4
+                NOT = { relation = { who = FROM value = 0 } }
+            }
+        }
+    }
+}
+
+#The Ziguinchor Purchase
+country_event = {
+    id = 26955202
+    title = "The Senegal-Guinea Border Treaty"
+    desc = "EVTDESC955202"
+    picture = "scramble_for_africa"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "The deal seems fair."
+        relation = { who = FROM value = 50 }
+        treasury = 200000
+        random_owned = {
+            limit = { province_id = 1792 }
+            secede_province = FROM
+        }
+        
+        random_country = {
+            limit = {
+                tag = FROM
+                has_country_flag = paying_for_senegal
+            }
+            treasury = -200000
+            clr_country_flag = paying_for_senegal
+        }
+
+        ai_chance = {
+            factor = 95
+            modifier = {
+                factor = 0.5
+                is_greater_power = yes
+            }
+        }
+    }
+
+    option = {
+        name = "We would never agree to such proposal."
+        relation = { who = FROM value = -150 }
+        badboy = 1
+        casus_belli = {
+            target = FROM
+            type = place_in_the_sun
+            months = 30
+        }
+        add_casus_belli = {
+            target = FROM
+            type = place_in_the_sun
+            months = 30
+        }
+        ai_chance = {
+            factor = 5
+            modifier = {
+                factor = 4
+                NOT = { relation = { who = FROM value = 0 } }
+            }
+        }
+    }
+}
+
+#Buying Gabu
+country_event = {
+    id = 26955204
+    title = "The Gabu Purchase"
+    desc = "EVTDESC955204"
+    picture = "scramble_for_africa"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "The deal seems fair."
+        relation = { who = FROM value = 50 }
+        treasury = 200000
+        random_owned = {
+            limit = { province_id = 1878 }
+            secede_province = FROM
+        }
+
+        random_country = {
+            limit = {
+                tag = FROM
+                has_country_flag = paying_for_senegal
+            }
+            treasury = -200000
+            clr_country_flag = paying_for_senegal
+        }
+
+        ai_chance = {
+            factor = 95
+        }
+    }
+
+    option = {
+        name = "We would never agree to such proposal."
+        relation = { who = FROM value = -150 }
+        badboy = 1
+        casus_belli = {
+            target = FROM
+            type = place_in_the_sun
+            months = 30
+        }
+        add_casus_belli = {
+            target = FROM
+            type = place_in_the_sun
+            months = 30
+        }
+        ai_chance = {
+            factor = 5
+            modifier = {
+                factor = 4
+                NOT = { relation = { who = FROM value = 0 } }
+            }
+        }
+    }
+}
+
+

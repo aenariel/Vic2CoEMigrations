@@ -1,0 +1,4066 @@
+promotion_chance = 
+{
+	factor = 0.25
+	modifier = {
+		factor = -10000
+		NOT = { location = { controlled_by = owner } }
+	}	
+	
+	modifier = {
+		factor = 0.01
+		literacy = 0.05
+	}
+	modifier = {
+		factor = 0.01
+		literacy = 0.1 
+	}
+	modifier = {
+		factor = 0.01
+		literacy = 0.2
+	}
+	modifier = {
+		factor = 0.01
+		literacy = 0.3
+	}
+	modifier = {
+		factor = 0.01
+		literacy = 0.4
+	}
+	modifier = {
+		factor = 0.01
+		literacy = 0.5
+	}
+	modifier = {
+		factor = 0.01
+		literacy = 0.6
+	}
+	modifier = {
+		factor = 0.01
+		literacy = 0.7
+	}
+	modifier = {
+		factor = 0.01
+		literacy = 0.8
+	}
+	modifier = {
+		factor = 0.01
+		literacy = 0.9
+	}
+	
+	modifier = {
+		factor = -0.1
+		militancy = 8
+	}
+	modifier = {
+		factor = -0.1
+		militancy = 6
+	}
+	modifier = {
+		factor = -0.05
+		militancy = 4
+	}
+	
+	modifier = {
+		factor = -10
+		strata = rich
+		luxury_needs = 0.5
+	}
+	modifier = {
+		factor = -0.2
+		strata = rich
+	}
+	modifier = {
+		factor = 0.1
+		life_needs = 1	
+	}	
+	#modifier = {
+	#	factor = 0.1
+	#	life_needs = 0.9
+	#}
+	#modifier = {
+	#	factor = 0.1
+	#	life_needs = 0.8 
+	#}
+	#modifier = {
+	#	factor = 0.1
+	#	life_needs = 0.7
+	#	strata = poor
+	#}
+	modifier = {
+		factor = -0.2
+		NOT = { religion = THIS }
+		country = { religious_policy = moralism }
+	}
+	modifier = {
+		factor = -0.1
+		state_scope = { is_colonial = yes }
+	}
+	#modifier = {
+	#	factor = -0.1
+	#	NOT = { culture = THIS }
+	#}
+	modifier = {
+		factor = -0.1
+		country = { slavery = yes_slavery }
+	}
+	modifier = {
+		factor = -0.05
+		state_scope = { is_slave = yes }
+	}	
+	modifier = {
+		factor = -100
+		location = { NOT = { controlled_by = owner } }
+	}
+	modifier = {
+		factor = -0.2
+		strata = poor
+		country = { land_property = serfdom }
+	}
+	modifier = {
+		factor = -0.1
+		strata = poor
+		country = { land_property = landed_estates }
+	}
+	modifier = {
+		factor = 0.1
+		strata = poor
+		country = { land_property = collectivization }
+	}
+
+	modifier = {
+		factor = 0.20
+		OR = {
+			everyday_needs = 0.1
+			luxury_needs = 0.25
+		}
+		strata = poor
+	}
+	modifier = {
+		factor = 0.20
+		OR = {
+			everyday_needs = 0.2
+			luxury_needs = 0.25
+		}
+		literacy = 0.10
+		strata = poor
+	}
+	modifier = {
+		factor = 0.20
+		OR = {
+			everyday_needs = 0.3
+			luxury_needs = 0.25
+		}
+		literacy = 0.20
+		strata = poor
+	}
+	modifier = {
+		factor = 0.20
+		OR = {
+			everyday_needs = 0.4
+			luxury_needs = 0.25
+		}
+		literacy = 0.30
+		strata = poor
+	}
+	modifier = {
+		factor = 0.20
+		OR = {
+			 everyday_needs = 0.5
+			 luxury_needs = 0.25
+		}
+		literacy = 0.40
+		strata = poor
+	}
+	modifier = {
+		factor = 0.20
+		OR = {
+			everyday_needs = 0.6
+			luxury_needs = 0.25
+		}
+		literacy = 0.50
+		strata = poor
+	}
+	modifier = {
+		factor = 0.20
+		OR = {
+			everyday_needs = 0.7
+			luxury_needs = 0.25
+		}
+		literacy = 0.60
+		strata = poor
+	}
+	modifier = {
+		factor = 0.20
+		OR = {
+			everyday_needs = 0.8
+			luxury_needs = 0.25
+		}
+		literacy = 0.70
+		strata = poor
+	}
+	modifier = {
+		factor = 0.20
+		OR = {
+			everyday_needs = 0.9
+			luxury_needs = 0.25
+		}
+		literacy = 0.80
+		strata = poor
+	}
+	modifier = {
+		factor = 0.20
+		OR = {
+			everyday_needs = 0.99
+			luxury_needs = 0.25
+		}
+		literacy = 0.90
+		strata = poor
+	}
+}
+
+demotion_chance = 
+{
+	factor = 0.5
+	modifier = {
+		factor = -10000
+		NOT = { location = { controlled_by = owner } }
+	}	
+	modifier = {
+		factor = -0.1
+		NOT = { religion = THIS }
+	}
+	modifier = {
+		factor = 10
+		state_scope = { is_colonial = yes }
+		strata = middle
+		unemployment = 0.01
+	}	
+	modifier = {
+		factor = -0.2
+		state_scope = { is_colonial = yes }
+		strata = poor
+	}
+	modifier = {
+		factor = 1
+		state_scope = { is_colonial = yes }
+		strata = middle
+		NOT = { is_primary_culture = yes is_accepted_culture = yes }
+	}
+	modifier = {
+		factor = -5
+		state_scope = { is_colonial = yes }
+		strata = rich
+	}
+	modifier = {
+		factor = -0.1
+		country = { slavery = yes_slavery }
+	}
+	modifier = {
+		factor = -0.05
+		state_scope = { is_slave = yes }
+	}
+	modifier = {
+		factor = -0.1
+		NOT = { is_primary_culture = yes is_accepted_culture = yes }
+	}
+	
+	modifier = {
+		factor = -0.01
+		not = { literacy = 0.1 }
+	}
+	modifier = {
+		factor = -0.01
+		not = { literacy = 0.15 }
+	}
+	modifier = {
+		factor = -0.01
+		not = { literacy = 0.2 }
+	}
+	modifier = {
+		factor = -0.01
+		not = { literacy = 0.3 }
+	}
+	modifier = {
+		factor = -0.01
+		not = { literacy = 0.4 }
+	}
+	modifier = {
+		factor = -0.01
+		not = { literacy = 0.5 }
+	}
+	modifier = {
+		factor = -0.01
+		not = { literacy = 0.6 }
+	}
+	modifier = {
+		factor = -0.01
+		not = { literacy = 0.7 }
+	}
+	modifier = {
+		factor = -0.01
+		not = { literacy = 0.8 }
+	}
+	modifier = {
+		factor = -0.01
+		not = { literacy = 0.9 }
+	}
+
+	modifier = {
+		factor = 0.1
+		NOT = { life_needs = 0.9 }
+	}
+	modifier = {
+		factor = 0.1
+		NOT = { life_needs = 0.8 }
+	}
+	modifier = {
+		factor = 0.1
+		NOT = { life_needs = 0.7 }
+	}
+	
+	modifier = {
+		factor = -0.1
+		NOT = { consciousness = 4 }
+		strata = poor
+	}
+	
+	#modifier = {
+	#	factor = 0.1
+	#	NOT = { luxury_needs = 1 }
+	#}
+	#modifier = {
+	#	factor = 0.1
+	#	NOT = { luxury_needs = 0.9 }
+	#}
+	#modifier = {
+	#	factor = 0.1
+	#	NOT = { luxury_needs = 0.8 }
+	#}
+	
+	modifier = {
+		factor = 0.1
+		NOT = { life_needs = 0.5 }
+		strata = middle
+	}
+	modifier = {
+		factor = 0.1
+		NOT = { life_needs = 0.4 }
+		strata = middle
+	}
+	modifier = {
+		factor = 0.1
+		NOT = { life_needs = 0.3 }
+		strata = middle
+	}
+	modifier = {
+		factor = 0.1
+		NOT = { life_needs = 0.2 }
+		strata = middle
+	}
+	modifier = {
+		factor = 0.2
+		NOT = { life_needs = 0.1 }
+		strata = middle
+	}
+
+	modifier = {
+		factor = -0.1
+		everyday_needs = 0.9
+		strata = middle
+	}
+	modifier = {
+		factor = -0.1
+		everyday_needs = 0.8 
+		strata = middle
+	}
+	modifier = {
+		factor = -0.1
+		everyday_needs = 0.7 
+		strata = middle
+	}
+	
+	modifier = {
+		factor = 0.1
+		unemployment = 0.05
+	}
+	modifier = {
+		factor = 0.1
+		unemployment = 0.1
+		literacy = 0.1
+	}
+	modifier = {
+		factor = 0.1
+		unemployment = 0.2
+		literacy = 0.2
+		location = { controlled_by = owner }
+	}
+	modifier = {
+		factor = 0.1
+		unemployment = 0.3
+		literacy = 0.3
+		location = { controlled_by = owner }
+	}
+	modifier = {
+		factor = 0.1
+		unemployment = 0.4
+		literacy = 0.4
+		location = { controlled_by = owner }
+	}		
+	modifier = {
+		factor = 0.1
+		unemployment = 0.5
+		literacy = 0.5
+		location = { controlled_by = owner }
+	}		
+	modifier = {
+		factor = 0.1
+		unemployment = 0.6
+		literacy = 0.6
+		location = { controlled_by = owner }
+	}
+	modifier = {
+		factor = 0.1
+		unemployment = 0.7
+		literacy = 0.7
+		location = { controlled_by = owner }
+	}
+	modifier = {
+		factor = 0.1
+		unemployment = 0.8
+		literacy = 0.8
+		location = { controlled_by = owner }
+	}		
+	modifier = {
+		factor = 0.1
+		unemployment = 0.9
+		literacy = 0.9
+		location = { controlled_by = owner }
+	}		
+	#modifier = {
+	#	factor = 0.2
+	#	unemployment = 0.99
+	#	literacy = 0.99
+	#	location = { controlled_by = owner }
+	#}	
+	
+	#modifier = {
+	#	factor = -100
+	#	location = { NOT = { controlled_by = owner } }
+	#}
+	modifier = {
+		factor = -0.8
+		strata = poor
+		country = { land_property = serfdom }
+	}
+	modifier = {
+		factor = -0.4
+		strata = poor
+		country = { land_property = landed_estates }
+	}
+}
+
+migration_chance = {
+	factor = 0.2
+	
+	modifier = {
+		factor = -10000
+		location = { is_colonial = yes }
+	}	
+	
+	#COLD CLIMATES DO BAD THINGS
+	modifier = {	
+		factor = 25
+		location = {
+			is_colonial = no
+			terrain = arctic
+		}
+		OR = {
+			AND = { OR = { month = 9 NOT = { month = 3 } } OR = { continent = europe continent = asia continent = north_america } }
+			AND = { month = 3 NOT = { month = 9 } OR = { continent = oceania continent = south_america continent = east_indies } }
+		}
+	}	
+	modifier = {	
+		factor = 10
+		location = {
+			is_colonial = no
+			OR = {
+		 		terrain = cold_desert 
+		 		terrain = cold_desert_hills
+		 		terrain = cold_desert_mountains
+		 		terrain = tundra
+		 		terrain = tundra_hills
+		 		terrain = tundra_mountains
+		 		terrain = arctic
+		 	}
+		}
+		OR = {
+			AND = { OR = { month = 9 NOT = { month = 3 } } OR = { continent = europe continent = asia continent = north_america } }
+			AND = { month = 3 NOT = { month = 9 } OR = { continent = oceania continent = south_america continent = east_indies } }
+		}
+	}
+	modifier = {	
+		factor = 2.5
+		location = {
+			is_colonial = no
+			OR = {
+		 		terrain = boreal_forest 
+		 		terrain = boreal_forest_hills
+		 		terrain = boreal_forest_mountains
+		 		terrain = boreal_marsh
+		 	}
+		 	total_pops = 5000
+		}
+		OR = {
+			AND = { OR = { month = 9 NOT = { month = 3 } } OR = { continent = europe continent = asia continent = north_america } }
+			AND = { month = 3 NOT = { month = 9 } OR = { continent = oceania continent = south_america continent = east_indies } }
+		}
+	}	
+	#HOT CLIMATES DO BAD THINGS
+	modifier = {	
+		factor = 3.5
+		location = {
+			is_colonial = no
+			OR = {
+		 		terrain = desert
+		 		terrain = desert_hills
+		 		terrain = desert_mountains
+		 	}
+		 	total_pops = 5000
+		}
+		OR = {
+			AND = { OR = { month = 9 NOT = { month = 3 } } OR = { continent = oceania continent = south_america continent = east_indies } }
+			AND = { month = 3 NOT = { month = 9 } OR = { continent = europe continent = asia continent = north_america continent = africa } }
+		}
+	}
+	
+	#modifier = {
+	#	factor = -10000
+	#	NOT = { location = { controlled_by = owner } }
+	#}	
+	
+	modifier = {
+		factor = -0.5
+		life_needs = 1
+	}
+	modifier = {
+		factor = -1
+		everyday_needs = 1
+	}
+	
+	#MAX -8
+	modifier = {
+		factor = -0.8
+		luxury_needs = 0.25
+		life_needs = 1
+	}
+	modifier = {
+		factor = -1.6
+		luxury_needs = 0.5
+		life_needs = 1
+	}
+	modifier = {
+		factor = -2.4
+		luxury_needs = 0.75
+		life_needs = 1
+	}
+	modifier = {
+		factor = -3.2
+		luxury_needs = 1
+		life_needs = 1
+	}
+	
+	#MAX -1
+	modifier = {
+		factor = -0.2
+		cash_reserves = 1
+	}
+	modifier = {
+		factor = -0.2
+		cash_reserves = 2
+	}
+	modifier = {
+		factor = -0.3
+		cash_reserves = 3
+	}
+	modifier = {
+		factor = -0.3
+		cash_reserves = 4
+	}
+	
+	#MAX 1	
+	modifier = {
+		factor = 0.1
+		NOT = { life_needs = 1 }
+		OR = {
+			AND = { country = { poor_strata_life_needs = 1 } strata = poor }
+			AND = { country = { middle_strata_life_needs = 1 } strata = middle }
+			AND = { country = { rich_strata_life_needs = 1 } strata = rich }
+		}		
+	}
+	modifier = {
+		factor = 0.2
+		NOT = { life_needs = 0.9 }
+		OR = {
+			AND = { country = { poor_strata_life_needs = 0.9 } strata = poor }
+			AND = { country = { middle_strata_life_needs = 0.9 } strata = middle }
+			AND = { country = { rich_strata_life_needs = 0.9 } strata = rich }
+		}		
+	}
+	modifier = {
+		factor = 0.3
+		NOT = { life_needs = 0.8 }
+		OR = {
+			AND = { country = { poor_strata_life_needs = 0.8 } strata = poor }
+			AND = { country = { middle_strata_life_needs = 0.8 } strata = middle }
+			AND = { country = { rich_strata_life_needs = 0.8 } strata = rich }
+		}		
+	}
+	modifier = {
+		factor = 0.4
+		NOT = { life_needs = 0.6 }
+		OR = {
+			AND = { country = { poor_strata_life_needs = 0.6 } strata = poor }
+			AND = { country = { middle_strata_life_needs = 0.6 } strata = middle }
+			AND = { country = { rich_strata_life_needs = 0.6 } strata = rich }
+		}		
+	}
+	
+	#MAX 1
+	modifier = {
+		factor = 0.1
+		NOT = { everyday_needs = 1 }
+		OR = {
+			AND = { country = { poor_strata_everyday_needs = 1 } strata = poor }
+			AND = { country = { middle_strata_everyday_needs = 1 } strata = middle }
+			AND = { country = { rich_strata_everyday_needs = 1 } strata = rich }
+		}		
+		life_needs = 1
+	}
+	modifier = {
+		factor = 0.2
+		NOT = { everyday_needs = 0.9 }
+		OR = {
+			AND = { country = { poor_strata_everyday_needs = 0.9 } strata = poor }
+			AND = { country = { middle_strata_everyday_needs = 0.9 } strata = middle }
+			AND = { country = { rich_strata_everyday_needs = 0.9 } strata = rich }
+		}		
+		life_needs = 1
+	}
+	modifier = {
+		factor = 0.3
+		NOT = { everyday_needs = 0.8 }
+		OR = {
+			AND = { country = { poor_strata_everyday_needs = 0.8 } strata = poor }
+			AND = { country = { middle_strata_everyday_needs = 0.8 } strata = middle }
+			AND = { country = { rich_strata_everyday_needs = 0.8 } strata = rich }
+		}		
+		life_needs = 1
+	}
+	modifier = {
+		factor = 0.4
+		NOT = { everyday_needs = 0.6 }
+		OR = {
+			AND = { country = { poor_strata_everyday_needs = 0.6 } strata = poor }
+			AND = { country = { middle_strata_everyday_needs = 0.6 } strata = middle }
+			AND = { country = { rich_strata_everyday_needs = 0.6 } strata = rich }
+		}		
+		life_needs = 1
+	}
+	
+	#MAX 1.5
+	modifier = {
+		factor = 0.02
+		unemployment = 0.1
+		NOT = { life_needs = 1 }
+	}
+	modifier = {
+		factor = 0.1
+		unemployment = 0.2
+		NOT = { life_needs = 1 }
+	}
+	modifier = {
+		factor = 0.1
+		unemployment = 0.3
+		NOT = { life_needs = 1 }
+	}
+	modifier = {
+		factor = 0.1
+		unemployment = 0.4
+		NOT = { life_needs = 1 }
+	}
+	modifier = {
+		factor = 0.18
+		unemployment = 0.5
+		NOT = { life_needs = 1 }
+	}
+	modifier = {
+		factor = 0.5
+		unemployment = 0.7
+		NOT = { life_needs = 1 }
+	}
+	modifier = {
+		factor = 0.5
+		unemployment = 0.9
+		NOT = { life_needs = 1 }
+	}
+	
+	#MAX 0.5
+	modifier = {
+		factor = 0.02
+		unemployment = 0.1
+		life_needs = 1
+	}
+	modifier = {
+		factor = 0.04
+		unemployment = 0.2
+		life_needs = 1
+	}
+	modifier = {
+		factor = 0.06
+		unemployment = 0.3
+		life_needs = 1
+	}
+	modifier = {
+		factor = 0.08
+		unemployment = 0.4
+		life_needs = 1
+	}
+	modifier = {
+		factor = 0.1
+		unemployment = 0.5
+		life_needs = 1
+	}
+	modifier = {
+		factor = 0.1
+		unemployment = 0.7
+		life_needs = 1
+	}
+	modifier = {
+		factor = 0.1
+		unemployment = 0.9
+		life_needs = 1
+	}
+	
+	#modifier = {
+	#	factor = -0.25
+	#	NOT = { is_accepted_culture = yes }
+	#	NOT = { is_primary_culture = yes }
+	#}
+	
+	#MAX -3
+	modifier = {
+		factor = -0.2
+		militancy = 1
+		has_culture_core = yes
+		NOT = { is_primary_culture = yes }
+	}
+	
+	modifier = {
+		factor = -0.4
+		militancy = 3
+		has_culture_core = yes
+		NOT = { is_primary_culture = yes }
+	}
+	modifier = {
+		factor = -0.8
+		militancy = 5
+		has_culture_core = yes
+		NOT = { is_primary_culture = yes }
+	}
+	modifier = {
+		factor = -1.6
+		militancy = 7
+		has_culture_core = yes
+		NOT = { is_primary_culture = yes }
+	}
+		
+	#MAX 1
+	modifier = {
+		factor = 0.1
+		militancy = 1
+		NOT = { has_culture_core = yes }
+		NOT = { is_primary_culture = yes }
+	}
+	modifier = {
+		factor = 0.2
+		militancy = 3
+		NOT = { has_culture_core = yes }
+		NOT = { is_primary_culture = yes }
+	}
+	modifier = {
+		factor = 0.3
+		militancy = 5
+		NOT = { has_culture_core = yes }
+		NOT = { is_primary_culture = yes }
+	}
+	modifier = {
+		factor = 0.4
+		militancy = 7
+		NOT = { has_culture_core = yes }
+		NOT = { is_primary_culture = yes }
+	}
+	
+	#extra chance if there is a core in the country and current location has no core (re-group cultures)
+	modifier = {
+		factor = 2
+		NOT = { has_culture_core = yes }
+		NOT = { is_primary_culture = yes }
+		OR = {
+			AND = { culture = north_german country = { any_owned_province = { any_core = { is_primary_culture = north_german } } } }
+			AND = { culture = south_german country = { any_owned_province = { any_core = { is_primary_culture = south_german } } } }			
+			AND = { culture = russian_german country = { any_owned_province = { any_core = { is_primary_culture = russian_german } } } }
+			AND = { culture = ashkenazi country = { any_owned_province = { any_core = { is_primary_culture = ashkenazi } } } }
+			AND = { culture = sephardic country = { any_owned_province = { any_core = { is_primary_culture = sephardic } } } }
+			AND = { culture = dutch country = { any_owned_province = { any_core = { is_primary_culture = dutch } } } }
+			AND = { culture = frisian country = { any_owned_province = { any_core = { is_primary_culture = frisian } } } }			
+			AND = { culture = flemish country = { any_owned_province = { any_core = { is_primary_culture = flemish } } } }
+			AND = { culture = romansh country = { any_owned_province = { any_core = { is_primary_culture = romansh } } } }				
+			AND = { culture = swedish country = { any_owned_province = { any_core = { is_primary_culture = swedish } } } }
+			AND = { culture = danish country = { any_owned_province = { any_core = { is_primary_culture = danish } } } }
+			AND = { culture = norwegian country = { any_owned_province = { any_core = { is_primary_culture = norwegian } } } }			
+			AND = { culture = icelandic country = { any_owned_province = { any_core = { is_primary_culture = icelandic } } } }
+			AND = { culture = faroese country = { any_owned_province = { any_core = { is_primary_culture = faroese } } } }	
+			AND = { culture = finnish country = { any_owned_province = { any_core = { is_primary_culture = finnish } } } }
+			AND = { culture = sami country = { any_owned_province = { any_core = { is_primary_culture = sami } } } }
+			AND = { culture = british country = { any_owned_province = { any_core = { is_primary_culture = british } } } }			
+			AND = { culture = irish country = { any_owned_province = { any_core = { is_primary_culture = irish } } } }
+			AND = { culture = north_italian country = { any_owned_province = { any_core = { is_primary_culture = north_italian } } } }					
+			AND = { culture = south_italian country = { any_owned_province = { any_core = { is_primary_culture = south_italian } } } }
+			AND = { culture = maltese country = { any_owned_province = { any_core = { is_primary_culture = maltese } } } }
+			AND = { culture = basque country = { any_owned_province = { any_core = { is_primary_culture = basque } } } }			
+			AND = { culture = spanish country = { any_owned_province = { any_core = { is_primary_culture = spanish } } } }
+			AND = { culture = catalan country = { any_owned_province = { any_core = { is_primary_culture = catalan } } } }				
+			AND = { culture = portuguese country = { any_owned_province = { any_core = { is_primary_culture = portuguese } } } }
+			AND = { culture = french country = { any_owned_province = { any_core = { is_primary_culture = french } } } }
+			AND = { culture = breton country = { any_owned_province = { any_core = { is_primary_culture = breton } } } }			
+			AND = { culture = occitan country = { any_owned_province = { any_core = { is_primary_culture = occitan } } } }
+			AND = { culture = picard country = { any_owned_province = { any_core = { is_primary_culture = picard } } } }	
+			AND = { culture = wallonian country = { any_owned_province = { any_core = { is_primary_culture = wallonian } } } }
+			AND = { culture = croat country = { any_owned_province = { any_core = { is_primary_culture = croat } } } }
+			AND = { culture = serb country = { any_owned_province = { any_core = { is_primary_culture = serb } } } }			
+			AND = { culture = bulgarian country = { any_owned_province = { any_core = { is_primary_culture = bulgarian } } } }
+			AND = { culture = slovene country = { any_owned_province = { any_core = { is_primary_culture = slovene } } } }				
+			AND = { culture = bosniak country = { any_owned_province = { any_core = { is_primary_culture = bosniak } } } }			
+			AND = { culture = albanian country = { any_owned_province = { any_core = { is_primary_culture = albanian } } } }
+			AND = { culture = romanian country = { any_owned_province = { any_core = { is_primary_culture = romanian } } } }				
+			AND = { culture = hungarian country = { any_owned_province = { any_core = { is_primary_culture = hungarian } } } }
+			AND = { culture = polish country = { any_owned_province = { any_core = { is_primary_culture = polish } } } }
+			AND = { culture = western_slavic country = { any_owned_province = { any_core = { is_primary_culture = western_slavic } } } }			
+			AND = { culture = czech country = { any_owned_province = { any_core = { is_primary_culture = czech } } } }
+			AND = { culture = slovak country = { any_owned_province = { any_core = { is_primary_culture = slovak } } } }	
+			AND = { culture = russian country = { any_owned_province = { any_core = { is_primary_culture = russian } } } }
+			AND = { culture = byelorussian country = { any_owned_province = { any_core = { is_primary_culture = byelorussian } } } }
+			AND = { culture = ukrainian country = { any_owned_province = { any_core = { is_primary_culture = ukrainian } } } }			
+			AND = { culture = ugrian country = { any_owned_province = { any_core = { is_primary_culture = ugrian } } } }
+			AND = { culture = lithuanian country = { any_owned_province = { any_core = { is_primary_culture = lithuanian } } } }
+			AND = { culture = latvian country = { any_owned_province = { any_core = { is_primary_culture = latvian } } } }
+			AND = { culture = estonian country = { any_owned_province = { any_core = { is_primary_culture = estonian } } } }			
+			AND = { culture = greek country = { any_owned_province = { any_core = { is_primary_culture = greek } } } }
+			AND = { culture = georgian country = { any_owned_province = { any_core = { is_primary_culture = georgian } } } }
+			AND = { culture = armenian country = { any_owned_province = { any_core = { is_primary_culture = armenian } } } }
+			AND = { culture = assyrian country = { any_owned_province = { any_core = { is_primary_culture = assyrian } } } }			
+			AND = { culture = turkish country = { any_owned_province = { any_core = { is_primary_culture = turkish } } } }
+			AND = { culture = azerbaijani country = { any_owned_province = { any_core = { is_primary_culture = azerbaijani } } } }				
+			AND = { culture = north_caucasian country = { any_owned_province = { any_core = { is_primary_culture = north_caucasian } } } }
+			AND = { culture = kurdish country = { any_owned_province = { any_core = { is_primary_culture = kurdish } } } }
+			AND = { culture = maghrebi country = { any_owned_province = { any_core = { is_primary_culture = maghrebi } } } }			
+			AND = { culture = misri country = { any_owned_province = { any_core = { is_primary_culture = misri } } } }
+			AND = { culture = mashriqi country = { any_owned_province = { any_core = { is_primary_culture = mashriqi } } } }	
+			AND = { culture = bedouin country = { any_owned_province = { any_core = { is_primary_culture = bedouin } } } }
+			AND = { culture = berber country = { any_owned_province = { any_core = { is_primary_culture = berber } } } }
+			AND = { culture = maures country = { any_owned_province = { any_core = { is_primary_culture = maures } } } }			
+			AND = { culture = sudanese country = { any_owned_province = { any_core = { is_primary_culture = sudanese } } } }
+			AND = { culture = persian country = { any_owned_province = { any_core = { is_primary_culture = persian } } } }					
+			AND = { culture = uzbek country = { any_owned_province = { any_core = { is_primary_culture = uzbek } } } }
+			AND = { culture = kazak country = { any_owned_province = { any_core = { is_primary_culture = kazak } } } }
+			AND = { culture = kirgiz country = { any_owned_province = { any_core = { is_primary_culture = kirgiz } } } }			
+			AND = { culture = tajik country = { any_owned_province = { any_core = { is_primary_culture = tajik } } } }
+			AND = { culture = uighur country = { any_owned_province = { any_core = { is_primary_culture = uighur } } } }				
+			AND = { culture = pashtun country = { any_owned_province = { any_core = { is_primary_culture = pashtun } } } }
+			AND = { culture = baluchi country = { any_owned_province = { any_core = { is_primary_culture = baluchi } } } }
+			AND = { culture = hazara country = { any_owned_province = { any_core = { is_primary_culture = hazara } } } }			
+			AND = { culture = turkmen country = { any_owned_province = { any_core = { is_primary_culture = turkmen } } } }
+			AND = { culture = tatar country = { any_owned_province = { any_core = { is_primary_culture = tatar } } } }	
+			AND = { culture = parsi country = { any_owned_province = { any_core = { is_primary_culture = parsi } } } }
+			AND = { culture = tabari country = { any_owned_province = { any_core = { is_primary_culture = tabari } } } }
+			AND = { culture = luri country = { any_owned_province = { any_core = { is_primary_culture = luri } } } }			
+			AND = { culture = kalash country = { any_owned_province = { any_core = { is_primary_culture = kalash } } } }
+			AND = { culture = ossetian country = { any_owned_province = { any_core = { is_primary_culture = ossetian } } } }				
+			AND = { culture = mongol country = { any_owned_province = { any_core = { is_primary_culture = mongol } } } }			
+			AND = { culture = siberian country = { any_owned_province = { any_core = { is_primary_culture = siberian } } } }
+			AND = { culture = yakut country = { any_owned_province = { any_core = { is_primary_culture = yakut } } } }				
+			AND = { culture = tibetan country = { any_owned_province = { any_core = { is_primary_culture = tibetan } } } }
+			AND = { culture = assamese country = { any_owned_province = { any_core = { is_primary_culture = assamese } } } }
+			AND = { culture = bengali country = { any_owned_province = { any_core = { is_primary_culture = bengali } } } }			
+			AND = { culture = bihari country = { any_owned_province = { any_core = { is_primary_culture = bihari } } } }
+			AND = { culture = manipuri country = { any_owned_province = { any_core = { is_primary_culture = manipuri } } } }	
+			AND = { culture = nepali country = { any_owned_province = { any_core = { is_primary_culture = nepali } } } }
+			AND = { culture = oriya country = { any_owned_province = { any_core = { is_primary_culture = oriya } } } }
+			AND = { culture = sinhala country = { any_owned_province = { any_core = { is_primary_culture = sinhala } } } }			
+			AND = { culture = avadhi country = { any_owned_province = { any_core = { is_primary_culture = avadhi } } } }
+			AND = { culture = kanauji country = { any_owned_province = { any_core = { is_primary_culture = kanauji } } } }
+			AND = { culture = panjabi country = { any_owned_province = { any_core = { is_primary_culture = panjabi } } } }
+			AND = { culture = kashmiri country = { any_owned_province = { any_core = { is_primary_culture = kashmiri } } } }			
+			AND = { culture = gujarati country = { any_owned_province = { any_core = { is_primary_culture = gujarati } } } }
+			AND = { culture = marathi country = { any_owned_province = { any_core = { is_primary_culture = marathi } } } }
+			AND = { culture = sindi country = { any_owned_province = { any_core = { is_primary_culture = sindi } } } }
+			AND = { culture = rajput country = { any_owned_province = { any_core = { is_primary_culture = rajput } } } }			
+			AND = { culture = kannada country = { any_owned_province = { any_core = { is_primary_culture = kannada } } } }
+			AND = { culture = malayalam country = { any_owned_province = { any_core = { is_primary_culture = malayalam } } } }				
+			AND = { culture = tamil country = { any_owned_province = { any_core = { is_primary_culture = tamil } } } }
+			AND = { culture = telegu country = { any_owned_province = { any_core = { is_primary_culture = telegu } } } }
+			AND = { culture = vietnamese country = { any_owned_province = { any_core = { is_primary_culture = vietnamese } } } }			
+			AND = { culture = khmer country = { any_owned_province = { any_core = { is_primary_culture = khmer } } } }
+			AND = { culture = filipino country = { any_owned_province = { any_core = { is_primary_culture = filipino } } } }	
+			AND = { culture = thai country = { any_owned_province = { any_core = { is_primary_culture = thai } } } }
+			AND = { culture = lao country = { any_owned_province = { any_core = { is_primary_culture = lao } } } }
+			AND = { culture = shan country = { any_owned_province = { any_core = { is_primary_culture = shan } } } }			
+			AND = { culture = burmese country = { any_owned_province = { any_core = { is_primary_culture = burmese } } } }
+			AND = { culture = asian_minor country = { any_owned_province = { any_core = { is_primary_culture = asian_minor } } } }					
+			AND = { culture = kachin country = { any_owned_province = { any_core = { is_primary_culture = kachin } } } }
+			AND = { culture = karen country = { any_owned_province = { any_core = { is_primary_culture = karen } } } }
+			AND = { culture = acehnese country = { any_owned_province = { any_core = { is_primary_culture = acehnese } } } }			
+			AND = { culture = balinese country = { any_owned_province = { any_core = { is_primary_culture = balinese } } } }
+			AND = { culture = batak country = { any_owned_province = { any_core = { is_primary_culture = batak } } } }				
+			AND = { culture = betawi country = { any_owned_province = { any_core = { is_primary_culture = betawi } } } }
+			AND = { culture = bantenese country = { any_owned_province = { any_core = { is_primary_culture = bantenese } } } }
+			AND = { culture = banjarnese country = { any_owned_province = { any_core = { is_primary_culture = banjarnese } } } }			
+			AND = { culture = bunginese country = { any_owned_province = { any_core = { is_primary_culture = bunginese } } } }
+			AND = { culture = dayak country = { any_owned_province = { any_core = { is_primary_culture = dayak } } } }	
+			AND = { culture = javan country = { any_owned_province = { any_core = { is_primary_culture = javan } } } }
+			AND = { culture = madurese country = { any_owned_province = { any_core = { is_primary_culture = madurese } } } }
+			AND = { culture = makassarese country = { any_owned_province = { any_core = { is_primary_culture = makassarese } } } }			
+			AND = { culture = malay country = { any_owned_province = { any_core = { is_primary_culture = malay } } } }
+			AND = { culture = minahasan country = { any_owned_province = { any_core = { is_primary_culture = minahasan } } } }				
+			AND = { culture = minangkabau country = { any_owned_province = { any_core = { is_primary_culture = minangkabau } } } }			
+			AND = { culture = moluccan country = { any_owned_province = { any_core = { is_primary_culture = moluccan } } } }
+			AND = { culture = sasak country = { any_owned_province = { any_core = { is_primary_culture = sasak } } } }				
+			AND = { culture = sundanese country = { any_owned_province = { any_core = { is_primary_culture = sundanese } } } }
+			AND = { culture = manchu country = { any_owned_province = { any_core = { is_primary_culture = manchu } } } }
+			AND = { culture = beifaren country = { any_owned_province = { any_core = { is_primary_culture = beifaren } } } }			
+			AND = { culture = nanfaren country = { any_owned_province = { any_core = { is_primary_culture = nanfaren } } } }
+			AND = { culture = hakka country = { any_owned_province = { any_core = { is_primary_culture = hakka } } } }	
+			AND = { culture = miao country = { any_owned_province = { any_core = { is_primary_culture = miao } } } }
+			AND = { culture = min country = { any_owned_province = { any_core = { is_primary_culture = min } } } }
+			AND = { culture = zhuang country = { any_owned_province = { any_core = { is_primary_culture = zhuang } } } }			
+			AND = { culture = yi country = { any_owned_province = { any_core = { is_primary_culture = yi } } } }
+			AND = { culture = yue country = { any_owned_province = { any_core = { is_primary_culture = yue } } } }
+			AND = { culture = japanese country = { any_owned_province = { any_core = { is_primary_culture = japanese } } } }
+			AND = { culture = korean country = { any_owned_province = { any_core = { is_primary_culture = korean } } } }			
+			AND = { culture = ainu country = { any_owned_province = { any_core = { is_primary_culture = ainu } } } }
+			AND = { culture = polynesian country = { any_owned_province = { any_core = { is_primary_culture = polynesian } } } }
+			AND = { culture = hawaiian country = { any_owned_province = { any_core = { is_primary_culture = hawaiian } } } }
+			AND = { culture = maori country = { any_owned_province = { any_core = { is_primary_culture = maori } } } }			
+			AND = { culture = aborigine country = { any_owned_province = { any_core = { is_primary_culture = aborigine } } } }
+			AND = { culture = melanesian country = { any_owned_province = { any_core = { is_primary_culture = melanesian } } } }				
+			AND = { culture = micronesian country = { any_owned_province = { any_core = { is_primary_culture = micronesian } } } }
+			AND = { culture = aimara country = { any_owned_province = { any_core = { is_primary_culture = aimara } } } }
+			AND = { culture = amazonian country = { any_owned_province = { any_core = { is_primary_culture = amazonian } } } }			
+			AND = { culture = californian_people country = { any_owned_province = { any_core = { is_primary_culture = californian_people } } } }
+			AND = { culture = cherokee country = { any_owned_province = { any_core = { is_primary_culture = cherokee } } } }	
+			AND = { culture = cheyenne country = { any_owned_province = { any_core = { is_primary_culture = cheyenne } } } }
+			AND = { culture = comanche country = { any_owned_province = { any_core = { is_primary_culture = comanche } } } }
+			AND = { culture = cree country = { any_owned_province = { any_core = { is_primary_culture = cree } } } }			
+			AND = { culture = dakota country = { any_owned_province = { any_core = { is_primary_culture = dakota } } } }
+			AND = { culture = guajiro country = { any_owned_province = { any_core = { is_primary_culture = guajiro } } } }					
+			AND = { culture = guarani country = { any_owned_province = { any_core = { is_primary_culture = guarani } } } }
+			AND = { culture = great_basin_peoples country = { any_owned_province = { any_core = { is_primary_culture = great_basin_peoples } } } }
+			AND = { culture = lakota country = { any_owned_province = { any_core = { is_primary_culture = lakota } } } }			
+			AND = { culture = inuit country = { any_owned_province = { any_core = { is_primary_culture = inuit } } } }
+			AND = { culture = mayan country = { any_owned_province = { any_core = { is_primary_culture = mayan } } } }				
+			AND = { culture = metis country = { any_owned_province = { any_core = { is_primary_culture = metis } } } }
+			AND = { culture = nakota country = { any_owned_province = { any_core = { is_primary_culture = nakota } } } }
+			AND = { culture = nahua country = { any_owned_province = { any_core = { is_primary_culture = nahua } } } }			
+			AND = { culture = navajo country = { any_owned_province = { any_core = { is_primary_culture = navajo } } } }
+			AND = { culture = native_american_minor country = { any_owned_province = { any_core = { is_primary_culture = native_american_minor } } } }	
+			AND = { culture = north_west_coastal country = { any_owned_province = { any_core = { is_primary_culture = north_west_coastal } } } }
+			AND = { culture = osage country = { any_owned_province = { any_core = { is_primary_culture = osage } } } }
+			AND = { culture = patagonian country = { any_owned_province = { any_core = { is_primary_culture = patagonian } } } }			
+			AND = { culture = pawnee country = { any_owned_province = { any_core = { is_primary_culture = pawnee } } } }
+			AND = { culture = plateau_peoples country = { any_owned_province = { any_core = { is_primary_culture = plateau_peoples } } } }				
+			AND = { culture = pueblo country = { any_owned_province = { any_core = { is_primary_culture = pueblo } } } }			
+			AND = { culture = quechua country = { any_owned_province = { any_core = { is_primary_culture = quechua } } } }
+			AND = { culture = tarascan country = { any_owned_province = { any_core = { is_primary_culture = tarascan } } } }				
+			AND = { culture = tupinamba country = { any_owned_province = { any_core = { is_primary_culture = tupinamba } } } }
+			AND = { culture = zapotec country = { any_owned_province = { any_core = { is_primary_culture = zapotec } } } }
+			AND = { culture = yankee country = { any_owned_province = { any_core = { is_primary_culture = yankee } } } }			
+			AND = { culture = dixie country = { any_owned_province = { any_core = { is_primary_culture = dixie } } } }
+			AND = { culture = boer country = { any_owned_province = { any_core = { is_primary_culture = boer } } } }	
+			AND = { culture = anglo_african country = { any_owned_province = { any_core = { is_primary_culture = anglo_african } } } }
+			AND = { culture = australian country = { any_owned_province = { any_core = { is_primary_culture = australian } } } }
+			AND = { culture = anglo_canadian country = { any_owned_province = { any_core = { is_primary_culture = anglo_canadian } } } }			
+			AND = { culture = french_canadian country = { any_owned_province = { any_core = { is_primary_culture = french_canadian } } } }
+			AND = { culture = mexican country = { any_owned_province = { any_core = { is_primary_culture = mexican } } } }			
+			AND = { culture = central_american country = { any_owned_province = { any_core = { is_primary_culture = central_american } } } }
+			AND = { culture = caribeno country = { any_owned_province = { any_core = { is_primary_culture = caribeno } } } }			
+			AND = { culture = north_andean country = { any_owned_province = { any_core = { is_primary_culture = north_andean } } } }
+			AND = { culture = chilean country = { any_owned_province = { any_core = { is_primary_culture = chilean } } } }	
+			AND = { culture = south_andean country = { any_owned_province = { any_core = { is_primary_culture = south_andean } } } }
+			AND = { culture = peruvian country = { any_owned_province = { any_core = { is_primary_culture = peruvian } } } }
+			AND = { culture = bolivian country = { any_owned_province = { any_core = { is_primary_culture = bolivian } } } }			
+			AND = { culture = platinean country = { any_owned_province = { any_core = { is_primary_culture = platinean } } } }
+			AND = { culture = brazilian country = { any_owned_province = { any_core = { is_primary_culture = brazilian } } } }					
+			AND = { culture = afro_american country = { any_owned_province = { any_core = { is_primary_culture = afro_american } } } }
+			AND = { culture = afro_caribbean country = { any_owned_province = { any_core = { is_primary_culture = afro_caribbean } } } }
+			AND = { culture = afro_caribeno country = { any_owned_province = { any_core = { is_primary_culture = afro_caribeno } } } }			
+			AND = { culture = afro_brazilian country = { any_owned_province = { any_core = { is_primary_culture = afro_brazilian } } } }
+			AND = { culture = afro_antillean country = { any_owned_province = { any_core = { is_primary_culture = afro_antillean } } } }				
+			AND = { culture = akan country = { any_owned_province = { any_core = { is_primary_culture = akan } } } }
+			AND = { culture = bambara country = { any_owned_province = { any_core = { is_primary_culture = bambara } } } }
+			AND = { culture = dyula country = { any_owned_province = { any_core = { is_primary_culture = dyula } } } }			
+			AND = { culture = edo country = { any_owned_province = { any_core = { is_primary_culture = edo } } } }
+			AND = { culture = ewe country = { any_owned_province = { any_core = { is_primary_culture = ewe } } } }	
+			AND = { culture = fon country = { any_owned_province = { any_core = { is_primary_culture = fon } } } }
+			AND = { culture = fulbe country = { any_owned_province = { any_core = { is_primary_culture = fulbe } } } }
+			AND = { culture = hausa country = { any_owned_province = { any_core = { is_primary_culture = hausa } } } }			
+			AND = { culture = ibibio country = { any_owned_province = { any_core = { is_primary_culture = ibibio } } } }
+			AND = { culture = itsekari country = { any_owned_province = { any_core = { is_primary_culture = itsekari } } } }				
+			AND = { culture = ibo country = { any_owned_province = { any_core = { is_primary_culture = ibo } } } }			
+			AND = { culture = kru country = { any_owned_province = { any_core = { is_primary_culture = kru } } } }
+			AND = { culture = mande country = { any_owned_province = { any_core = { is_primary_culture = mande } } } }				
+			AND = { culture = mossi country = { any_owned_province = { any_core = { is_primary_culture = mossi } } } }
+			AND = { culture = senufo country = { any_owned_province = { any_core = { is_primary_culture = senufo } } } }
+			AND = { culture = serer country = { any_owned_province = { any_core = { is_primary_culture = serer } } } }			
+			AND = { culture = songhai country = { any_owned_province = { any_core = { is_primary_culture = songhai } } } }
+			AND = { culture = tiv country = { any_owned_province = { any_core = { is_primary_culture = tiv } } } }	
+			AND = { culture = tuareg country = { any_owned_province = { any_core = { is_primary_culture = tuareg } } } }
+			AND = { culture = wolof country = { any_owned_province = { any_core = { is_primary_culture = wolof } } } }
+			AND = { culture = yoruba country = { any_owned_province = { any_core = { is_primary_culture = yoruba } } } }			
+			AND = { culture = zarma country = { any_owned_province = { any_core = { is_primary_culture = zarma } } } }
+			AND = { culture = bakongo country = { any_owned_province = { any_core = { is_primary_culture = bakongo } } } }	
+			AND = { culture = baguirmi country = { any_owned_province = { any_core = { is_primary_culture = baguirmi } } } }
+			AND = { culture = fang country = { any_owned_province = { any_core = { is_primary_culture = fang } } } }
+			AND = { culture = kanuri country = { any_owned_province = { any_core = { is_primary_culture = kanuri } } } }			
+			AND = { culture = kuba country = { any_owned_province = { any_core = { is_primary_culture = kuba } } } }
+			AND = { culture = luba country = { any_owned_province = { any_core = { is_primary_culture = luba } } } }	
+			AND = { culture = lunda country = { any_owned_province = { any_core = { is_primary_culture = lunda } } } }
+			AND = { culture = mongo country = { any_owned_province = { any_core = { is_primary_culture = mongo } } } }
+			AND = { culture = sara country = { any_owned_province = { any_core = { is_primary_culture = sara } } } }			
+			AND = { culture = teda country = { any_owned_province = { any_core = { is_primary_culture = teda } } } }
+			AND = { culture = african_minor country = { any_owned_province = { any_core = { is_primary_culture = african_minor } } } }				
+			AND = { culture = amhara country = { any_owned_province = { any_core = { is_primary_culture = amhara } } } }			
+			AND = { culture = afar country = { any_owned_province = { any_core = { is_primary_culture = afar } } } }
+			AND = { culture = azande country = { any_owned_province = { any_core = { is_primary_culture = azande } } } }				
+			AND = { culture = baganda country = { any_owned_province = { any_core = { is_primary_culture = baganda } } } }
+			AND = { culture = beja country = { any_owned_province = { any_core = { is_primary_culture = beja } } } }
+			AND = { culture = dinka country = { any_owned_province = { any_core = { is_primary_culture = dinka } } } }			
+			AND = { culture = fur country = { any_owned_province = { any_core = { is_primary_culture = fur } } } }
+			AND = { culture = kikuyu country = { any_owned_province = { any_core = { is_primary_culture = kikuyu } } } }	
+			AND = { culture = luo country = { any_owned_province = { any_core = { is_primary_culture = luo } } } }
+			AND = { culture = maasai country = { any_owned_province = { any_core = { is_primary_culture = maasai } } } }
+			AND = { culture = nuer country = { any_owned_province = { any_core = { is_primary_culture = nuer } } } }			
+			AND = { culture = nuba country = { any_owned_province = { any_core = { is_primary_culture = nuba } } } }
+			AND = { culture = oromo country = { any_owned_province = { any_core = { is_primary_culture = oromo } } } }					
+			AND = { culture = ruanda country = { any_owned_province = { any_core = { is_primary_culture = ruanda } } } }	
+			AND = { culture = rundi country = { any_owned_province = { any_core = { is_primary_culture = rundi } } } }
+			AND = { culture = sidama country = { any_owned_province = { any_core = { is_primary_culture = sidama } } } }
+			AND = { culture = somali country = { any_owned_province = { any_core = { is_primary_culture = somali } } } }			
+			AND = { culture = sukuma country = { any_owned_province = { any_core = { is_primary_culture = sukuma } } } }
+			AND = { culture = swahili country = { any_owned_province = { any_core = { is_primary_culture = swahili } } } }	
+			AND = { culture = tigray country = { any_owned_province = { any_core = { is_primary_culture = tigray } } } }
+			AND = { culture = unyamwezi country = { any_owned_province = { any_core = { is_primary_culture = unyamwezi } } } }
+			AND = { culture = chewa country = { any_owned_province = { any_core = { is_primary_culture = chewa } } } }			
+			AND = { culture = herero country = { any_owned_province = { any_core = { is_primary_culture = herero } } } }
+			AND = { culture = khoisan country = { any_owned_province = { any_core = { is_primary_culture = khoisan } } } }				
+			AND = { culture = lomwe country = { any_owned_province = { any_core = { is_primary_culture = lomwe } } } }			
+			AND = { culture = makua country = { any_owned_province = { any_core = { is_primary_culture = makua } } } }
+			AND = { culture = malagasy country = { any_owned_province = { any_core = { is_primary_culture = malagasy } } } }				
+			AND = { culture = nguni country = { any_owned_province = { any_core = { is_primary_culture = nguni } } } }
+			AND = { culture = ovimbundu country = { any_owned_province = { any_core = { is_primary_culture = ovimbundu } } } }
+			AND = { culture = sena country = { any_owned_province = { any_core = { is_primary_culture = sena } } } }			
+			AND = { culture = shona country = { any_owned_province = { any_core = { is_primary_culture = shona } } } }
+			AND = { culture = sotho country = { any_owned_province = { any_core = { is_primary_culture = sotho } } } }	
+			AND = { culture = tonga country = { any_owned_province = { any_core = { is_primary_culture = tonga } } } }
+			AND = { culture = tswana country = { any_owned_province = { any_core = { is_primary_culture = tswana } } } }
+			AND = { culture = xhosa country = { any_owned_province = { any_core = { is_primary_culture = xhosa } } } }			
+			AND = { culture = yao country = { any_owned_province = { any_core = { is_primary_culture = yao } } } }
+			AND = { culture = zulu country = { any_owned_province = { any_core = { is_primary_culture = zulu } } } }				
+		}
+	}	
+	
+	#FLEE PROBLEMATIC PROVINCES IF PRIMARY
+	#MAX 2
+	modifier = {
+		factor = 0.2
+		average_militancy = 4
+		any_core = { NOT = { is_primary_culture = yes } }
+	}	
+	modifier = {
+		factor = 0.4
+		average_militancy = 4
+		any_core = { NOT = { is_primary_culture = yes } }
+	}	
+	modifier = {
+		factor = 0.4
+		average_militancy = 6
+		any_core = { NOT = { is_primary_culture = yes } }
+	}
+	modifier = {
+		factor = 1
+		average_militancy = 8
+		is_primary_culture = yes
+		any_core = { NOT = { is_primary_culture = yes } }
+	}
+	
+	#FLEE REBELLIOUS PROVINCES IF NO CORE
+	#MAX 5
+	modifier = {
+		factor = 0.5
+		average_militancy = 4
+		NOT = { has_culture_core = yes }
+	}	
+	modifier = {
+		factor = 1
+		average_militancy = 4
+		NOT = { has_culture_core = yes }
+	}	
+	modifier = {
+		factor = 1.5
+		average_militancy = 6
+		NOT = { has_culture_core = yes }
+	}
+	modifier = {
+		factor = 2
+		average_militancy = 8
+		NOT = { has_culture_core = yes }
+	}	
+	
+	#FLEE REBEL OCCUPATION
+	modifier = {
+		factor = 3
+		OR = {
+			location = { controlled_by = REB }
+			location = { country_units_in_province = REB }
+		}
+		NOT = { has_culture_core = yes }
+	}
+	
+	modifier = {
+		factor = -0.05
+		country = { administration_spending = 0.1 immigration_policy = nobody_gets_out }
+		NOT = { is_primary_culture = yes is_accepted_culture = yes }
+	}
+	modifier = {
+		factor = -0.05
+		country = { administration_spending = 0.2 immigration_policy = nobody_gets_out }
+		NOT = { is_primary_culture = yes is_accepted_culture = yes }
+	}
+	modifier = {
+		factor = -0.05
+		country = { administration_spending = 0.3 immigration_policy = nobody_gets_out }
+		NOT = { is_primary_culture = yes is_accepted_culture = yes }
+	}
+	modifier = {
+		factor = -0.05
+		country = { administration_spending = 0.4 immigration_policy = nobody_gets_out }
+		NOT = { is_primary_culture = yes is_accepted_culture = yes }
+	}
+	modifier = {
+		factor = -0.05
+		country = { administration_spending = 0.5 immigration_policy = nobody_gets_out }
+		NOT = { is_primary_culture = yes is_accepted_culture = yes }
+	}
+	modifier = {
+		factor = -0.05
+		country = { administration_spending = 0.6 immigration_policy = nobody_gets_out }
+		NOT = { is_primary_culture = yes is_accepted_culture = yes }
+	}
+	modifier = {
+		factor = -0.05
+		country = { administration_spending = 0.7 immigration_policy = nobody_gets_out }
+		NOT = { is_primary_culture = yes is_accepted_culture = yes }
+	}
+	modifier = {
+		factor = -0.05
+		country = { administration_spending = 0.8 immigration_policy = nobody_gets_out }
+		NOT = { is_primary_culture = yes is_accepted_culture = yes }
+	}
+	modifier = {
+		factor = -0.05
+		country = { administration_spending = 0.9 immigration_policy = nobody_gets_out }
+		NOT = { is_primary_culture = yes is_accepted_culture = yes }
+	}
+	modifier = {
+		factor = -0.05
+		country = { administration_spending = 0.99 immigration_policy = nobody_gets_out }
+		NOT = { is_primary_culture = yes is_accepted_culture = yes }
+	}
+
+
+	modifier = {
+		factor = -0.05
+		country = { military_spending = 0.1 immigration_policy = nobody_gets_out }
+		NOT = { is_primary_culture = yes is_accepted_culture = yes }
+	}
+	modifier = {
+		factor = -0.05
+		country = { military_spending = 0.2 immigration_policy = nobody_gets_out }
+		NOT = { is_primary_culture = yes is_accepted_culture = yes }
+	}
+	modifier = {
+		factor = -0.05
+		country = { military_spending = 0.3 immigration_policy = nobody_gets_out }
+		NOT = { is_primary_culture = yes is_accepted_culture = yes }
+	}
+	modifier = {
+		factor = -0.05
+		country = { military_spending = 0.4 immigration_policy = nobody_gets_out }
+		NOT = { is_primary_culture = yes is_accepted_culture = yes }
+	}
+	modifier = {
+		factor = -0.05
+		country = { military_spending = 0.5 immigration_policy = nobody_gets_out }
+		NOT = { is_primary_culture = yes is_accepted_culture = yes }
+	}
+	modifier = {
+		factor = -0.05
+		country = { military_spending = 0.6 immigration_policy = nobody_gets_out }
+		NOT = { is_primary_culture = yes is_accepted_culture = yes }
+	}
+	modifier = {
+		factor = -0.05
+		country = { military_spending = 0.7 immigration_policy = nobody_gets_out }
+		NOT = { is_primary_culture = yes is_accepted_culture = yes }
+	}
+	modifier = {
+		factor = -0.05
+		country = { military_spending = 0.8 immigration_policy = nobody_gets_out }
+		NOT = { is_primary_culture = yes is_accepted_culture = yes }
+	}
+	modifier = {
+		factor = -0.05
+		country = { military_spending = 0.9 immigration_policy = nobody_gets_out }
+		NOT = { is_primary_culture = yes is_accepted_culture = yes }
+	}
+	modifier = {
+		factor = -0.05
+		country = { military_spending = 0.99 immigration_policy = nobody_gets_out }
+		NOT = { is_primary_culture = yes is_accepted_culture = yes }
+	}
+}
+
+#general colonial migration mtth, same for all pops
+colonialmigration_chance = {
+	factor = 0.1
+	
+	#COLD CLIMATES DO BAD THINGS
+	modifier = {	
+		factor = 25
+		OR = {
+			is_primary_culture = yes
+			is_accepted_culture = yes
+		}
+		location = {
+			is_colonial = yes
+			terrain = arctic
+		}
+		OR = {
+			AND = { OR = { month = 9 NOT = { month = 3 } } OR = { continent = europe continent = asia continent = north_america } }
+			AND = { month = 3 NOT = { month = 9 } OR = { continent = oceania continent = south_america continent = east_indies } }
+		}
+	}	
+	modifier = {	
+		factor = 10
+		OR = {
+			is_primary_culture = yes
+			is_accepted_culture = yes
+		}
+		location = {
+			is_colonial = yes
+			OR = {
+		 		terrain = cold_desert 
+		 		terrain = cold_desert_hills
+		 		terrain = cold_desert_mountains
+		 		terrain = tundra
+		 		terrain = tundra_hills
+		 		terrain = tundra_mountains
+		 		terrain = arctic
+		 	}
+		}
+		OR = {
+			AND = { OR = { month = 9 NOT = { month = 3 } } OR = { continent = europe continent = asia continent = north_america } }
+			AND = { month = 3 NOT = { month = 9 } OR = { continent = oceania continent = south_america continent = east_indies } }
+		}
+	}
+	modifier = {	
+		factor = 2.5
+		OR = {
+			is_primary_culture = yes
+			is_accepted_culture = yes
+		}
+		location = {
+			is_colonial = yes
+			OR = {
+		 		terrain = boreal_forest 
+		 		terrain = boreal_forest_hills
+		 		terrain = boreal_forest_mountains
+		 		terrain = boreal_marsh
+		 	}
+		 	total_pops = 5000
+		}
+		OR = {
+			AND = { OR = { month = 9 NOT = { month = 3 } } OR = { continent = europe continent = asia continent = north_america } }
+			AND = { month = 3 NOT = { month = 9 } OR = { continent = oceania continent = south_america continent = east_indies } }
+		}
+	}	
+	#HOT CLIMATES DO BAD THINGS
+	modifier = {	
+		factor = 3.5
+		OR = {
+			is_primary_culture = yes
+			is_accepted_culture = yes
+		}
+		location = {
+			is_colonial = yes
+			OR = {
+		 		terrain = desert
+		 		terrain = desert_hills
+		 		terrain = desert_mountains
+		 	}
+		 	total_pops = 5000
+		}
+		OR = {
+			AND = { OR = { month = 9 NOT = { month = 3 } } OR = { continent = oceania continent = south_america continent = east_indies } }
+			AND = { month = 3 NOT = { month = 9 } OR = { continent = europe continent = asia continent = north_america continent = africa } }
+		}
+	}		
+	
+	#modifier = {
+	#	factor = -10000
+	#	NOT = { location = { controlled_by = owner } }
+	#}	
+	
+	#If open country with cores is present, colonial migration gets a big bonus to simulate e.g. Russian east and American west
+	modifier = {
+		factor = 0.25
+		NOT = { location = { is_colonial = yes } }
+		location = { 
+			owner = { 
+				any_owned_province = { 
+					is_colonial = yes 
+					is_core = THIS 
+					NOT = { is_overseas = yes } 
+					any_neighbor_province = {
+						owned_by = THIS
+						NOT = { is_colonial = yes }
+					}
+				} 
+			} 
+		}
+	}
+	
+	modifier = {
+		factor = -0.25
+		life_needs = 1
+	}
+	modifier = {
+		factor = -0.5
+		everyday_needs = 1
+	}
+	#MAX -4
+	modifier = {
+		factor = -0.4
+		luxury_needs = 0.25
+	}
+	modifier = {
+		factor = -0.8
+		luxury_needs = 0.5
+	}
+	modifier = {
+		factor = -1.2
+		luxury_needs = 0.75
+	}
+	modifier = {
+		factor = -1.6
+		luxury_needs = 1
+	}
+
+	#MAX -1
+	modifier = {
+		factor = -0.1
+		cash_reserves = 1
+	}
+	modifier = {
+		factor = -0.2
+		cash_reserves = 2
+	}
+	modifier = {
+		factor = -0.3
+		cash_reserves = 3
+	}
+	modifier = {
+		factor = -0.4
+		cash_reserves = 4
+	}
+	
+	#MAX 0.5
+	modifier = {
+		factor = 0.05
+		NOT = { life_needs = 1 }
+		OR = {
+			AND = { NOT = { country = { poor_strata_life_needs = 1 } } strata = poor }
+			AND = { NOT = { country = { middle_strata_life_needs = 1 } } strata = middle }
+			AND = { NOT = { country = { rich_strata_life_needs = 1 } } strata = rich }
+		}		
+	}
+	modifier = {
+		factor = 0.1
+		NOT = { life_needs = 0.9 }
+		OR = {
+			AND = { NOT = { country = { poor_strata_life_needs = 0.9 } } strata = poor }
+			AND = { NOT = { country = { middle_strata_life_needs = 0.9 } } strata = middle }
+			AND = { NOT = { country = { rich_strata_life_needs = 0.9 } } strata = rich }
+		}		
+	}
+	modifier = {
+		factor = 0.15
+		NOT = { life_needs = 0.8 }
+		OR = {
+			AND = { NOT = { country = { poor_strata_life_needs = 0.8 } } strata = poor }
+			AND = { NOT = { country = { middle_strata_life_needs = 0.8 } } strata = middle }
+			AND = { NOT = { country = { rich_strata_life_needs = 0.8 } } strata = rich }
+		}		
+	}
+	modifier = {
+		factor = 0.2
+		NOT = { life_needs = 0.6 }
+		OR = {
+			AND = { NOT = { country = { poor_strata_life_needs = 0.6 } } strata = poor }
+			AND = { NOT = { country = { middle_strata_life_needs = 0.6 } } strata = middle }
+			AND = { NOT = { country = { rich_strata_life_needs = 0.6 } } strata = rich }
+		}		
+	}
+	
+	#MAX 0.25
+	modifier = {
+		factor = 0.025
+		NOT = { everyday_needs = 1 }
+		OR = {
+			AND = { NOT = { country = { poor_strata_everyday_needs = 1 } } strata = poor }
+			AND = { NOT = { country = { middle_strata_everyday_needs = 1 } } strata = middle }
+			AND = { NOT = { country = { rich_strata_everyday_needs = 1 } } strata = rich }
+		}		
+		life_needs = 1
+	}
+	modifier = {
+		factor = 0.05
+		NOT = { everyday_needs = 0.9 }
+		OR = {
+			AND = { NOT = { country = { poor_strata_everyday_needs = 0.9 } } strata = poor }
+			AND = { NOT = { country = { middle_strata_everyday_needs = 0.9 } } strata = middle }
+			AND = { NOT = { country = { rich_strata_everyday_needs = 0.9 } } strata = rich }
+		}		
+		life_needs = 1
+	}
+	modifier = {
+		factor = 0.075
+		NOT = { everyday_needs = 0.8 }
+		OR = {
+			AND = { NOT = { country = { poor_strata_everyday_needs = 0.8 } } strata = poor }
+			AND = { NOT = { country = { middle_strata_everyday_needs = 0.8 } } strata = middle }
+			AND = { NOT = { country = { rich_strata_everyday_needs = 0.8 } } strata = rich }
+		}		
+		life_needs = 1
+	}
+	modifier = {
+		factor = 0.1
+		NOT = { everyday_needs = 0.6 }
+		OR = {
+			AND = { NOT = { country = { poor_strata_everyday_needs = 0.6 } } strata = poor }
+			AND = { NOT = { country = { middle_strata_everyday_needs = 0.6 } } strata = middle }
+			AND = { NOT = { country = { rich_strata_everyday_needs = 0.6 } } strata = rich }
+		}		
+		life_needs = 1
+	}
+	
+	modifier = {
+		factor = -1
+		strata = rich
+	}
+	modifier = {
+		factor = -0.5
+		strata = middle
+	}	
+	
+	#MAX 0.5
+	modifier = {
+		factor = 0.05
+		unemployment = 0.1
+		NOT = { life_needs = 1 }
+	}
+	modifier = {
+		factor = 0.05
+		unemployment = 0.2
+		NOT = { life_needs = 1 }
+	}
+	modifier = {
+		factor = 0.05
+		unemployment = 0.3
+		NOT = { life_needs = 1 }
+	}
+	modifier = {
+		factor = 0.05
+		unemployment = 0.4
+		NOT = { life_needs = 1 }
+	}
+	modifier = {
+		factor = 0.05
+		unemployment = 0.5
+		NOT = { life_needs = 1 }
+	}
+	modifier = {
+		factor = 0.1
+		unemployment = 0.7
+		NOT = { life_needs = 1 }
+	}
+	modifier = {
+		factor = 0.15
+		unemployment = 0.9
+		NOT = { life_needs = 1 }
+	}
+	
+	#MAX 0.25
+	modifier = {
+		factor = 0.03
+		unemployment = 0.1
+		life_needs = 1
+	}
+	modifier = {
+		factor = 0.03
+		unemployment = 0.2
+		life_needs = 1
+	}
+	modifier = {
+		factor = 0.03
+		unemployment = 0.3
+		life_needs = 1
+	}
+	modifier = {
+		factor = 0.03
+		unemployment = 0.4
+		life_needs = 1
+	}
+	modifier = {
+		factor = 0.04
+		unemployment = 0.5
+		life_needs = 1
+	}
+	modifier = {
+		factor = 0.04
+		unemployment = 0.7
+		life_needs = 1
+	}
+	modifier = {
+		factor = 0.05
+		unemployment = 0.9
+		life_needs = 1
+	}
+	
+	#MAX -1
+	modifier = {
+		factor = -0.2
+		militancy = 3
+		has_culture_core = yes
+		NOT = { is_primary_culture = yes }
+		NOT = { location = { is_colonial = yes } }
+	}
+	modifier = {
+		factor = -0.4
+		militancy = 5
+		has_culture_core = yes
+		NOT = { is_primary_culture = yes }
+		NOT = { location = { is_colonial = yes } }
+	}
+	modifier = {
+		factor = -0.4
+		militancy = 7
+		has_culture_core = yes
+		NOT = { is_primary_culture = yes }
+		NOT = { location = { is_colonial = yes } }
+	}
+
+	#NON PRIMARY CULTURES EXODUS
+	#MAX 0.25
+	modifier = {
+		factor = 0.025
+		militancy = 3
+		NOT = { has_culture_core = yes }
+		NOT = { is_primary_culture = yes }
+		NOT = { location = { is_colonial = yes } }
+	}
+	modifier = {
+		factor = 0.05
+		militancy = 5
+		NOT = { has_culture_core = yes }
+		NOT = { is_primary_culture = yes }
+		NOT = { location = { is_colonial = yes } }
+	}
+	modifier = {
+		factor = 0.075
+		militancy = 6
+		NOT = { has_culture_core = yes }
+		NOT = { is_primary_culture = yes }
+		NOT = { location = { is_colonial = yes } }
+	}
+	modifier = {
+		factor = 0.1
+		militancy = 7
+		NOT = { has_culture_core = yes }
+		NOT = { is_primary_culture = yes }
+		NOT = { location = { is_colonial = yes } }
+	}
+	
+	#modifier = {
+	#	factor = 0.05
+	#	NOT = { is_primary_culture = yes }
+	#	NOT = { is_accepted_culture = yes }
+	#	NOT = { location = { is_colonial = yes } }
+	#}	
+	
+	modifier = {
+		factor = 0.1
+		NOT = { has_culture_core = yes }
+		NOT = { is_primary_culture = yes }
+		NOT = { is_accepted_culture = yes }
+		NOT = { location = { is_colonial = yes } }		
+		NOT = {
+			location = { continent = north_america }
+			location = { continent = south_america }
+			location = { continent = oceania }
+		}
+			
+	}	
+	#malus if there is a core in the country (prefer normal migration)
+	modifier = {
+		factor = -0.4
+		NOT = { has_culture_core = yes }
+		NOT = { is_primary_culture = yes }
+		NOT = { is_accepted_culture = yes }
+		OR = {
+			AND = { culture = north_german country = { any_owned_province = { any_core = { is_primary_culture = north_german } } } }
+			AND = { culture = south_german country = { any_owned_province = { any_core = { is_primary_culture = south_german } } } }			
+			AND = { culture = russian_german country = { any_owned_province = { any_core = { is_primary_culture = russian_german } } } }
+			AND = { culture = ashkenazi country = { any_owned_province = { any_core = { is_primary_culture = ashkenazi } } } }
+			AND = { culture = sephardic country = { any_owned_province = { any_core = { is_primary_culture = sephardic } } } }
+			AND = { culture = dutch country = { any_owned_province = { any_core = { is_primary_culture = dutch } } } }
+			AND = { culture = frisian country = { any_owned_province = { any_core = { is_primary_culture = frisian } } } }			
+			AND = { culture = flemish country = { any_owned_province = { any_core = { is_primary_culture = flemish } } } }
+			AND = { culture = romansh country = { any_owned_province = { any_core = { is_primary_culture = romansh } } } }				
+			AND = { culture = swedish country = { any_owned_province = { any_core = { is_primary_culture = swedish } } } }
+			AND = { culture = danish country = { any_owned_province = { any_core = { is_primary_culture = danish } } } }
+			AND = { culture = norwegian country = { any_owned_province = { any_core = { is_primary_culture = norwegian } } } }			
+			AND = { culture = icelandic country = { any_owned_province = { any_core = { is_primary_culture = icelandic } } } }
+			AND = { culture = faroese country = { any_owned_province = { any_core = { is_primary_culture = faroese } } } }	
+			AND = { culture = finnish country = { any_owned_province = { any_core = { is_primary_culture = finnish } } } }
+			AND = { culture = sami country = { any_owned_province = { any_core = { is_primary_culture = sami } } } }
+			AND = { culture = british country = { any_owned_province = { any_core = { is_primary_culture = british } } } }			
+			AND = { culture = irish country = { any_owned_province = { any_core = { is_primary_culture = irish } } } }
+			AND = { culture = north_italian country = { any_owned_province = { any_core = { is_primary_culture = north_italian } } } }					
+			AND = { culture = south_italian country = { any_owned_province = { any_core = { is_primary_culture = south_italian } } } }
+			AND = { culture = maltese country = { any_owned_province = { any_core = { is_primary_culture = maltese } } } }
+			AND = { culture = basque country = { any_owned_province = { any_core = { is_primary_culture = basque } } } }			
+			AND = { culture = spanish country = { any_owned_province = { any_core = { is_primary_culture = spanish } } } }
+			AND = { culture = catalan country = { any_owned_province = { any_core = { is_primary_culture = catalan } } } }				
+			AND = { culture = portuguese country = { any_owned_province = { any_core = { is_primary_culture = portuguese } } } }
+			AND = { culture = french country = { any_owned_province = { any_core = { is_primary_culture = french } } } }
+			AND = { culture = breton country = { any_owned_province = { any_core = { is_primary_culture = breton } } } }			
+			AND = { culture = occitan country = { any_owned_province = { any_core = { is_primary_culture = occitan } } } }
+			AND = { culture = picard country = { any_owned_province = { any_core = { is_primary_culture = picard } } } }	
+			AND = { culture = wallonian country = { any_owned_province = { any_core = { is_primary_culture = wallonian } } } }
+			AND = { culture = croat country = { any_owned_province = { any_core = { is_primary_culture = croat } } } }
+			AND = { culture = serb country = { any_owned_province = { any_core = { is_primary_culture = serb } } } }			
+			AND = { culture = bulgarian country = { any_owned_province = { any_core = { is_primary_culture = bulgarian } } } }
+			AND = { culture = slovene country = { any_owned_province = { any_core = { is_primary_culture = slovene } } } }				
+			AND = { culture = bosniak country = { any_owned_province = { any_core = { is_primary_culture = bosniak } } } }			
+			AND = { culture = albanian country = { any_owned_province = { any_core = { is_primary_culture = albanian } } } }
+			AND = { culture = romanian country = { any_owned_province = { any_core = { is_primary_culture = romanian } } } }				
+			AND = { culture = hungarian country = { any_owned_province = { any_core = { is_primary_culture = hungarian } } } }
+			AND = { culture = polish country = { any_owned_province = { any_core = { is_primary_culture = polish } } } }
+			AND = { culture = western_slavic country = { any_owned_province = { any_core = { is_primary_culture = western_slavic } } } }			
+			AND = { culture = czech country = { any_owned_province = { any_core = { is_primary_culture = czech } } } }
+			AND = { culture = slovak country = { any_owned_province = { any_core = { is_primary_culture = slovak } } } }	
+			AND = { culture = russian country = { any_owned_province = { any_core = { is_primary_culture = russian } } } }
+			AND = { culture = byelorussian country = { any_owned_province = { any_core = { is_primary_culture = byelorussian } } } }
+			AND = { culture = ukrainian country = { any_owned_province = { any_core = { is_primary_culture = ukrainian } } } }			
+			AND = { culture = ugrian country = { any_owned_province = { any_core = { is_primary_culture = ugrian } } } }
+			AND = { culture = lithuanian country = { any_owned_province = { any_core = { is_primary_culture = lithuanian } } } }
+			AND = { culture = latvian country = { any_owned_province = { any_core = { is_primary_culture = latvian } } } }
+			AND = { culture = estonian country = { any_owned_province = { any_core = { is_primary_culture = estonian } } } }			
+			AND = { culture = greek country = { any_owned_province = { any_core = { is_primary_culture = greek } } } }
+			AND = { culture = georgian country = { any_owned_province = { any_core = { is_primary_culture = georgian } } } }
+			AND = { culture = armenian country = { any_owned_province = { any_core = { is_primary_culture = armenian } } } }
+			AND = { culture = assyrian country = { any_owned_province = { any_core = { is_primary_culture = assyrian } } } }			
+			AND = { culture = turkish country = { any_owned_province = { any_core = { is_primary_culture = turkish } } } }
+			AND = { culture = azerbaijani country = { any_owned_province = { any_core = { is_primary_culture = azerbaijani } } } }				
+			AND = { culture = north_caucasian country = { any_owned_province = { any_core = { is_primary_culture = north_caucasian } } } }
+			AND = { culture = kurdish country = { any_owned_province = { any_core = { is_primary_culture = kurdish } } } }
+			AND = { culture = maghrebi country = { any_owned_province = { any_core = { is_primary_culture = maghrebi } } } }			
+			AND = { culture = misri country = { any_owned_province = { any_core = { is_primary_culture = misri } } } }
+			AND = { culture = mashriqi country = { any_owned_province = { any_core = { is_primary_culture = mashriqi } } } }	
+			AND = { culture = bedouin country = { any_owned_province = { any_core = { is_primary_culture = bedouin } } } }
+			AND = { culture = berber country = { any_owned_province = { any_core = { is_primary_culture = berber } } } }
+			AND = { culture = maures country = { any_owned_province = { any_core = { is_primary_culture = maures } } } }			
+			AND = { culture = sudanese country = { any_owned_province = { any_core = { is_primary_culture = sudanese } } } }
+			AND = { culture = persian country = { any_owned_province = { any_core = { is_primary_culture = persian } } } }					
+			AND = { culture = uzbek country = { any_owned_province = { any_core = { is_primary_culture = uzbek } } } }
+			AND = { culture = kazak country = { any_owned_province = { any_core = { is_primary_culture = kazak } } } }
+			AND = { culture = kirgiz country = { any_owned_province = { any_core = { is_primary_culture = kirgiz } } } }			
+			AND = { culture = tajik country = { any_owned_province = { any_core = { is_primary_culture = tajik } } } }
+			AND = { culture = uighur country = { any_owned_province = { any_core = { is_primary_culture = uighur } } } }				
+			AND = { culture = pashtun country = { any_owned_province = { any_core = { is_primary_culture = pashtun } } } }
+			AND = { culture = baluchi country = { any_owned_province = { any_core = { is_primary_culture = baluchi } } } }
+			AND = { culture = hazara country = { any_owned_province = { any_core = { is_primary_culture = hazara } } } }			
+			AND = { culture = turkmen country = { any_owned_province = { any_core = { is_primary_culture = turkmen } } } }
+			AND = { culture = tatar country = { any_owned_province = { any_core = { is_primary_culture = tatar } } } }	
+			AND = { culture = parsi country = { any_owned_province = { any_core = { is_primary_culture = parsi } } } }
+			AND = { culture = tabari country = { any_owned_province = { any_core = { is_primary_culture = tabari } } } }
+			AND = { culture = luri country = { any_owned_province = { any_core = { is_primary_culture = luri } } } }			
+			AND = { culture = kalash country = { any_owned_province = { any_core = { is_primary_culture = kalash } } } }
+			AND = { culture = ossetian country = { any_owned_province = { any_core = { is_primary_culture = ossetian } } } }				
+			AND = { culture = mongol country = { any_owned_province = { any_core = { is_primary_culture = mongol } } } }			
+			AND = { culture = siberian country = { any_owned_province = { any_core = { is_primary_culture = siberian } } } }
+			AND = { culture = yakut country = { any_owned_province = { any_core = { is_primary_culture = yakut } } } }				
+			AND = { culture = tibetan country = { any_owned_province = { any_core = { is_primary_culture = tibetan } } } }
+			AND = { culture = assamese country = { any_owned_province = { any_core = { is_primary_culture = assamese } } } }
+			AND = { culture = bengali country = { any_owned_province = { any_core = { is_primary_culture = bengali } } } }			
+			AND = { culture = bihari country = { any_owned_province = { any_core = { is_primary_culture = bihari } } } }
+			AND = { culture = manipuri country = { any_owned_province = { any_core = { is_primary_culture = manipuri } } } }	
+			AND = { culture = nepali country = { any_owned_province = { any_core = { is_primary_culture = nepali } } } }
+			AND = { culture = oriya country = { any_owned_province = { any_core = { is_primary_culture = oriya } } } }
+			AND = { culture = sinhala country = { any_owned_province = { any_core = { is_primary_culture = sinhala } } } }			
+			AND = { culture = avadhi country = { any_owned_province = { any_core = { is_primary_culture = avadhi } } } }
+			AND = { culture = kanauji country = { any_owned_province = { any_core = { is_primary_culture = kanauji } } } }
+			AND = { culture = panjabi country = { any_owned_province = { any_core = { is_primary_culture = panjabi } } } }
+			AND = { culture = kashmiri country = { any_owned_province = { any_core = { is_primary_culture = kashmiri } } } }			
+			AND = { culture = gujarati country = { any_owned_province = { any_core = { is_primary_culture = gujarati } } } }
+			AND = { culture = marathi country = { any_owned_province = { any_core = { is_primary_culture = marathi } } } }
+			AND = { culture = sindi country = { any_owned_province = { any_core = { is_primary_culture = sindi } } } }
+			AND = { culture = rajput country = { any_owned_province = { any_core = { is_primary_culture = rajput } } } }			
+			AND = { culture = kannada country = { any_owned_province = { any_core = { is_primary_culture = kannada } } } }
+			AND = { culture = malayalam country = { any_owned_province = { any_core = { is_primary_culture = malayalam } } } }				
+			AND = { culture = tamil country = { any_owned_province = { any_core = { is_primary_culture = tamil } } } }
+			AND = { culture = telegu country = { any_owned_province = { any_core = { is_primary_culture = telegu } } } }
+			AND = { culture = vietnamese country = { any_owned_province = { any_core = { is_primary_culture = vietnamese } } } }			
+			AND = { culture = khmer country = { any_owned_province = { any_core = { is_primary_culture = khmer } } } }
+			AND = { culture = filipino country = { any_owned_province = { any_core = { is_primary_culture = filipino } } } }	
+			AND = { culture = thai country = { any_owned_province = { any_core = { is_primary_culture = thai } } } }
+			AND = { culture = lao country = { any_owned_province = { any_core = { is_primary_culture = lao } } } }
+			AND = { culture = shan country = { any_owned_province = { any_core = { is_primary_culture = shan } } } }			
+			AND = { culture = burmese country = { any_owned_province = { any_core = { is_primary_culture = burmese } } } }
+			AND = { culture = asian_minor country = { any_owned_province = { any_core = { is_primary_culture = asian_minor } } } }					
+			AND = { culture = kachin country = { any_owned_province = { any_core = { is_primary_culture = kachin } } } }
+			AND = { culture = karen country = { any_owned_province = { any_core = { is_primary_culture = karen } } } }
+			AND = { culture = acehnese country = { any_owned_province = { any_core = { is_primary_culture = acehnese } } } }			
+			AND = { culture = balinese country = { any_owned_province = { any_core = { is_primary_culture = balinese } } } }
+			AND = { culture = batak country = { any_owned_province = { any_core = { is_primary_culture = batak } } } }				
+			AND = { culture = betawi country = { any_owned_province = { any_core = { is_primary_culture = betawi } } } }
+			AND = { culture = bantenese country = { any_owned_province = { any_core = { is_primary_culture = bantenese } } } }
+			AND = { culture = banjarnese country = { any_owned_province = { any_core = { is_primary_culture = banjarnese } } } }			
+			AND = { culture = bunginese country = { any_owned_province = { any_core = { is_primary_culture = bunginese } } } }
+			AND = { culture = dayak country = { any_owned_province = { any_core = { is_primary_culture = dayak } } } }	
+			AND = { culture = javan country = { any_owned_province = { any_core = { is_primary_culture = javan } } } }
+			AND = { culture = madurese country = { any_owned_province = { any_core = { is_primary_culture = madurese } } } }
+			AND = { culture = makassarese country = { any_owned_province = { any_core = { is_primary_culture = makassarese } } } }			
+			AND = { culture = malay country = { any_owned_province = { any_core = { is_primary_culture = malay } } } }
+			AND = { culture = minahasan country = { any_owned_province = { any_core = { is_primary_culture = minahasan } } } }				
+			AND = { culture = minangkabau country = { any_owned_province = { any_core = { is_primary_culture = minangkabau } } } }			
+			AND = { culture = moluccan country = { any_owned_province = { any_core = { is_primary_culture = moluccan } } } }
+			AND = { culture = sasak country = { any_owned_province = { any_core = { is_primary_culture = sasak } } } }				
+			AND = { culture = sundanese country = { any_owned_province = { any_core = { is_primary_culture = sundanese } } } }
+			AND = { culture = manchu country = { any_owned_province = { any_core = { is_primary_culture = manchu } } } }
+			AND = { culture = beifaren country = { any_owned_province = { any_core = { is_primary_culture = beifaren } } } }			
+			AND = { culture = nanfaren country = { any_owned_province = { any_core = { is_primary_culture = nanfaren } } } }
+			AND = { culture = hakka country = { any_owned_province = { any_core = { is_primary_culture = hakka } } } }	
+			AND = { culture = miao country = { any_owned_province = { any_core = { is_primary_culture = miao } } } }
+			AND = { culture = min country = { any_owned_province = { any_core = { is_primary_culture = min } } } }
+			AND = { culture = zhuang country = { any_owned_province = { any_core = { is_primary_culture = zhuang } } } }			
+			AND = { culture = yi country = { any_owned_province = { any_core = { is_primary_culture = yi } } } }
+			AND = { culture = yue country = { any_owned_province = { any_core = { is_primary_culture = yue } } } }
+			AND = { culture = japanese country = { any_owned_province = { any_core = { is_primary_culture = japanese } } } }
+			AND = { culture = korean country = { any_owned_province = { any_core = { is_primary_culture = korean } } } }			
+			AND = { culture = ainu country = { any_owned_province = { any_core = { is_primary_culture = ainu } } } }
+			AND = { culture = polynesian country = { any_owned_province = { any_core = { is_primary_culture = polynesian } } } }
+			AND = { culture = hawaiian country = { any_owned_province = { any_core = { is_primary_culture = hawaiian } } } }
+			AND = { culture = maori country = { any_owned_province = { any_core = { is_primary_culture = maori } } } }			
+			AND = { culture = aborigine country = { any_owned_province = { any_core = { is_primary_culture = aborigine } } } }
+			AND = { culture = melanesian country = { any_owned_province = { any_core = { is_primary_culture = melanesian } } } }				
+			AND = { culture = micronesian country = { any_owned_province = { any_core = { is_primary_culture = micronesian } } } }
+			AND = { culture = aimara country = { any_owned_province = { any_core = { is_primary_culture = aimara } } } }
+			AND = { culture = amazonian country = { any_owned_province = { any_core = { is_primary_culture = amazonian } } } }			
+			AND = { culture = californian_people country = { any_owned_province = { any_core = { is_primary_culture = californian_people } } } }
+			AND = { culture = cherokee country = { any_owned_province = { any_core = { is_primary_culture = cherokee } } } }	
+			AND = { culture = cheyenne country = { any_owned_province = { any_core = { is_primary_culture = cheyenne } } } }
+			AND = { culture = comanche country = { any_owned_province = { any_core = { is_primary_culture = comanche } } } }
+			AND = { culture = cree country = { any_owned_province = { any_core = { is_primary_culture = cree } } } }			
+			AND = { culture = dakota country = { any_owned_province = { any_core = { is_primary_culture = dakota } } } }
+			AND = { culture = guajiro country = { any_owned_province = { any_core = { is_primary_culture = guajiro } } } }					
+			AND = { culture = guarani country = { any_owned_province = { any_core = { is_primary_culture = guarani } } } }
+			AND = { culture = great_basin_peoples country = { any_owned_province = { any_core = { is_primary_culture = great_basin_peoples } } } }
+			AND = { culture = lakota country = { any_owned_province = { any_core = { is_primary_culture = lakota } } } }			
+			AND = { culture = inuit country = { any_owned_province = { any_core = { is_primary_culture = inuit } } } }
+			AND = { culture = mayan country = { any_owned_province = { any_core = { is_primary_culture = mayan } } } }				
+			AND = { culture = metis country = { any_owned_province = { any_core = { is_primary_culture = metis } } } }
+			AND = { culture = nakota country = { any_owned_province = { any_core = { is_primary_culture = nakota } } } }
+			AND = { culture = nahua country = { any_owned_province = { any_core = { is_primary_culture = nahua } } } }			
+			AND = { culture = navajo country = { any_owned_province = { any_core = { is_primary_culture = navajo } } } }
+			AND = { culture = native_american_minor country = { any_owned_province = { any_core = { is_primary_culture = native_american_minor } } } }	
+			AND = { culture = north_west_coastal country = { any_owned_province = { any_core = { is_primary_culture = north_west_coastal } } } }
+			AND = { culture = osage country = { any_owned_province = { any_core = { is_primary_culture = osage } } } }
+			AND = { culture = patagonian country = { any_owned_province = { any_core = { is_primary_culture = patagonian } } } }			
+			AND = { culture = pawnee country = { any_owned_province = { any_core = { is_primary_culture = pawnee } } } }
+			AND = { culture = plateau_peoples country = { any_owned_province = { any_core = { is_primary_culture = plateau_peoples } } } }				
+			AND = { culture = pueblo country = { any_owned_province = { any_core = { is_primary_culture = pueblo } } } }			
+			AND = { culture = quechua country = { any_owned_province = { any_core = { is_primary_culture = quechua } } } }
+			AND = { culture = tarascan country = { any_owned_province = { any_core = { is_primary_culture = tarascan } } } }				
+			AND = { culture = tupinamba country = { any_owned_province = { any_core = { is_primary_culture = tupinamba } } } }
+			AND = { culture = zapotec country = { any_owned_province = { any_core = { is_primary_culture = zapotec } } } }
+			AND = { culture = yankee country = { any_owned_province = { any_core = { is_primary_culture = yankee } } } }			
+			AND = { culture = dixie country = { any_owned_province = { any_core = { is_primary_culture = dixie } } } }
+			AND = { culture = boer country = { any_owned_province = { any_core = { is_primary_culture = boer } } } }	
+			AND = { culture = anglo_african country = { any_owned_province = { any_core = { is_primary_culture = anglo_african } } } }
+			AND = { culture = australian country = { any_owned_province = { any_core = { is_primary_culture = australian } } } }
+			AND = { culture = anglo_canadian country = { any_owned_province = { any_core = { is_primary_culture = anglo_canadian } } } }			
+			AND = { culture = french_canadian country = { any_owned_province = { any_core = { is_primary_culture = french_canadian } } } }
+			AND = { culture = mexican country = { any_owned_province = { any_core = { is_primary_culture = mexican } } } }			
+			AND = { culture = central_american country = { any_owned_province = { any_core = { is_primary_culture = central_american } } } }
+			AND = { culture = caribeno country = { any_owned_province = { any_core = { is_primary_culture = caribeno } } } }			
+			AND = { culture = north_andean country = { any_owned_province = { any_core = { is_primary_culture = north_andean } } } }
+			AND = { culture = chilean country = { any_owned_province = { any_core = { is_primary_culture = chilean } } } }	
+			AND = { culture = south_andean country = { any_owned_province = { any_core = { is_primary_culture = south_andean } } } }
+			AND = { culture = peruvian country = { any_owned_province = { any_core = { is_primary_culture = peruvian } } } }
+			AND = { culture = bolivian country = { any_owned_province = { any_core = { is_primary_culture = bolivian } } } }			
+			AND = { culture = platinean country = { any_owned_province = { any_core = { is_primary_culture = platinean } } } }
+			AND = { culture = brazilian country = { any_owned_province = { any_core = { is_primary_culture = brazilian } } } }					
+			AND = { culture = afro_american country = { any_owned_province = { any_core = { is_primary_culture = afro_american } } } }
+			AND = { culture = afro_caribbean country = { any_owned_province = { any_core = { is_primary_culture = afro_caribbean } } } }
+			AND = { culture = afro_caribeno country = { any_owned_province = { any_core = { is_primary_culture = afro_caribeno } } } }			
+			AND = { culture = afro_brazilian country = { any_owned_province = { any_core = { is_primary_culture = afro_brazilian } } } }
+			AND = { culture = afro_antillean country = { any_owned_province = { any_core = { is_primary_culture = afro_antillean } } } }				
+			AND = { culture = akan country = { any_owned_province = { any_core = { is_primary_culture = akan } } } }
+			AND = { culture = bambara country = { any_owned_province = { any_core = { is_primary_culture = bambara } } } }
+			AND = { culture = dyula country = { any_owned_province = { any_core = { is_primary_culture = dyula } } } }			
+			AND = { culture = edo country = { any_owned_province = { any_core = { is_primary_culture = edo } } } }
+			AND = { culture = ewe country = { any_owned_province = { any_core = { is_primary_culture = ewe } } } }	
+			AND = { culture = fon country = { any_owned_province = { any_core = { is_primary_culture = fon } } } }
+			AND = { culture = fulbe country = { any_owned_province = { any_core = { is_primary_culture = fulbe } } } }
+			AND = { culture = hausa country = { any_owned_province = { any_core = { is_primary_culture = hausa } } } }			
+			AND = { culture = ibibio country = { any_owned_province = { any_core = { is_primary_culture = ibibio } } } }
+			AND = { culture = itsekari country = { any_owned_province = { any_core = { is_primary_culture = itsekari } } } }				
+			AND = { culture = ibo country = { any_owned_province = { any_core = { is_primary_culture = ibo } } } }			
+			AND = { culture = kru country = { any_owned_province = { any_core = { is_primary_culture = kru } } } }
+			AND = { culture = mande country = { any_owned_province = { any_core = { is_primary_culture = mande } } } }				
+			AND = { culture = mossi country = { any_owned_province = { any_core = { is_primary_culture = mossi } } } }
+			AND = { culture = senufo country = { any_owned_province = { any_core = { is_primary_culture = senufo } } } }
+			AND = { culture = serer country = { any_owned_province = { any_core = { is_primary_culture = serer } } } }			
+			AND = { culture = songhai country = { any_owned_province = { any_core = { is_primary_culture = songhai } } } }
+			AND = { culture = tiv country = { any_owned_province = { any_core = { is_primary_culture = tiv } } } }	
+			AND = { culture = tuareg country = { any_owned_province = { any_core = { is_primary_culture = tuareg } } } }
+			AND = { culture = wolof country = { any_owned_province = { any_core = { is_primary_culture = wolof } } } }
+			AND = { culture = yoruba country = { any_owned_province = { any_core = { is_primary_culture = yoruba } } } }			
+			AND = { culture = zarma country = { any_owned_province = { any_core = { is_primary_culture = zarma } } } }
+			AND = { culture = bakongo country = { any_owned_province = { any_core = { is_primary_culture = bakongo } } } }	
+			AND = { culture = baguirmi country = { any_owned_province = { any_core = { is_primary_culture = baguirmi } } } }
+			AND = { culture = fang country = { any_owned_province = { any_core = { is_primary_culture = fang } } } }
+			AND = { culture = kanuri country = { any_owned_province = { any_core = { is_primary_culture = kanuri } } } }			
+			AND = { culture = kuba country = { any_owned_province = { any_core = { is_primary_culture = kuba } } } }
+			AND = { culture = luba country = { any_owned_province = { any_core = { is_primary_culture = luba } } } }	
+			AND = { culture = lunda country = { any_owned_province = { any_core = { is_primary_culture = lunda } } } }
+			AND = { culture = mongo country = { any_owned_province = { any_core = { is_primary_culture = mongo } } } }
+			AND = { culture = sara country = { any_owned_province = { any_core = { is_primary_culture = sara } } } }			
+			AND = { culture = teda country = { any_owned_province = { any_core = { is_primary_culture = teda } } } }
+			AND = { culture = african_minor country = { any_owned_province = { any_core = { is_primary_culture = african_minor } } } }				
+			AND = { culture = amhara country = { any_owned_province = { any_core = { is_primary_culture = amhara } } } }			
+			AND = { culture = afar country = { any_owned_province = { any_core = { is_primary_culture = afar } } } }
+			AND = { culture = azande country = { any_owned_province = { any_core = { is_primary_culture = azande } } } }				
+			AND = { culture = baganda country = { any_owned_province = { any_core = { is_primary_culture = baganda } } } }
+			AND = { culture = beja country = { any_owned_province = { any_core = { is_primary_culture = beja } } } }
+			AND = { culture = dinka country = { any_owned_province = { any_core = { is_primary_culture = dinka } } } }			
+			AND = { culture = fur country = { any_owned_province = { any_core = { is_primary_culture = fur } } } }
+			AND = { culture = kikuyu country = { any_owned_province = { any_core = { is_primary_culture = kikuyu } } } }	
+			AND = { culture = luo country = { any_owned_province = { any_core = { is_primary_culture = luo } } } }
+			AND = { culture = maasai country = { any_owned_province = { any_core = { is_primary_culture = maasai } } } }
+			AND = { culture = nuer country = { any_owned_province = { any_core = { is_primary_culture = nuer } } } }			
+			AND = { culture = nuba country = { any_owned_province = { any_core = { is_primary_culture = nuba } } } }
+			AND = { culture = oromo country = { any_owned_province = { any_core = { is_primary_culture = oromo } } } }					
+			AND = { culture = ruanda country = { any_owned_province = { any_core = { is_primary_culture = ruanda } } } }	
+			AND = { culture = rundi country = { any_owned_province = { any_core = { is_primary_culture = rundi } } } }
+			AND = { culture = sidama country = { any_owned_province = { any_core = { is_primary_culture = sidama } } } }
+			AND = { culture = somali country = { any_owned_province = { any_core = { is_primary_culture = somali } } } }			
+			AND = { culture = sukuma country = { any_owned_province = { any_core = { is_primary_culture = sukuma } } } }
+			AND = { culture = swahili country = { any_owned_province = { any_core = { is_primary_culture = swahili } } } }	
+			AND = { culture = tigray country = { any_owned_province = { any_core = { is_primary_culture = tigray } } } }
+			AND = { culture = unyamwezi country = { any_owned_province = { any_core = { is_primary_culture = unyamwezi } } } }
+			AND = { culture = chewa country = { any_owned_province = { any_core = { is_primary_culture = chewa } } } }			
+			AND = { culture = herero country = { any_owned_province = { any_core = { is_primary_culture = herero } } } }
+			AND = { culture = khoisan country = { any_owned_province = { any_core = { is_primary_culture = khoisan } } } }				
+			AND = { culture = lomwe country = { any_owned_province = { any_core = { is_primary_culture = lomwe } } } }			
+			AND = { culture = makua country = { any_owned_province = { any_core = { is_primary_culture = makua } } } }
+			AND = { culture = malagasy country = { any_owned_province = { any_core = { is_primary_culture = malagasy } } } }				
+			AND = { culture = nguni country = { any_owned_province = { any_core = { is_primary_culture = nguni } } } }
+			AND = { culture = ovimbundu country = { any_owned_province = { any_core = { is_primary_culture = ovimbundu } } } }
+			AND = { culture = sena country = { any_owned_province = { any_core = { is_primary_culture = sena } } } }			
+			AND = { culture = shona country = { any_owned_province = { any_core = { is_primary_culture = shona } } } }
+			AND = { culture = sotho country = { any_owned_province = { any_core = { is_primary_culture = sotho } } } }	
+			AND = { culture = tonga country = { any_owned_province = { any_core = { is_primary_culture = tonga } } } }
+			AND = { culture = tswana country = { any_owned_province = { any_core = { is_primary_culture = tswana } } } }
+			AND = { culture = xhosa country = { any_owned_province = { any_core = { is_primary_culture = xhosa } } } }			
+			AND = { culture = yao country = { any_owned_province = { any_core = { is_primary_culture = yao } } } }
+			AND = { culture = zulu country = { any_owned_province = { any_core = { is_primary_culture = zulu } } } }				
+		}
+	}		
+	#END NON PRIMARY EXODUS
+	
+	modifier = {
+		factor = -0.05
+		is_primary_culture = yes		
+		NOT = { location = { is_colonial = yes } }
+	}			
+	modifier = {
+		factor = -0.025
+		is_accepted_culture = yes		
+		NOT = { location = { is_colonial = yes } }
+	}		
+	
+	modifier = {
+		factor = 0.1
+		OR = {
+			location = { controlled_by = REB }
+			location = { country_units_in_province = REB }
+		}
+		NOT = { has_culture_core = yes }
+	}
+	
+	#people living in the colonies are much more likely to move around
+	#if unemployed, poor, or natives not living on a core if both
+	modifier = {
+		factor = 1
+		location = { is_colonial = yes }
+		OR = {
+			unemployment = 0.025
+			NOT = { life_needs = 0.5 }
+			AND = {
+				NOT = { life_needs = 1 }
+				NOT = { cash_reserves = 0.25 }
+			}
+		}
+		NOT = { has_culture_core = yes }
+		NOT = { is_primary_culture = yes }
+	}
+	modifier = {
+		factor = 1
+		location = { is_colonial = yes }
+		OR = {
+			unemployment = 0.01
+			NOT = { life_needs = 1 }
+		}
+		is_primary_culture = yes
+	}
+	
+	#to simulate e.g. large indian and african migrations
+	#elsewhere in colonial times due to work shortages
+	modifier = {
+		factor = 1
+		location = { is_colonial = yes }
+		NOT = { is_accepted_culture = yes }
+		NOT = { is_primary_culture = yes }
+		
+		OR = {
+			unemployment = 0.5
+			AND = {
+				unemployment = 0.25
+				NOT = { everyday_needs = 1 }
+			}
+			AND = {
+				unemployment = 0.1
+				NOT = { life_needs = 1 }
+			}
+		}
+	}
+	modifier = {
+		factor = 0.5
+		location = { is_colonial = yes }
+		NOT = { is_accepted_culture = yes }
+		NOT = { is_primary_culture = yes }
+		
+		NOT = { unemployment = 0.1 }
+		NOT = { life_needs = 0.5 }
+	}	
+	modifier = {
+		factor = 0.25
+		location = { is_colonial = yes }
+		NOT = { is_accepted_culture = yes }
+		NOT = { is_primary_culture = yes }
+		
+		NOT = { unemployment = 0.1 }
+		NOT = { cash_reserves = 0.01 }
+	}		
+	
+	modifier = {
+		factor = -0.5
+		location = { is_colonial = yes }
+		has_culture_core = yes
+	}	
+}
+
+#general emigration chance
+emigration_chance =
+{
+	factor = 0.5
+	
+	modifier = {
+		factor = -10000
+		location = { is_colonial = yes }
+	}
+	
+	#modifier = {
+	#	factor = -10000
+	#	NOT = { location = { controlled_by = owner } }
+	#}
+	
+	#WAR REFUGEES
+	#DURING THE WAR
+	modifier = {
+		factor = 10
+		country = { war = yes }
+		NOT = { is_primary_culture = yes }
+		NOT = { is_accepted_culture = yes }			
+		OR = {
+			AND = { culture = north_german country = { any_neighbor_country = { war_with = THIS primary_culture = north_german } } }
+			AND = { culture = south_german country = { any_neighbor_country = { war_with = THIS primary_culture = south_german } } }			
+			AND = { culture = russian_german country = { any_neighbor_country = { war_with = THIS primary_culture = russian_german } } }
+			AND = { culture = ashkenazi country = { any_neighbor_country = { war_with = THIS primary_culture = ashkenazi } } }
+			AND = { culture = sephardic country = { any_neighbor_country = { war_with = THIS primary_culture = sephardic } } }
+			AND = { culture = dutch country = { any_neighbor_country = { war_with = THIS primary_culture = dutch } } }	
+			AND = { culture = frisian country = { any_neighbor_country = { war_with = THIS primary_culture = frisian } } }			
+			AND = { culture = flemish country = { any_neighbor_country = { war_with = THIS primary_culture = flemish } } }
+			AND = { culture = romansh country = { any_neighbor_country = { war_with = THIS primary_culture = romansh } } }				
+			AND = { culture = swedish country = { any_neighbor_country = { war_with = THIS primary_culture = swedish } } }
+			AND = { culture = danish country = { any_neighbor_country = { war_with = THIS primary_culture = danish } } }
+			AND = { culture = norwegian country = { any_neighbor_country = { war_with = THIS primary_culture = norwegian } } }			
+			AND = { culture = icelandic country = { any_neighbor_country = { war_with = THIS primary_culture = icelandic } } }
+			AND = { culture = faroese country = { any_neighbor_country = { war_with = THIS primary_culture = faroese } } }	
+			AND = { culture = finnish country = { any_neighbor_country = { war_with = THIS primary_culture = finnish } } }
+			AND = { culture = sami country = { any_neighbor_country = { war_with = THIS primary_culture = sami } } }
+			AND = { culture = british country = { any_neighbor_country = { war_with = THIS primary_culture = british } } }			
+			AND = { culture = irish country = { any_neighbor_country = { war_with = THIS primary_culture = irish } } }
+			AND = { culture = north_italian country = { any_neighbor_country = { war_with = THIS primary_culture = north_italian } } }					
+			AND = { culture = south_italian country = { any_neighbor_country = { war_with = THIS primary_culture = south_italian } } }
+			AND = { culture = maltese country = { any_neighbor_country = { war_with = THIS primary_culture = maltese } } }
+			AND = { culture = basque country = { any_neighbor_country = { war_with = THIS primary_culture = basque } } }			
+			AND = { culture = spanish country = { any_neighbor_country = { war_with = THIS primary_culture = spanish } } }
+			AND = { culture = catalan country = { any_neighbor_country = { war_with = THIS primary_culture = catalan } } }				
+			AND = { culture = portuguese country = { any_neighbor_country = { war_with = THIS primary_culture = portuguese } } }
+			AND = { culture = french country = { any_neighbor_country = { war_with = THIS primary_culture = french } } }
+			AND = { culture = breton country = { any_neighbor_country = { war_with = THIS primary_culture = breton } } }			
+			AND = { culture = occitan country = { any_neighbor_country = { war_with = THIS primary_culture = occitan } } }
+			AND = { culture = picard country = { any_neighbor_country = { war_with = THIS primary_culture = picard } } }	
+			AND = { culture = wallonian country = { any_neighbor_country = { war_with = THIS primary_culture = wallonian } } }
+			AND = { culture = croat country = { any_neighbor_country = { war_with = THIS primary_culture = croat } } }
+			AND = { culture = serb country = { any_neighbor_country = { war_with = THIS primary_culture = serb } } }			
+			AND = { culture = bulgarian country = { any_neighbor_country = { war_with = THIS primary_culture = bulgarian } } }
+			AND = { culture = slovene country = { any_neighbor_country = { war_with = THIS primary_culture = slovene } } }				
+			AND = { culture = bosniak country = { any_neighbor_country = { war_with = THIS primary_culture = bosniak } } }			
+			AND = { culture = albanian country = { any_neighbor_country = { war_with = THIS primary_culture = albanian } } }
+			AND = { culture = romanian country = { any_neighbor_country = { war_with = THIS primary_culture = romanian } } }				
+			AND = { culture = hungarian country = { any_neighbor_country = { war_with = THIS primary_culture = hungarian } } }
+			AND = { culture = polish country = { any_neighbor_country = { war_with = THIS primary_culture = polish } } }
+			AND = { culture = western_slavic country = { any_neighbor_country = { war_with = THIS primary_culture = western_slavic } } }			
+			AND = { culture = czech country = { any_neighbor_country = { war_with = THIS primary_culture = czech } } }
+			AND = { culture = slovak country = { any_neighbor_country = { war_with = THIS primary_culture = slovak } } }	
+			AND = { culture = russian country = { any_neighbor_country = { war_with = THIS primary_culture = russian } } }
+			AND = { culture = byelorussian country = { any_neighbor_country = { war_with = THIS primary_culture = byelorussian } } }
+			AND = { culture = ukrainian country = { any_neighbor_country = { war_with = THIS primary_culture = ukrainian } } }			
+			AND = { culture = ugrian country = { any_neighbor_country = { war_with = THIS primary_culture = ugrian } } }
+			AND = { culture = lithuanian country = { any_neighbor_country = { war_with = THIS primary_culture = lithuanian } } }
+			AND = { culture = latvian country = { any_neighbor_country = { war_with = THIS primary_culture = latvian } } }
+			AND = { culture = estonian country = { any_neighbor_country = { war_with = THIS primary_culture = estonian } } }			
+			AND = { culture = greek country = { any_neighbor_country = { war_with = THIS primary_culture = greek } } }
+			AND = { culture = georgian country = { any_neighbor_country = { war_with = THIS primary_culture = georgian } } }
+			AND = { culture = armenian country = { any_neighbor_country = { war_with = THIS primary_culture = armenian } } }
+			AND = { culture = assyrian country = { any_neighbor_country = { war_with = THIS primary_culture = assyrian } } }			
+			AND = { culture = turkish country = { any_neighbor_country = { war_with = THIS primary_culture = turkish } } }
+			AND = { culture = azerbaijani country = { any_neighbor_country = { war_with = THIS primary_culture = azerbaijani } } }				
+			AND = { culture = north_caucasian country = { any_neighbor_country = { war_with = THIS primary_culture = north_caucasian } } }
+			AND = { culture = kurdish country = { any_neighbor_country = { war_with = THIS primary_culture = kurdish } } }
+			AND = { culture = maghrebi country = { any_neighbor_country = { war_with = THIS primary_culture = maghrebi } } }			
+			AND = { culture = misri country = { any_neighbor_country = { war_with = THIS primary_culture = misri } } }
+			AND = { culture = mashriqi country = { any_neighbor_country = { war_with = THIS primary_culture = mashriqi } } }	
+			AND = { culture = bedouin country = { any_neighbor_country = { war_with = THIS primary_culture = bedouin } } }
+			AND = { culture = berber country = { any_neighbor_country = { war_with = THIS primary_culture = berber } } }
+			AND = { culture = maures country = { any_neighbor_country = { war_with = THIS primary_culture = maures } } }			
+			AND = { culture = sudanese country = { any_neighbor_country = { war_with = THIS primary_culture = sudanese } } }
+			AND = { culture = persian country = { any_neighbor_country = { war_with = THIS primary_culture = persian } } }					
+			AND = { culture = uzbek country = { any_neighbor_country = { war_with = THIS primary_culture = uzbek } } }
+			AND = { culture = kazak country = { any_neighbor_country = { war_with = THIS primary_culture = kazak } } }
+			AND = { culture = kirgiz country = { any_neighbor_country = { war_with = THIS primary_culture = kirgiz } } }			
+			AND = { culture = tajik country = { any_neighbor_country = { war_with = THIS primary_culture = tajik } } }
+			AND = { culture = uighur country = { any_neighbor_country = { war_with = THIS primary_culture = uighur } } }				
+			AND = { culture = pashtun country = { any_neighbor_country = { war_with = THIS primary_culture = pashtun } } }
+			AND = { culture = baluchi country = { any_neighbor_country = { war_with = THIS primary_culture = baluchi } } }
+			AND = { culture = hazara country = { any_neighbor_country = { war_with = THIS primary_culture = hazara } } }			
+			AND = { culture = turkmen country = { any_neighbor_country = { war_with = THIS primary_culture = turkmen } } }
+			AND = { culture = tatar country = { any_neighbor_country = { war_with = THIS primary_culture = tatar } } }	
+			AND = { culture = parsi country = { any_neighbor_country = { war_with = THIS primary_culture = parsi } } }
+			AND = { culture = tabari country = { any_neighbor_country = { war_with = THIS primary_culture = tabari } } }
+			AND = { culture = luri country = { any_neighbor_country = { war_with = THIS primary_culture = luri } } }			
+			AND = { culture = kalash country = { any_neighbor_country = { war_with = THIS primary_culture = kalash } } }
+			AND = { culture = ossetian country = { any_neighbor_country = { war_with = THIS primary_culture = ossetian } } }				
+			AND = { culture = mongol country = { any_neighbor_country = { war_with = THIS primary_culture = mongol } } }			
+			AND = { culture = siberian country = { any_neighbor_country = { war_with = THIS primary_culture = siberian } } }
+			AND = { culture = yakut country = { any_neighbor_country = { war_with = THIS primary_culture = yakut } } }				
+			AND = { culture = tibetan country = { any_neighbor_country = { war_with = THIS primary_culture = tibetan } } }
+			AND = { culture = assamese country = { any_neighbor_country = { war_with = THIS primary_culture = assamese } } }
+			AND = { culture = bengali country = { any_neighbor_country = { war_with = THIS primary_culture = bengali } } }			
+			AND = { culture = bihari country = { any_neighbor_country = { war_with = THIS primary_culture = bihari } } }
+			AND = { culture = manipuri country = { any_neighbor_country = { war_with = THIS primary_culture = manipuri } } }	
+			AND = { culture = nepali country = { any_neighbor_country = { war_with = THIS primary_culture = nepali } } }
+			AND = { culture = oriya country = { any_neighbor_country = { war_with = THIS primary_culture = oriya } } }
+			AND = { culture = sinhala country = { any_neighbor_country = { war_with = THIS primary_culture = sinhala } } }			
+			AND = { culture = avadhi country = { any_neighbor_country = { war_with = THIS primary_culture = avadhi } } }
+			AND = { culture = kanauji country = { any_neighbor_country = { war_with = THIS primary_culture = kanauji } } }
+			AND = { culture = panjabi country = { any_neighbor_country = { war_with = THIS primary_culture = panjabi } } }
+			AND = { culture = kashmiri country = { any_neighbor_country = { war_with = THIS primary_culture = kashmiri } } }			
+			AND = { culture = gujarati country = { any_neighbor_country = { war_with = THIS primary_culture = gujarati } } }
+			AND = { culture = marathi country = { any_neighbor_country = { war_with = THIS primary_culture = marathi } } }
+			AND = { culture = sindi country = { any_neighbor_country = { war_with = THIS primary_culture = sindi } } }
+			AND = { culture = rajput country = { any_neighbor_country = { war_with = THIS primary_culture = rajput } } }			
+			AND = { culture = kannada country = { any_neighbor_country = { war_with = THIS primary_culture = kannada } } }
+			AND = { culture = malayalam country = { any_neighbor_country = { war_with = THIS primary_culture = malayalam } } }				
+			AND = { culture = tamil country = { any_neighbor_country = { war_with = THIS primary_culture = tamil } } }
+			AND = { culture = telegu country = { any_neighbor_country = { war_with = THIS primary_culture = telegu } } }
+			AND = { culture = vietnamese country = { any_neighbor_country = { war_with = THIS primary_culture = vietnamese } } }			
+			AND = { culture = khmer country = { any_neighbor_country = { war_with = THIS primary_culture = khmer } } }
+			AND = { culture = filipino country = { any_neighbor_country = { war_with = THIS primary_culture = filipino } } }	
+			AND = { culture = thai country = { any_neighbor_country = { war_with = THIS primary_culture = thai } } }
+			AND = { culture = lao country = { any_neighbor_country = { war_with = THIS primary_culture = lao } } }
+			AND = { culture = shan country = { any_neighbor_country = { war_with = THIS primary_culture = shan } } }			
+			AND = { culture = burmese country = { any_neighbor_country = { war_with = THIS primary_culture = burmese } } }
+			AND = { culture = asian_minor country = { any_neighbor_country = { war_with = THIS primary_culture = asian_minor } } }					
+			AND = { culture = kachin country = { any_neighbor_country = { war_with = THIS primary_culture = kachin } } }
+			AND = { culture = karen country = { any_neighbor_country = { war_with = THIS primary_culture = karen } } }
+			AND = { culture = acehnese country = { any_neighbor_country = { war_with = THIS primary_culture = acehnese } } }			
+			AND = { culture = balinese country = { any_neighbor_country = { war_with = THIS primary_culture = balinese } } }
+			AND = { culture = batak country = { any_neighbor_country = { war_with = THIS primary_culture = batak } } }				
+			AND = { culture = betawi country = { any_neighbor_country = { war_with = THIS primary_culture = betawi } } }
+			AND = { culture = bantenese country = { any_neighbor_country = { war_with = THIS primary_culture = bantenese } } }
+			AND = { culture = banjarnese country = { any_neighbor_country = { war_with = THIS primary_culture = banjarnese } } }			
+			AND = { culture = bunginese country = { any_neighbor_country = { war_with = THIS primary_culture = bunginese } } }
+			AND = { culture = dayak country = { any_neighbor_country = { war_with = THIS primary_culture = dayak } } }	
+			AND = { culture = javan country = { any_neighbor_country = { war_with = THIS primary_culture = javan } } }
+			AND = { culture = madurese country = { any_neighbor_country = { war_with = THIS primary_culture = madurese } } }
+			AND = { culture = makassarese country = { any_neighbor_country = { war_with = THIS primary_culture = makassarese } } }			
+			AND = { culture = malay country = { any_neighbor_country = { war_with = THIS primary_culture = malay } } }
+			AND = { culture = minahasan country = { any_neighbor_country = { war_with = THIS primary_culture = minahasan } } }				
+			AND = { culture = minangkabau country = { any_neighbor_country = { war_with = THIS primary_culture = minangkabau } } }			
+			AND = { culture = moluccan country = { any_neighbor_country = { war_with = THIS primary_culture = moluccan } } }
+			AND = { culture = sasak country = { any_neighbor_country = { war_with = THIS primary_culture = sasak } } }				
+			AND = { culture = sundanese country = { any_neighbor_country = { war_with = THIS primary_culture = sundanese } } }
+			AND = { culture = manchu country = { any_neighbor_country = { war_with = THIS primary_culture = manchu } } }
+			AND = { culture = beifaren country = { any_neighbor_country = { war_with = THIS primary_culture = beifaren } } }			
+			AND = { culture = nanfaren country = { any_neighbor_country = { war_with = THIS primary_culture = nanfaren } } }
+			AND = { culture = hakka country = { any_neighbor_country = { war_with = THIS primary_culture = hakka } } }	
+			AND = { culture = miao country = { any_neighbor_country = { war_with = THIS primary_culture = miao } } }
+			AND = { culture = min country = { any_neighbor_country = { war_with = THIS primary_culture = min } } }
+			AND = { culture = zhuang country = { any_neighbor_country = { war_with = THIS primary_culture = zhuang } } }			
+			AND = { culture = yi country = { any_neighbor_country = { war_with = THIS primary_culture = yi } } }
+			AND = { culture = yue country = { any_neighbor_country = { war_with = THIS primary_culture = yue } } }
+			AND = { culture = japanese country = { any_neighbor_country = { war_with = THIS primary_culture = japanese } } }
+			AND = { culture = korean country = { any_neighbor_country = { war_with = THIS primary_culture = korean } } }			
+			AND = { culture = ainu country = { any_neighbor_country = { war_with = THIS primary_culture = ainu } } }
+			AND = { culture = polynesian country = { any_neighbor_country = { war_with = THIS primary_culture = polynesian } } }
+			AND = { culture = hawaiian country = { any_neighbor_country = { war_with = THIS primary_culture = hawaiian } } }
+			AND = { culture = maori country = { any_neighbor_country = { war_with = THIS primary_culture = maori } } }			
+			AND = { culture = aborigine country = { any_neighbor_country = { war_with = THIS primary_culture = aborigine } } }
+			AND = { culture = melanesian country = { any_neighbor_country = { war_with = THIS primary_culture = melanesian } } }				
+			AND = { culture = micronesian country = { any_neighbor_country = { war_with = THIS primary_culture = micronesian } } }
+			AND = { culture = aimara country = { any_neighbor_country = { war_with = THIS primary_culture = aimara } } }
+			AND = { culture = amazonian country = { any_neighbor_country = { war_with = THIS primary_culture = amazonian } } }			
+			AND = { culture = californian_people country = { any_neighbor_country = { war_with = THIS primary_culture = californian_people } } }
+			AND = { culture = cherokee country = { any_neighbor_country = { war_with = THIS primary_culture = cherokee } } }	
+			AND = { culture = cheyenne country = { any_neighbor_country = { war_with = THIS primary_culture = cheyenne } } }
+			AND = { culture = comanche country = { any_neighbor_country = { war_with = THIS primary_culture = comanche } } }
+			AND = { culture = cree country = { any_neighbor_country = { war_with = THIS primary_culture = cree } } }			
+			AND = { culture = dakota country = { any_neighbor_country = { war_with = THIS primary_culture = dakota } } }
+			AND = { culture = guajiro country = { any_neighbor_country = { war_with = THIS primary_culture = guajiro } } }					
+			AND = { culture = guarani country = { any_neighbor_country = { war_with = THIS primary_culture = guarani } } }
+			AND = { culture = great_basin_peoples country = { any_neighbor_country = { war_with = THIS primary_culture = great_basin_peoples } } }
+			AND = { culture = lakota country = { any_neighbor_country = { war_with = THIS primary_culture = lakota } } }			
+			AND = { culture = inuit country = { any_neighbor_country = { war_with = THIS primary_culture = inuit } } }
+			AND = { culture = mayan country = { any_neighbor_country = { war_with = THIS primary_culture = mayan } } }				
+			AND = { culture = metis country = { any_neighbor_country = { war_with = THIS primary_culture = metis } } }
+			AND = { culture = nakota country = { any_neighbor_country = { war_with = THIS primary_culture = nakota } } }
+			AND = { culture = nahua country = { any_neighbor_country = { war_with = THIS primary_culture = nahua } } }			
+			AND = { culture = navajo country = { any_neighbor_country = { war_with = THIS primary_culture = navajo } } }
+			AND = { culture = native_american_minor country = { any_neighbor_country = { war_with = THIS primary_culture = native_american_minor } } }	
+			AND = { culture = north_west_coastal country = { any_neighbor_country = { war_with = THIS primary_culture = north_west_coastal } } }
+			AND = { culture = osage country = { any_neighbor_country = { war_with = THIS primary_culture = osage } } }
+			AND = { culture = patagonian country = { any_neighbor_country = { war_with = THIS primary_culture = patagonian } } }			
+			AND = { culture = pawnee country = { any_neighbor_country = { war_with = THIS primary_culture = pawnee } } }
+			AND = { culture = plateau_peoples country = { any_neighbor_country = { war_with = THIS primary_culture = plateau_peoples } } }				
+			AND = { culture = pueblo country = { any_neighbor_country = { war_with = THIS primary_culture = pueblo } } }			
+			AND = { culture = quechua country = { any_neighbor_country = { war_with = THIS primary_culture = quechua } } }
+			AND = { culture = tarascan country = { any_neighbor_country = { war_with = THIS primary_culture = tarascan } } }				
+			AND = { culture = tupinamba country = { any_neighbor_country = { war_with = THIS primary_culture = tupinamba } } }
+			AND = { culture = zapotec country = { any_neighbor_country = { war_with = THIS primary_culture = zapotec } } }
+			AND = { culture = yankee country = { any_neighbor_country = { war_with = THIS primary_culture = yankee } } }			
+			AND = { culture = dixie country = { any_neighbor_country = { war_with = THIS primary_culture = dixie } } }
+			AND = { culture = boer country = { any_neighbor_country = { war_with = THIS primary_culture = boer } } }	
+			AND = { culture = anglo_african country = { any_neighbor_country = { war_with = THIS primary_culture = anglo_african } } }
+			AND = { culture = australian country = { any_neighbor_country = { war_with = THIS primary_culture = australian } } }
+			AND = { culture = anglo_canadian country = { any_neighbor_country = { war_with = THIS primary_culture = anglo_canadian } } }			
+			AND = { culture = french_canadian country = { any_neighbor_country = { war_with = THIS primary_culture = french_canadian } } }
+			AND = { culture = mexican country = { any_neighbor_country = { war_with = THIS primary_culture = mexican } } }			
+			AND = { culture = central_american country = { any_neighbor_country = { war_with = THIS primary_culture = central_american } } }
+			AND = { culture = caribeno country = { any_neighbor_country = { war_with = THIS primary_culture = caribeno } } }			
+			AND = { culture = north_andean country = { any_neighbor_country = { war_with = THIS primary_culture = north_andean } } }
+			AND = { culture = chilean country = { any_neighbor_country = { war_with = THIS primary_culture = chilean } } }	
+			AND = { culture = south_andean country = { any_neighbor_country = { war_with = THIS primary_culture = south_andean } } }
+			AND = { culture = peruvian country = { any_neighbor_country = { war_with = THIS primary_culture = peruvian } } }
+			AND = { culture = bolivian country = { any_neighbor_country = { war_with = THIS primary_culture = bolivian } } }			
+			AND = { culture = platinean country = { any_neighbor_country = { war_with = THIS primary_culture = platinean } } }
+			AND = { culture = brazilian country = { any_neighbor_country = { war_with = THIS primary_culture = brazilian } } }					
+			AND = { culture = afro_american country = { any_neighbor_country = { war_with = THIS primary_culture = afro_american } } }
+			AND = { culture = afro_caribbean country = { any_neighbor_country = { war_with = THIS primary_culture = afro_caribbean } } }
+			AND = { culture = afro_caribeno country = { any_neighbor_country = { war_with = THIS primary_culture = afro_caribeno } } }			
+			AND = { culture = afro_brazilian country = { any_neighbor_country = { war_with = THIS primary_culture = afro_brazilian } } }
+			AND = { culture = afro_antillean country = { any_neighbor_country = { war_with = THIS primary_culture = afro_antillean } } }				
+			AND = { culture = akan country = { any_neighbor_country = { war_with = THIS primary_culture = akan } } }
+			AND = { culture = bambara country = { any_neighbor_country = { war_with = THIS primary_culture = bambara } } }
+			AND = { culture = dyula country = { any_neighbor_country = { war_with = THIS primary_culture = dyula } } }			
+			AND = { culture = edo country = { any_neighbor_country = { war_with = THIS primary_culture = edo } } }
+			AND = { culture = ewe country = { any_neighbor_country = { war_with = THIS primary_culture = ewe } } }	
+			AND = { culture = fon country = { any_neighbor_country = { war_with = THIS primary_culture = fon } } }
+			AND = { culture = fulbe country = { any_neighbor_country = { war_with = THIS primary_culture = fulbe } } }
+			AND = { culture = hausa country = { any_neighbor_country = { war_with = THIS primary_culture = hausa } } }			
+			AND = { culture = ibibio country = { any_neighbor_country = { war_with = THIS primary_culture = ibibio } } }
+			AND = { culture = itsekari country = { any_neighbor_country = { war_with = THIS primary_culture = itsekari } } }				
+			AND = { culture = ibo country = { any_neighbor_country = { war_with = THIS primary_culture = ibo } } }			
+			AND = { culture = kru country = { any_neighbor_country = { war_with = THIS primary_culture = kru } } }
+			AND = { culture = mande country = { any_neighbor_country = { war_with = THIS primary_culture = mande } } }				
+			AND = { culture = mossi country = { any_neighbor_country = { war_with = THIS primary_culture = mossi } } }
+			AND = { culture = senufo country = { any_neighbor_country = { war_with = THIS primary_culture = senufo } } }
+			AND = { culture = serer country = { any_neighbor_country = { war_with = THIS primary_culture = serer } } }			
+			AND = { culture = songhai country = { any_neighbor_country = { war_with = THIS primary_culture = songhai } } }
+			AND = { culture = tiv country = { any_neighbor_country = { war_with = THIS primary_culture = tiv } } }	
+			AND = { culture = tuareg country = { any_neighbor_country = { war_with = THIS primary_culture = tuareg } } }
+			AND = { culture = wolof country = { any_neighbor_country = { war_with = THIS primary_culture = wolof } } }
+			AND = { culture = yoruba country = { any_neighbor_country = { war_with = THIS primary_culture = yoruba } } }			
+			AND = { culture = zarma country = { any_neighbor_country = { war_with = THIS primary_culture = zarma } } }
+			AND = { culture = bakongo country = { any_neighbor_country = { war_with = THIS primary_culture = bakongo } } }	
+			AND = { culture = baguirmi country = { any_neighbor_country = { war_with = THIS primary_culture = baguirmi } } }
+			AND = { culture = fang country = { any_neighbor_country = { war_with = THIS primary_culture = fang } } }
+			AND = { culture = kanuri country = { any_neighbor_country = { war_with = THIS primary_culture = kanuri } } }			
+			AND = { culture = kuba country = { any_neighbor_country = { war_with = THIS primary_culture = kuba } } }
+			AND = { culture = luba country = { any_neighbor_country = { war_with = THIS primary_culture = luba } } }	
+			AND = { culture = lunda country = { any_neighbor_country = { war_with = THIS primary_culture = lunda } } }
+			AND = { culture = mongo country = { any_neighbor_country = { war_with = THIS primary_culture = mongo } } }
+			AND = { culture = sara country = { any_neighbor_country = { war_with = THIS primary_culture = sara } } }			
+			AND = { culture = teda country = { any_neighbor_country = { war_with = THIS primary_culture = teda } } }
+			AND = { culture = african_minor country = { any_neighbor_country = { war_with = THIS primary_culture = african_minor } } }				
+			AND = { culture = amhara country = { any_neighbor_country = { war_with = THIS primary_culture = amhara } } }			
+			AND = { culture = afar country = { any_neighbor_country = { war_with = THIS primary_culture = afar } } }
+			AND = { culture = azande country = { any_neighbor_country = { war_with = THIS primary_culture = azande } } }				
+			AND = { culture = baganda country = { any_neighbor_country = { war_with = THIS primary_culture = baganda } } }
+			AND = { culture = beja country = { any_neighbor_country = { war_with = THIS primary_culture = beja } } }
+			AND = { culture = dinka country = { any_neighbor_country = { war_with = THIS primary_culture = dinka } } }			
+			AND = { culture = fur country = { any_neighbor_country = { war_with = THIS primary_culture = fur } } }
+			AND = { culture = kikuyu country = { any_neighbor_country = { war_with = THIS primary_culture = kikuyu } } }	
+			AND = { culture = luo country = { any_neighbor_country = { war_with = THIS primary_culture = luo } } }
+			AND = { culture = maasai country = { any_neighbor_country = { war_with = THIS primary_culture = maasai } } }
+			AND = { culture = nuer country = { any_neighbor_country = { war_with = THIS primary_culture = nuer } } }			
+			AND = { culture = nuba country = { any_neighbor_country = { war_with = THIS primary_culture = nuba } } }
+			AND = { culture = oromo country = { any_neighbor_country = { war_with = THIS primary_culture = oromo } } }					
+			AND = { culture = ruanda country = { any_neighbor_country = { war_with = THIS primary_culture = ruanda } } }	
+			AND = { culture = rundi country = { any_neighbor_country = { war_with = THIS primary_culture = rundi } } }
+			AND = { culture = sidama country = { any_neighbor_country = { war_with = THIS primary_culture = sidama } } }
+			AND = { culture = somali country = { any_neighbor_country = { war_with = THIS primary_culture = somali } } }			
+			AND = { culture = sukuma country = { any_neighbor_country = { war_with = THIS primary_culture = sukuma } } }
+			AND = { culture = swahili country = { any_neighbor_country = { war_with = THIS primary_culture = swahili } } }	
+			AND = { culture = tigray country = { any_neighbor_country = { war_with = THIS primary_culture = tigray } } }
+			AND = { culture = unyamwezi country = { any_neighbor_country = { war_with = THIS primary_culture = unyamwezi } } }
+			AND = { culture = chewa country = { any_neighbor_country = { war_with = THIS primary_culture = chewa } } }			
+			AND = { culture = herero country = { any_neighbor_country = { war_with = THIS primary_culture = herero } } }
+			AND = { culture = khoisan country = { any_neighbor_country = { war_with = THIS primary_culture = khoisan } } }				
+			AND = { culture = lomwe country = { any_neighbor_country = { war_with = THIS primary_culture = lomwe } } }			
+			AND = { culture = makua country = { any_neighbor_country = { war_with = THIS primary_culture = makua } } }
+			AND = { culture = malagasy country = { any_neighbor_country = { war_with = THIS primary_culture = malagasy } } }				
+			AND = { culture = nguni country = { any_neighbor_country = { war_with = THIS primary_culture = nguni } } }
+			AND = { culture = ovimbundu country = { any_neighbor_country = { war_with = THIS primary_culture = ovimbundu } } }
+			AND = { culture = sena country = { any_neighbor_country = { war_with = THIS primary_culture = sena } } }			
+			AND = { culture = shona country = { any_neighbor_country = { war_with = THIS primary_culture = shona } } }
+			AND = { culture = sotho country = { any_neighbor_country = { war_with = THIS primary_culture = sotho } } }	
+			AND = { culture = tonga country = { any_neighbor_country = { war_with = THIS primary_culture = tonga } } }
+			AND = { culture = tswana country = { any_neighbor_country = { war_with = THIS primary_culture = tswana } } }
+			AND = { culture = xhosa country = { any_neighbor_country = { war_with = THIS primary_culture = xhosa } } }			
+			AND = { culture = yao country = { any_neighbor_country = { war_with = THIS primary_culture = yao } } }
+			AND = { culture = zulu country = { any_neighbor_country = { war_with = THIS primary_culture = zulu } } }				
+		}
+	}
+#AFTER THE WAR
+	modifier = {
+		factor = 2.5
+		NOT = { is_primary_culture = yes }
+		NOT = { is_accepted_culture = yes }
+		OR = {
+			AND = { culture = north_german country = { any_neighbor_country = { truce_with = THIS primary_culture = north_german } } }
+			AND = { culture = south_german country = { any_neighbor_country = { truce_with = THIS primary_culture = south_german } } }			
+			AND = { culture = russian_german country = { any_neighbor_country = { truce_with = THIS primary_culture = russian_german } } }
+			AND = { culture = ashkenazi country = { any_neighbor_country = { truce_with = THIS primary_culture = ashkenazi } } }
+			AND = { culture = sephardic country = { any_neighbor_country = { truce_with = THIS primary_culture = sephardic } } }
+			AND = { culture = dutch country = { any_neighbor_country = { truce_with = THIS primary_culture = dutch } } }
+			AND = { culture = frisian country = { any_neighbor_country = { truce_with = THIS primary_culture = frisian } } }			
+			AND = { culture = flemish country = { any_neighbor_country = { truce_with = THIS primary_culture = flemish } } }
+			AND = { culture = romansh country = { any_neighbor_country = { truce_with = THIS primary_culture = romansh } } }				
+			AND = { culture = swedish country = { any_neighbor_country = { truce_with = THIS primary_culture = swedish } } }
+			AND = { culture = danish country = { any_neighbor_country = { truce_with = THIS primary_culture = danish } } }
+			AND = { culture = norwegian country = { any_neighbor_country = { truce_with = THIS primary_culture = norwegian } } }			
+			AND = { culture = icelandic country = { any_neighbor_country = { truce_with = THIS primary_culture = icelandic } } }
+			AND = { culture = faroese country = { any_neighbor_country = { truce_with = THIS primary_culture = faroese } } }	
+			AND = { culture = finnish country = { any_neighbor_country = { truce_with = THIS primary_culture = finnish } } }
+			AND = { culture = sami country = { any_neighbor_country = { truce_with = THIS primary_culture = sami } } }
+			AND = { culture = british country = { any_neighbor_country = { truce_with = THIS primary_culture = british } } }			
+			AND = { culture = irish country = { any_neighbor_country = { truce_with = THIS primary_culture = irish } } }
+			AND = { culture = north_italian country = { any_neighbor_country = { truce_with = THIS primary_culture = north_italian } } }					
+			AND = { culture = south_italian country = { any_neighbor_country = { truce_with = THIS primary_culture = south_italian } } }
+			AND = { culture = maltese country = { any_neighbor_country = { truce_with = THIS primary_culture = maltese } } }
+			AND = { culture = basque country = { any_neighbor_country = { truce_with = THIS primary_culture = basque } } }			
+			AND = { culture = spanish country = { any_neighbor_country = { truce_with = THIS primary_culture = spanish } } }
+			AND = { culture = catalan country = { any_neighbor_country = { truce_with = THIS primary_culture = catalan } } }				
+			AND = { culture = portuguese country = { any_neighbor_country = { truce_with = THIS primary_culture = portuguese } } }
+			AND = { culture = french country = { any_neighbor_country = { truce_with = THIS primary_culture = french } } }
+			AND = { culture = breton country = { any_neighbor_country = { truce_with = THIS primary_culture = breton } } }			
+			AND = { culture = occitan country = { any_neighbor_country = { truce_with = THIS primary_culture = occitan } } }
+			AND = { culture = picard country = { any_neighbor_country = { truce_with = THIS primary_culture = picard } } }	
+			AND = { culture = wallonian country = { any_neighbor_country = { truce_with = THIS primary_culture = wallonian } } }
+			AND = { culture = croat country = { any_neighbor_country = { truce_with = THIS primary_culture = croat } } }
+			AND = { culture = serb country = { any_neighbor_country = { truce_with = THIS primary_culture = serb } } }			
+			AND = { culture = bulgarian country = { any_neighbor_country = { truce_with = THIS primary_culture = bulgarian } } }
+			AND = { culture = slovene country = { any_neighbor_country = { truce_with = THIS primary_culture = slovene } } }				
+			AND = { culture = bosniak country = { any_neighbor_country = { truce_with = THIS primary_culture = bosniak } } }			
+			AND = { culture = albanian country = { any_neighbor_country = { truce_with = THIS primary_culture = albanian } } }
+			AND = { culture = romanian country = { any_neighbor_country = { truce_with = THIS primary_culture = romanian } } }				
+			AND = { culture = hungarian country = { any_neighbor_country = { truce_with = THIS primary_culture = hungarian } } }
+			AND = { culture = polish country = { any_neighbor_country = { truce_with = THIS primary_culture = polish } } }
+			AND = { culture = western_slavic country = { any_neighbor_country = { truce_with = THIS primary_culture = western_slavic } } }			
+			AND = { culture = czech country = { any_neighbor_country = { truce_with = THIS primary_culture = czech } } }
+			AND = { culture = slovak country = { any_neighbor_country = { truce_with = THIS primary_culture = slovak } } }	
+			AND = { culture = russian country = { any_neighbor_country = { truce_with = THIS primary_culture = russian } } }
+			AND = { culture = byelorussian country = { any_neighbor_country = { truce_with = THIS primary_culture = byelorussian } } }
+			AND = { culture = ukrainian country = { any_neighbor_country = { truce_with = THIS primary_culture = ukrainian } } }			
+			AND = { culture = ugrian country = { any_neighbor_country = { truce_with = THIS primary_culture = ugrian } } }
+			AND = { culture = lithuanian country = { any_neighbor_country = { truce_with = THIS primary_culture = lithuanian } } }
+			AND = { culture = latvian country = { any_neighbor_country = { truce_with = THIS primary_culture = latvian } } }
+			AND = { culture = estonian country = { any_neighbor_country = { truce_with = THIS primary_culture = estonian } } }			
+			AND = { culture = greek country = { any_neighbor_country = { truce_with = THIS primary_culture = greek } } }
+			AND = { culture = georgian country = { any_neighbor_country = { truce_with = THIS primary_culture = georgian } } }
+			AND = { culture = armenian country = { any_neighbor_country = { truce_with = THIS primary_culture = armenian } } }
+			AND = { culture = assyrian country = { any_neighbor_country = { truce_with = THIS primary_culture = assyrian } } }			
+			AND = { culture = turkish country = { any_neighbor_country = { truce_with = THIS primary_culture = turkish } } }
+			AND = { culture = azerbaijani country = { any_neighbor_country = { truce_with = THIS primary_culture = azerbaijani } } }				
+			AND = { culture = north_caucasian country = { any_neighbor_country = { truce_with = THIS primary_culture = north_caucasian } } }
+			AND = { culture = kurdish country = { any_neighbor_country = { truce_with = THIS primary_culture = kurdish } } }
+			AND = { culture = maghrebi country = { any_neighbor_country = { truce_with = THIS primary_culture = maghrebi } } }			
+			AND = { culture = misri country = { any_neighbor_country = { truce_with = THIS primary_culture = misri } } }
+			AND = { culture = mashriqi country = { any_neighbor_country = { truce_with = THIS primary_culture = mashriqi } } }	
+			AND = { culture = bedouin country = { any_neighbor_country = { truce_with = THIS primary_culture = bedouin } } }
+			AND = { culture = berber country = { any_neighbor_country = { truce_with = THIS primary_culture = berber } } }
+			AND = { culture = maures country = { any_neighbor_country = { truce_with = THIS primary_culture = maures } } }			
+			AND = { culture = sudanese country = { any_neighbor_country = { truce_with = THIS primary_culture = sudanese } } }
+			AND = { culture = persian country = { any_neighbor_country = { truce_with = THIS primary_culture = persian } } }					
+			AND = { culture = uzbek country = { any_neighbor_country = { truce_with = THIS primary_culture = uzbek } } }
+			AND = { culture = kazak country = { any_neighbor_country = { truce_with = THIS primary_culture = kazak } } }
+			AND = { culture = kirgiz country = { any_neighbor_country = { truce_with = THIS primary_culture = kirgiz } } }			
+			AND = { culture = tajik country = { any_neighbor_country = { truce_with = THIS primary_culture = tajik } } }
+			AND = { culture = uighur country = { any_neighbor_country = { truce_with = THIS primary_culture = uighur } } }				
+			AND = { culture = pashtun country = { any_neighbor_country = { truce_with = THIS primary_culture = pashtun } } }
+			AND = { culture = baluchi country = { any_neighbor_country = { truce_with = THIS primary_culture = baluchi } } }
+			AND = { culture = hazara country = { any_neighbor_country = { truce_with = THIS primary_culture = hazara } } }			
+			AND = { culture = turkmen country = { any_neighbor_country = { truce_with = THIS primary_culture = turkmen } } }
+			AND = { culture = tatar country = { any_neighbor_country = { truce_with = THIS primary_culture = tatar } } }	
+			AND = { culture = parsi country = { any_neighbor_country = { truce_with = THIS primary_culture = parsi } } }
+			AND = { culture = tabari country = { any_neighbor_country = { truce_with = THIS primary_culture = tabari } } }
+			AND = { culture = luri country = { any_neighbor_country = { truce_with = THIS primary_culture = luri } } }			
+			AND = { culture = kalash country = { any_neighbor_country = { truce_with = THIS primary_culture = kalash } } }
+			AND = { culture = ossetian country = { any_neighbor_country = { truce_with = THIS primary_culture = ossetian } } }				
+			AND = { culture = mongol country = { any_neighbor_country = { truce_with = THIS primary_culture = mongol } } }			
+			AND = { culture = siberian country = { any_neighbor_country = { truce_with = THIS primary_culture = siberian } } }
+			AND = { culture = yakut country = { any_neighbor_country = { truce_with = THIS primary_culture = yakut } } }				
+			AND = { culture = tibetan country = { any_neighbor_country = { truce_with = THIS primary_culture = tibetan } } }
+			AND = { culture = assamese country = { any_neighbor_country = { truce_with = THIS primary_culture = assamese } } }
+			AND = { culture = bengali country = { any_neighbor_country = { truce_with = THIS primary_culture = bengali } } }			
+			AND = { culture = bihari country = { any_neighbor_country = { truce_with = THIS primary_culture = bihari } } }
+			AND = { culture = manipuri country = { any_neighbor_country = { truce_with = THIS primary_culture = manipuri } } }	
+			AND = { culture = nepali country = { any_neighbor_country = { truce_with = THIS primary_culture = nepali } } }
+			AND = { culture = oriya country = { any_neighbor_country = { truce_with = THIS primary_culture = oriya } } }
+			AND = { culture = sinhala country = { any_neighbor_country = { truce_with = THIS primary_culture = sinhala } } }			
+			AND = { culture = avadhi country = { any_neighbor_country = { truce_with = THIS primary_culture = avadhi } } }
+			AND = { culture = kanauji country = { any_neighbor_country = { truce_with = THIS primary_culture = kanauji } } }
+			AND = { culture = panjabi country = { any_neighbor_country = { truce_with = THIS primary_culture = panjabi } } }
+			AND = { culture = kashmiri country = { any_neighbor_country = { truce_with = THIS primary_culture = kashmiri } } }			
+			AND = { culture = gujarati country = { any_neighbor_country = { truce_with = THIS primary_culture = gujarati } } }
+			AND = { culture = marathi country = { any_neighbor_country = { truce_with = THIS primary_culture = marathi } } }
+			AND = { culture = sindi country = { any_neighbor_country = { truce_with = THIS primary_culture = sindi } } }
+			AND = { culture = rajput country = { any_neighbor_country = { truce_with = THIS primary_culture = rajput } } }			
+			AND = { culture = kannada country = { any_neighbor_country = { truce_with = THIS primary_culture = kannada } } }
+			AND = { culture = malayalam country = { any_neighbor_country = { truce_with = THIS primary_culture = malayalam } } }				
+			AND = { culture = tamil country = { any_neighbor_country = { truce_with = THIS primary_culture = tamil } } }
+			AND = { culture = telegu country = { any_neighbor_country = { truce_with = THIS primary_culture = telegu } } }
+			AND = { culture = vietnamese country = { any_neighbor_country = { truce_with = THIS primary_culture = vietnamese } } }			
+			AND = { culture = khmer country = { any_neighbor_country = { truce_with = THIS primary_culture = khmer } } }
+			AND = { culture = filipino country = { any_neighbor_country = { truce_with = THIS primary_culture = filipino } } }	
+			AND = { culture = thai country = { any_neighbor_country = { truce_with = THIS primary_culture = thai } } }
+			AND = { culture = lao country = { any_neighbor_country = { truce_with = THIS primary_culture = lao } } }
+			AND = { culture = shan country = { any_neighbor_country = { truce_with = THIS primary_culture = shan } } }			
+			AND = { culture = burmese country = { any_neighbor_country = { truce_with = THIS primary_culture = burmese } } }
+			AND = { culture = asian_minor country = { any_neighbor_country = { truce_with = THIS primary_culture = asian_minor } } }					
+			AND = { culture = kachin country = { any_neighbor_country = { truce_with = THIS primary_culture = kachin } } }
+			AND = { culture = karen country = { any_neighbor_country = { truce_with = THIS primary_culture = karen } } }
+			AND = { culture = acehnese country = { any_neighbor_country = { truce_with = THIS primary_culture = acehnese } } }			
+			AND = { culture = balinese country = { any_neighbor_country = { truce_with = THIS primary_culture = balinese } } }
+			AND = { culture = batak country = { any_neighbor_country = { truce_with = THIS primary_culture = batak } } }				
+			AND = { culture = betawi country = { any_neighbor_country = { truce_with = THIS primary_culture = betawi } } }
+			AND = { culture = bantenese country = { any_neighbor_country = { truce_with = THIS primary_culture = bantenese } } }
+			AND = { culture = banjarnese country = { any_neighbor_country = { truce_with = THIS primary_culture = banjarnese } } }			
+			AND = { culture = bunginese country = { any_neighbor_country = { truce_with = THIS primary_culture = bunginese } } }
+			AND = { culture = dayak country = { any_neighbor_country = { truce_with = THIS primary_culture = dayak } } }	
+			AND = { culture = javan country = { any_neighbor_country = { truce_with = THIS primary_culture = javan } } }
+			AND = { culture = madurese country = { any_neighbor_country = { truce_with = THIS primary_culture = madurese } } }
+			AND = { culture = makassarese country = { any_neighbor_country = { truce_with = THIS primary_culture = makassarese } } }			
+			AND = { culture = malay country = { any_neighbor_country = { truce_with = THIS primary_culture = malay } } }
+			AND = { culture = minahasan country = { any_neighbor_country = { truce_with = THIS primary_culture = minahasan } } }				
+			AND = { culture = minangkabau country = { any_neighbor_country = { truce_with = THIS primary_culture = minangkabau } } }			
+			AND = { culture = moluccan country = { any_neighbor_country = { truce_with = THIS primary_culture = moluccan } } }
+			AND = { culture = sasak country = { any_neighbor_country = { truce_with = THIS primary_culture = sasak } } }				
+			AND = { culture = sundanese country = { any_neighbor_country = { truce_with = THIS primary_culture = sundanese } } }
+			AND = { culture = manchu country = { any_neighbor_country = { truce_with = THIS primary_culture = manchu } } }
+			AND = { culture = beifaren country = { any_neighbor_country = { truce_with = THIS primary_culture = beifaren } } }			
+			AND = { culture = nanfaren country = { any_neighbor_country = { truce_with = THIS primary_culture = nanfaren } } }
+			AND = { culture = hakka country = { any_neighbor_country = { truce_with = THIS primary_culture = hakka } } }	
+			AND = { culture = miao country = { any_neighbor_country = { truce_with = THIS primary_culture = miao } } }
+			AND = { culture = min country = { any_neighbor_country = { truce_with = THIS primary_culture = min } } }
+			AND = { culture = zhuang country = { any_neighbor_country = { truce_with = THIS primary_culture = zhuang } } }			
+			AND = { culture = yi country = { any_neighbor_country = { truce_with = THIS primary_culture = yi } } }
+			AND = { culture = yue country = { any_neighbor_country = { truce_with = THIS primary_culture = yue } } }
+			AND = { culture = japanese country = { any_neighbor_country = { truce_with = THIS primary_culture = japanese } } }
+			AND = { culture = korean country = { any_neighbor_country = { truce_with = THIS primary_culture = korean } } }			
+			AND = { culture = ainu country = { any_neighbor_country = { truce_with = THIS primary_culture = ainu } } }
+			AND = { culture = polynesian country = { any_neighbor_country = { truce_with = THIS primary_culture = polynesian } } }
+			AND = { culture = hawaiian country = { any_neighbor_country = { truce_with = THIS primary_culture = hawaiian } } }
+			AND = { culture = maori country = { any_neighbor_country = { truce_with = THIS primary_culture = maori } } }			
+			AND = { culture = aborigine country = { any_neighbor_country = { truce_with = THIS primary_culture = aborigine } } }
+			AND = { culture = melanesian country = { any_neighbor_country = { truce_with = THIS primary_culture = melanesian } } }				
+			AND = { culture = micronesian country = { any_neighbor_country = { truce_with = THIS primary_culture = micronesian } } }
+			AND = { culture = aimara country = { any_neighbor_country = { truce_with = THIS primary_culture = aimara } } }
+			AND = { culture = amazonian country = { any_neighbor_country = { truce_with = THIS primary_culture = amazonian } } }			
+			AND = { culture = californian_people country = { any_neighbor_country = { truce_with = THIS primary_culture = californian_people } } }
+			AND = { culture = cherokee country = { any_neighbor_country = { truce_with = THIS primary_culture = cherokee } } }	
+			AND = { culture = cheyenne country = { any_neighbor_country = { truce_with = THIS primary_culture = cheyenne } } }
+			AND = { culture = comanche country = { any_neighbor_country = { truce_with = THIS primary_culture = comanche } } }
+			AND = { culture = cree country = { any_neighbor_country = { truce_with = THIS primary_culture = cree } } }			
+			AND = { culture = dakota country = { any_neighbor_country = { truce_with = THIS primary_culture = dakota } } }
+			AND = { culture = guajiro country = { any_neighbor_country = { truce_with = THIS primary_culture = guajiro } } }					
+			AND = { culture = guarani country = { any_neighbor_country = { truce_with = THIS primary_culture = guarani } } }
+			AND = { culture = great_basin_peoples country = { any_neighbor_country = { truce_with = THIS primary_culture = great_basin_peoples } } }
+			AND = { culture = lakota country = { any_neighbor_country = { truce_with = THIS primary_culture = lakota } } }			
+			AND = { culture = inuit country = { any_neighbor_country = { truce_with = THIS primary_culture = inuit } } }
+			AND = { culture = mayan country = { any_neighbor_country = { truce_with = THIS primary_culture = mayan } } }				
+			AND = { culture = metis country = { any_neighbor_country = { truce_with = THIS primary_culture = metis } } }
+			AND = { culture = nakota country = { any_neighbor_country = { truce_with = THIS primary_culture = nakota } } }
+			AND = { culture = nahua country = { any_neighbor_country = { truce_with = THIS primary_culture = nahua } } }			
+			AND = { culture = navajo country = { any_neighbor_country = { truce_with = THIS primary_culture = navajo } } }
+			AND = { culture = native_american_minor country = { any_neighbor_country = { truce_with = THIS primary_culture = native_american_minor } } }	
+			AND = { culture = north_west_coastal country = { any_neighbor_country = { truce_with = THIS primary_culture = north_west_coastal } } }
+			AND = { culture = osage country = { any_neighbor_country = { truce_with = THIS primary_culture = osage } } }
+			AND = { culture = patagonian country = { any_neighbor_country = { truce_with = THIS primary_culture = patagonian } } }			
+			AND = { culture = pawnee country = { any_neighbor_country = { truce_with = THIS primary_culture = pawnee } } }
+			AND = { culture = plateau_peoples country = { any_neighbor_country = { truce_with = THIS primary_culture = plateau_peoples } } }				
+			AND = { culture = pueblo country = { any_neighbor_country = { truce_with = THIS primary_culture = pueblo } } }			
+			AND = { culture = quechua country = { any_neighbor_country = { truce_with = THIS primary_culture = quechua } } }
+			AND = { culture = tarascan country = { any_neighbor_country = { truce_with = THIS primary_culture = tarascan } } }				
+			AND = { culture = tupinamba country = { any_neighbor_country = { truce_with = THIS primary_culture = tupinamba } } }
+			AND = { culture = zapotec country = { any_neighbor_country = { truce_with = THIS primary_culture = zapotec } } }
+			AND = { culture = yankee country = { any_neighbor_country = { truce_with = THIS primary_culture = yankee } } }			
+			AND = { culture = dixie country = { any_neighbor_country = { truce_with = THIS primary_culture = dixie } } }
+			AND = { culture = boer country = { any_neighbor_country = { truce_with = THIS primary_culture = boer } } }	
+			AND = { culture = anglo_african country = { any_neighbor_country = { truce_with = THIS primary_culture = anglo_african } } }
+			AND = { culture = australian country = { any_neighbor_country = { truce_with = THIS primary_culture = australian } } }
+			AND = { culture = anglo_canadian country = { any_neighbor_country = { truce_with = THIS primary_culture = anglo_canadian } } }			
+			AND = { culture = french_canadian country = { any_neighbor_country = { truce_with = THIS primary_culture = french_canadian } } }
+			AND = { culture = mexican country = { any_neighbor_country = { truce_with = THIS primary_culture = mexican } } }			
+			AND = { culture = central_american country = { any_neighbor_country = { truce_with = THIS primary_culture = central_american } } }
+			AND = { culture = caribeno country = { any_neighbor_country = { truce_with = THIS primary_culture = caribeno } } }			
+			AND = { culture = north_andean country = { any_neighbor_country = { truce_with = THIS primary_culture = north_andean } } }
+			AND = { culture = chilean country = { any_neighbor_country = { truce_with = THIS primary_culture = chilean } } }	
+			AND = { culture = south_andean country = { any_neighbor_country = { truce_with = THIS primary_culture = south_andean } } }
+			AND = { culture = peruvian country = { any_neighbor_country = { truce_with = THIS primary_culture = peruvian } } }
+			AND = { culture = bolivian country = { any_neighbor_country = { truce_with = THIS primary_culture = bolivian } } }			
+			AND = { culture = platinean country = { any_neighbor_country = { truce_with = THIS primary_culture = platinean } } }
+			AND = { culture = brazilian country = { any_neighbor_country = { truce_with = THIS primary_culture = brazilian } } }					
+			AND = { culture = afro_american country = { any_neighbor_country = { truce_with = THIS primary_culture = afro_american } } }
+			AND = { culture = afro_caribbean country = { any_neighbor_country = { truce_with = THIS primary_culture = afro_caribbean } } }
+			AND = { culture = afro_caribeno country = { any_neighbor_country = { truce_with = THIS primary_culture = afro_caribeno } } }			
+			AND = { culture = afro_brazilian country = { any_neighbor_country = { truce_with = THIS primary_culture = afro_brazilian } } }
+			AND = { culture = afro_antillean country = { any_neighbor_country = { truce_with = THIS primary_culture = afro_antillean } } }				
+			AND = { culture = akan country = { any_neighbor_country = { truce_with = THIS primary_culture = akan } } }
+			AND = { culture = bambara country = { any_neighbor_country = { truce_with = THIS primary_culture = bambara } } }
+			AND = { culture = dyula country = { any_neighbor_country = { truce_with = THIS primary_culture = dyula } } }			
+			AND = { culture = edo country = { any_neighbor_country = { truce_with = THIS primary_culture = edo } } }
+			AND = { culture = ewe country = { any_neighbor_country = { truce_with = THIS primary_culture = ewe } } }	
+			AND = { culture = fon country = { any_neighbor_country = { truce_with = THIS primary_culture = fon } } }
+			AND = { culture = fulbe country = { any_neighbor_country = { truce_with = THIS primary_culture = fulbe } } }
+			AND = { culture = hausa country = { any_neighbor_country = { truce_with = THIS primary_culture = hausa } } }			
+			AND = { culture = ibibio country = { any_neighbor_country = { truce_with = THIS primary_culture = ibibio } } }
+			AND = { culture = itsekari country = { any_neighbor_country = { truce_with = THIS primary_culture = itsekari } } }				
+			AND = { culture = ibo country = { any_neighbor_country = { truce_with = THIS primary_culture = ibo } } }			
+			AND = { culture = kru country = { any_neighbor_country = { truce_with = THIS primary_culture = kru } } }
+			AND = { culture = mande country = { any_neighbor_country = { truce_with = THIS primary_culture = mande } } }				
+			AND = { culture = mossi country = { any_neighbor_country = { truce_with = THIS primary_culture = mossi } } }
+			AND = { culture = senufo country = { any_neighbor_country = { truce_with = THIS primary_culture = senufo } } }
+			AND = { culture = serer country = { any_neighbor_country = { truce_with = THIS primary_culture = serer } } }			
+			AND = { culture = songhai country = { any_neighbor_country = { truce_with = THIS primary_culture = songhai } } }
+			AND = { culture = tiv country = { any_neighbor_country = { truce_with = THIS primary_culture = tiv } } }	
+			AND = { culture = tuareg country = { any_neighbor_country = { truce_with = THIS primary_culture = tuareg } } }
+			AND = { culture = wolof country = { any_neighbor_country = { truce_with = THIS primary_culture = wolof } } }
+			AND = { culture = yoruba country = { any_neighbor_country = { truce_with = THIS primary_culture = yoruba } } }			
+			AND = { culture = zarma country = { any_neighbor_country = { truce_with = THIS primary_culture = zarma } } }
+			AND = { culture = bakongo country = { any_neighbor_country = { truce_with = THIS primary_culture = bakongo } } }	
+			AND = { culture = baguirmi country = { any_neighbor_country = { truce_with = THIS primary_culture = baguirmi } } }
+			AND = { culture = fang country = { any_neighbor_country = { truce_with = THIS primary_culture = fang } } }
+			AND = { culture = kanuri country = { any_neighbor_country = { truce_with = THIS primary_culture = kanuri } } }			
+			AND = { culture = kuba country = { any_neighbor_country = { truce_with = THIS primary_culture = kuba } } }
+			AND = { culture = luba country = { any_neighbor_country = { truce_with = THIS primary_culture = luba } } }	
+			AND = { culture = lunda country = { any_neighbor_country = { truce_with = THIS primary_culture = lunda } } }
+			AND = { culture = mongo country = { any_neighbor_country = { truce_with = THIS primary_culture = mongo } } }
+			AND = { culture = sara country = { any_neighbor_country = { truce_with = THIS primary_culture = sara } } }			
+			AND = { culture = teda country = { any_neighbor_country = { truce_with = THIS primary_culture = teda } } }
+			AND = { culture = african_minor country = { any_neighbor_country = { truce_with = THIS primary_culture = african_minor } } }				
+			AND = { culture = amhara country = { any_neighbor_country = { truce_with = THIS primary_culture = amhara } } }			
+			AND = { culture = afar country = { any_neighbor_country = { truce_with = THIS primary_culture = afar } } }
+			AND = { culture = azande country = { any_neighbor_country = { truce_with = THIS primary_culture = azande } } }				
+			AND = { culture = baganda country = { any_neighbor_country = { truce_with = THIS primary_culture = baganda } } }
+			AND = { culture = beja country = { any_neighbor_country = { truce_with = THIS primary_culture = beja } } }
+			AND = { culture = dinka country = { any_neighbor_country = { truce_with = THIS primary_culture = dinka } } }			
+			AND = { culture = fur country = { any_neighbor_country = { truce_with = THIS primary_culture = fur } } }
+			AND = { culture = kikuyu country = { any_neighbor_country = { truce_with = THIS primary_culture = kikuyu } } }	
+			AND = { culture = luo country = { any_neighbor_country = { truce_with = THIS primary_culture = luo } } }
+			AND = { culture = maasai country = { any_neighbor_country = { truce_with = THIS primary_culture = maasai } } }
+			AND = { culture = nuer country = { any_neighbor_country = { truce_with = THIS primary_culture = nuer } } }			
+			AND = { culture = nuba country = { any_neighbor_country = { truce_with = THIS primary_culture = nuba } } }
+			AND = { culture = oromo country = { any_neighbor_country = { truce_with = THIS primary_culture = oromo } } }					
+			AND = { culture = ruanda country = { any_neighbor_country = { truce_with = THIS primary_culture = ruanda } } }	
+			AND = { culture = rundi country = { any_neighbor_country = { truce_with = THIS primary_culture = rundi } } }
+			AND = { culture = sidama country = { any_neighbor_country = { truce_with = THIS primary_culture = sidama } } }
+			AND = { culture = somali country = { any_neighbor_country = { truce_with = THIS primary_culture = somali } } }			
+			AND = { culture = sukuma country = { any_neighbor_country = { truce_with = THIS primary_culture = sukuma } } }
+			AND = { culture = swahili country = { any_neighbor_country = { truce_with = THIS primary_culture = swahili } } }	
+			AND = { culture = tigray country = { any_neighbor_country = { truce_with = THIS primary_culture = tigray } } }
+			AND = { culture = unyamwezi country = { any_neighbor_country = { truce_with = THIS primary_culture = unyamwezi } } }
+			AND = { culture = chewa country = { any_neighbor_country = { truce_with = THIS primary_culture = chewa } } }			
+			AND = { culture = herero country = { any_neighbor_country = { truce_with = THIS primary_culture = herero } } }
+			AND = { culture = khoisan country = { any_neighbor_country = { truce_with = THIS primary_culture = khoisan } } }				
+			AND = { culture = lomwe country = { any_neighbor_country = { truce_with = THIS primary_culture = lomwe } } }			
+			AND = { culture = makua country = { any_neighbor_country = { truce_with = THIS primary_culture = makua } } }
+			AND = { culture = malagasy country = { any_neighbor_country = { truce_with = THIS primary_culture = malagasy } } }				
+			AND = { culture = nguni country = { any_neighbor_country = { truce_with = THIS primary_culture = nguni } } }
+			AND = { culture = ovimbundu country = { any_neighbor_country = { truce_with = THIS primary_culture = ovimbundu } } }
+			AND = { culture = sena country = { any_neighbor_country = { truce_with = THIS primary_culture = sena } } }			
+			AND = { culture = shona country = { any_neighbor_country = { truce_with = THIS primary_culture = shona } } }
+			AND = { culture = sotho country = { any_neighbor_country = { truce_with = THIS primary_culture = sotho } } }	
+			AND = { culture = tonga country = { any_neighbor_country = { truce_with = THIS primary_culture = tonga } } }
+			AND = { culture = tswana country = { any_neighbor_country = { truce_with = THIS primary_culture = tswana } } }
+			AND = { culture = xhosa country = { any_neighbor_country = { truce_with = THIS primary_culture = xhosa } } }			
+			AND = { culture = yao country = { any_neighbor_country = { truce_with = THIS primary_culture = yao } } }
+			AND = { culture = zulu country = { any_neighbor_country = { truce_with = THIS primary_culture = zulu } } }				
+		}
+	}	
+	#END REFUGEES
+	
+	#WAR
+	modifier = {
+		factor = -3
+		country = { war = yes }
+		is_primary_culture = yes
+	}
+	modifier = {
+		factor = -1
+		country = { war = yes }
+		is_accepted_culture = yes
+	}
+	#MAX 1
+	modifier = {
+		factor = 0.25
+		country = { war = yes }
+		NOT = { is_primary_culture = yes }
+		NOT = { is_accepted_culture = yes }
+		NOT = { consciousness = 4 }
+		war_exhaustion = 1
+	}		
+	modifier = {
+		factor = 0.25
+		country = { war = yes }
+		NOT = { is_primary_culture = yes }
+		NOT = { is_accepted_culture = yes }
+		consciousness = 4
+		war_exhaustion = 1
+	}	
+	modifier = {
+		factor = 0.5
+		country = { war = yes }
+		NOT = { is_primary_culture = yes }
+		NOT = { is_accepted_culture = yes }
+		consciousness = 7
+		war_exhaustion = 1
+	}	
+	#END WAR
+	
+	#malus if there is a core in the country (prefers normal migration first to re-group)
+	#modifier = {
+	#	factor = -0.75
+	#	country = { any_owned_province = { any_core = { is_primary_culture = THIS } } }
+	#	NOT = { is_primary_culture = yes }
+	#}
+	
+	#malus if no core exists in the world (prefers to stay put if no other conditions apply)
+	#modifier = {
+	#	factor = -0.25
+	#	NOT = { any_country = { any_owned_province = { any_core = { is_primary_culture = THIS } } } }
+	#	NOT = { is_primary_culture = yes }
+	#}		
+	
+	#LIFE QUALITY
+	#MAX -1
+	modifier = {
+		factor = -0.1
+		cash_reserves = 1
+	}
+	modifier = {
+		factor = -0.2
+		cash_reserves = 2
+	}
+	modifier = {
+		factor = -0.3
+		cash_reserves = 3
+	}
+	modifier = {
+		factor = -0.4
+		cash_reserves = 4
+	}
+	
+	#MAX 2.5
+	modifier = {
+		factor = 0.25
+		NOT = { life_needs = 0.75 }
+		OR = {
+			AND = {
+				NOT = { country = { poor_strata_life_needs = 0.75 } }
+				strata = poor
+			}
+			AND = {
+				NOT = { country = { middle_strata_life_needs = 0.75 } }
+				strata = middle
+			}
+			AND = {
+				NOT = { country = { rich_strata_life_needs = 0.75 } }
+				strata = rich
+			}
+		}
+	}
+	modifier = {
+		factor = 0.5
+		NOT = { life_needs = 0.5 }
+		OR = {
+			AND = {
+				NOT = { country = { poor_strata_life_needs = 0.5 } }
+				strata = poor
+			}
+			AND = {
+				NOT = { country = { middle_strata_life_needs = 0.5 } }
+				strata = middle
+			}
+			AND = {
+				NOT = { country = { rich_strata_life_needs = 0.5 } }
+				strata = rich
+			}
+		}
+	}
+	modifier = {
+		factor = 0.75
+		NOT = { life_needs = 0.25 }
+		OR = {
+			AND = {
+				NOT = { country = { poor_strata_life_needs = 0.25 } }
+				strata = poor
+			}
+			AND = {
+				NOT = { country = { middle_strata_life_needs = 0.25 } }
+				strata = middle
+			}
+			AND = {
+				NOT = { country = { rich_strata_life_needs = 0.25 } }
+				strata = rich
+			}
+		}
+	}
+	modifier = {
+		factor = 1
+		NOT = { life_needs = 0.1 }
+		OR = {
+			AND = {
+				NOT = { country = { poor_strata_life_needs = 0.1 } }
+				strata = poor
+			}
+			AND = {
+				NOT = { country = { middle_strata_life_needs = 0.1 } }
+				strata = middle
+			}
+			AND = {
+				NOT = { country = { rich_strata_life_needs = 0.1 } }
+				strata = rich
+			}
+		}
+	}	
+	
+	#MAX 0.5
+	modifier = {
+		factor = 0.05
+		life_needs = 1
+		NOT = { everyday_needs = 0.66 }
+		OR = {
+			AND = {
+				NOT = { country = { poor_strata_everyday_needs = 0.66 } }
+				strata = poor
+			}
+			AND = {
+				NOT = { country = { middle_strata_everyday_needs = 0.66 } }
+				strata = middle
+			}
+			AND = {
+				NOT = { country = { rich_strata_everyday_needs = 0.66 } }
+				strata = rich
+			}
+		}
+	}
+	modifier = {
+		factor = 0.1
+		life_needs = 1
+		NOT = { everyday_needs = 0.5 }
+		OR = {
+			AND = {
+				NOT = { country = { poor_strata_everyday_needs = 0.5 } }
+				strata = poor
+			}
+			AND = {
+				NOT = { country = { middle_strata_everyday_needs = 0.5 } }
+				strata = middle
+			}
+			AND = {
+				NOT = { country = { rich_strata_everyday_needs = 0.5 } }
+				strata = rich
+			}
+		}			
+	}
+	modifier = {
+		factor = 0.1
+		life_needs = 1
+		NOT = { everyday_needs = 0.33 }
+		OR = {
+			AND = {
+				NOT = { country = { poor_strata_everyday_needs = 0.33 } }
+				strata = poor
+			}
+			AND = {
+				NOT = { country = { middle_strata_everyday_needs = 0.33 } }
+				strata = middle
+			}
+			AND = {
+				NOT = { country = { rich_strata_everyday_needs = 0.33 } }
+				strata = rich
+			}
+		}			
+	}
+	modifier = {
+		factor = 0.25
+		life_needs = 1
+		NOT = { everyday_needs = 0.1 }
+		OR = {
+			AND = {
+				NOT = { country = { poor_strata_everyday_needs = 0.1 } }
+				strata = poor
+			}
+			AND = {
+				NOT = { country = { middle_strata_everyday_needs = 0.1 } }
+				strata = middle
+			}
+			AND = {
+				NOT = { country = { rich_strata_everyday_needs = 0.1 } }
+				strata = rich
+			}
+		}			
+	}	
+	
+	#MAX -10
+	modifier = {
+		factor = -3
+		luxury_needs = 0.9
+		NOT = { militancy = 5 }
+	}
+	modifier = {
+		factor = -1.8
+		luxury_needs = 0.8
+		NOT = { militancy = 5 }
+	}
+	modifier = {
+		factor = -1.4
+		luxury_needs = 0.7
+		NOT = { militancy = 5 }
+	}
+	modifier = {
+		factor = -1
+		luxury_needs = 0.6
+		NOT = { militancy = 5 }
+	}
+	modifier = {
+		factor = -0.8
+		luxury_needs = 0.5
+		NOT = { militancy = 5 }
+	}
+	modifier = {
+		factor = -0.65
+		luxury_needs = 0.4
+		NOT = { militancy = 5 }
+	}
+	modifier = {
+		factor = -0.5
+		luxury_needs = 0.3
+		NOT = { militancy = 5 }
+	}
+	modifier = {
+		factor = -0.5
+		luxury_needs = 0.2
+		NOT = { militancy = 5 }
+	}
+	modifier = {
+		factor = -0.25
+		luxury_needs = 0.1
+		NOT = { militancy = 5 }
+	}
+	modifier = {
+		factor = -0.10
+		luxury_needs = 0.01
+		NOT = { militancy = 5 }
+	}
+	
+	
+	modifier = {
+		factor = -0.5
+		luxury_needs = 0.01	
+	}		
+	
+	#END LIFE QUALITY
+	
+	#LITERACY - MAX 0.25
+	modifier = {
+		factor = 0.05
+		literacy = 0.5
+	}
+	modifier = {
+		factor = 0.05
+		literacy = 0.7
+	}
+	modifier = {
+		factor = 0.05
+		literacy = 0.9
+	}
+	modifier = {
+		factor = 0.1
+		literacy = 1
+	}
+	#END LITERACY
+		
+	modifier = {
+		factor = -0.5
+		strata = rich
+		life_needs = 1
+	}
+	modifier = {
+		factor = -1.5
+		strata = rich
+		everyday_needs = 1
+	}			
+	
+	modifier = {
+		factor = -0.25
+		has_culture_core = yes
+		NOT = { is_primary_culture = yes }
+		is_accepted_culture = yes
+	}
+	modifier = {
+		factor = -0.5
+		has_culture_core = yes
+		NOT = { is_primary_culture = yes }
+		NOT = { is_accepted_culture = yes }
+	}	
+	
+	#MAX -1
+	modifier = {
+		factor = -0.1
+		militancy = 5
+		has_culture_core = yes
+		NOT = { is_primary_culture = yes }
+	}
+	modifier = {
+		factor = -0.1
+		militancy = 6
+		has_culture_core = yes
+		NOT = { is_primary_culture = yes }
+	}
+	modifier = {
+		factor = -0.2
+		militancy = 7
+		has_culture_core = yes
+		NOT = { is_primary_culture = yes }
+	}
+	modifier = {
+		factor = -0.2
+		militancy = 8
+		has_culture_core = yes
+		NOT = { is_primary_culture = yes }
+	}
+	modifier = {
+		factor = -0.4
+		militancy = 9
+		has_culture_core = yes
+		NOT = { is_primary_culture = yes }
+	}	
+	
+	
+	#MAX 1
+	modifier = {
+		factor = 0.1
+		militancy = 5
+		NOT = { has_culture_core = yes }
+		NOT = { is_primary_culture = yes }
+	}
+	modifier = {
+		factor = 0.1
+		militancy = 6
+		NOT = { has_culture_core = yes }
+		NOT = { is_primary_culture = yes }
+	}
+	modifier = {
+		factor = 0.2
+		militancy = 7
+		NOT = { has_culture_core = yes }
+		NOT = { is_primary_culture = yes }
+	}
+	modifier = {
+		factor = 0.25
+		militancy = 8
+		NOT = { has_culture_core = yes }
+		NOT = { is_primary_culture = yes }
+	}
+	modifier = {
+		factor = 0.35
+		militancy = 9
+		NOT = { has_culture_core = yes }
+		NOT = { is_primary_culture = yes }
+	}
+	
+	
+	#MAX 1
+	modifier = {
+		factor = 0.05
+		unemployment = 0.1
+		NOT = { everyday_needs = 0.1 }
+		NOT = { life_needs = 1 }
+	}
+	modifier = {
+		factor = 0.1
+		unemployment = 0.2
+		NOT = { everyday_needs = 0.01 }
+		NOT = { life_needs = 1 }
+	}
+	modifier = {
+		factor = 0.20
+		unemployment = 0.3
+		NOT = { everyday_needs = 0.01 }
+		NOT = { life_needs = 1 }
+	}
+	modifier = {
+		factor = 0.3
+		unemployment = 0.4
+		NOT = { everyday_needs = 0.01 }
+		NOT = { life_needs = 1 }
+	}
+	modifier = {
+		factor = 0.3
+		unemployment = 0.5
+		NOT = { everyday_needs = 0.01 }
+		NOT = { life_needs = 1 }
+	}
+	modifier = {
+		factor = 0.5
+		unemployment = 0.7
+		NOT = { everyday_needs = 0.01 }
+		NOT = { life_needs = 1 }			
+	}
+	modifier = {
+		factor = 0.5
+		unemployment = 0.9
+		NOT = { everyday_needs = 0.01 }
+		NOT = { life_needs = 1 }			
+	}
+	
+	#MAX 1
+	modifier = {
+		factor = 0.05
+		militancy = 5
+	}
+	modifier = {
+		factor = 0.1
+		militancy = 6
+	}
+	modifier = {
+		factor = 0.2
+		militancy = 7
+	}
+	modifier = {
+		factor = 0.25
+		militancy = 8
+	}
+	modifier = {
+		factor = 0.4
+		militancy = 9
+	}
+	
+	#WAR EXHAUSTION
+	#MAX 1
+	modifier = {
+		factor = 0.05
+		country = { war_exhaustion = 20 }
+	}
+	modifier = {
+		factor = 0.05
+		country = { war_exhaustion = 30 }
+	}
+	modifier = {
+		factor = 0.1
+		country = { war_exhaustion = 40 }
+	}
+	modifier = {
+		factor = 0.2
+		country = { war_exhaustion = 50 }
+	}
+	modifier = {
+		factor = 0.3
+		country = { war_exhaustion = 70 }
+	}
+	modifier = {
+		factor = 0.3
+		country = { war_exhaustion = 90 }
+	}
+	#END WAR EXHAUSTION
+	
+	#SPECIAL GOVERNMENTS
+	modifier = {
+		factor = -1
+		strata = poor
+		location = { owner = {
+			OR = {
+				government = absolute_monarchy
+				government = absolute_monarchy2
+				government = absolute_monarchy3
+				government = presidential_dictatorship
+				government = presidential_dictatorship2
+				government = presidential_dictatorship3
+				government = bourgeois_dictatorship
+				government = bourgeois_dictatorship2
+				government = bourgeois_dictatorship3				
+			}
+		} }
+	}
+	modifier = {
+		factor = 0.1
+		NOT = { strata = poor }
+		location = { owner = {
+			OR = {
+				government = absolute_monarchy
+				government = absolute_monarchy2
+				government = absolute_monarchy3
+				government = presidential_dictatorship
+				government = presidential_dictatorship2
+				government = presidential_dictatorship3
+				government = bourgeois_dictatorship
+				government = bourgeois_dictatorship2
+				government = bourgeois_dictatorship3				
+			}
+		} }
+	}	
+	modifier = {
+		factor = -3
+		strata = poor
+		location = { owner = {
+			OR = {
+				government = fascist_dictatorship
+				government = fascist_dictatorship2
+				government = fascist_dictatorship3
+				government = proletarian_dictatorship
+				government = proletarian_dictatorship2
+				government = proletarian_dictatorship3
+			}
+		} }
+	}
+	modifier = {
+		factor = 0.25
+		NOT = { strata = poor }
+		location = { owner = {
+			OR = {
+				government = fascist_dictatorship
+				government = fascist_dictatorship2
+				government = fascist_dictatorship3
+				government = proletarian_dictatorship
+				government = proletarian_dictatorship2
+				government = proletarian_dictatorship3
+			}
+		} }
+	}
+	#END SPECIAL GOVERNMENTS
+	
+	#RELIGIOUS POLICIES
+	modifier = {
+		factor = 0.1
+		country = { religious_policy = moralism }
+		NOT = { religion = THIS }
+	}
+	modifier = {
+		factor = -0.1
+		country = { religious_policy = moralism }
+		religion = THIS
+	}
+	#END RELIGIOUS POLICIES
+	
+	#CITIZENSHIP POLICIES
+	modifier = {
+		factor = 0.1
+		country = { citizenship_policy = residency }
+		NOT = { is_primary_culture = yes }
+		NOT = { is_accepted_culture = yes }
+	}
+	modifier = {
+		factor = -0.1
+		country = { citizenship_policy = residency }
+		is_primary_culture = yes
+	}
+	modifier = {
+		factor = 0.05
+		country = { citizenship_policy = limited_citizenship }
+		NOT = { is_primary_culture = yes }
+		NOT = { is_accepted_culture = yes }
+	}
+	modifier = {
+		factor = -0.05
+		country = { citizenship_policy = limited_citizenship }
+		OR = {
+			is_primary_culture = yes
+			is_accepted_culture = yes
+		}
+	}
+	modifier = {
+		factor = -0.15
+		country = { citizenship_policy = full_citizenship }
+		NOT = { is_primary_culture = yes }
+		NOT = { is_accepted_culture = yes }
+	}
+	modifier = {
+		factor = -0.1
+		country = { citizenship_policy = full_citizenship }
+		NOT = { is_primary_culture = yes }
+		is_accepted_culture = yes
+	}
+	modifier = {
+		factor = 0.05
+		country = { citizenship_policy = full_citizenship }
+		is_primary_culture = yes
+		militancy = 3
+	}
+	#END CITIZENSHIP POLICY
+	
+	#MINORITIES POLICIES
+	modifier = {
+		factor = 0.25
+		country = { minorities_reform = oppression }
+		NOT = { is_primary_culture = yes }
+	}
+	modifier = {
+		factor = 0.15
+		country = { minorities_reform = limited }
+		NOT = { is_primary_culture = yes }
+		NOT = { is_accepted_culture = yes }
+	}	
+	modifier = {
+		factor = -0.15
+		country = { minorities_reform = protected }
+		NOT = { is_primary_culture = yes }
+		NOT = { is_accepted_culture = yes }
+	}		
+	#END MINORITIES POLICIES
+	
+	#TO SCALE THE ASIAN MIGRATIONS	
+	modifier = {
+		factor = -1.5
+		OR = {
+			is_culture_group = south_asian
+			is_culture_group = central_asian
+			is_culture_group = southeast_asian
+			is_culture_group = east_asian
+			is_culture_group = far_east_asian
+			is_culture_group = indonesian
+		}
+		NOT = { year = 1900 }
+	}	
+	modifier = {
+		factor = -1
+		OR = {
+			is_culture_group = south_asian
+			is_culture_group = central_asian
+			is_culture_group = southeast_asian
+			is_culture_group = east_asian
+			is_culture_group = far_east_asian
+			is_culture_group = indonesian
+		}
+		year = 1900
+		NOT = { year = 1910 }
+	}
+	modifier = {
+		factor = -0.5
+		OR = {
+			is_culture_group = south_asian
+			is_culture_group = central_asian
+			is_culture_group = southeast_asian
+			is_culture_group = east_asian
+			is_culture_group = far_east_asian
+			is_culture_group = indonesian
+		}
+		year = 1910
+		NOT = { year = 1920 }
+	}
+	#END ASIAN MIGRATIONS	
+
+	#AFRICAN DIASPORAS BRAKE	
+	modifier = {
+		factor = -10
+		OR = {
+			is_culture_group = african_diaspora_cultures
+			is_culture_group = native_american
+			is_culture_group = oceanic
+		}
+	}
+	
+	modifier = {
+		factor = -0.25
+		country = { administration_spending = 0.1 immigration_policy = nobody_gets_out }
+	}
+	modifier = {
+		factor = -0.25
+		country = { administration_spending = 0.2 immigration_policy = nobody_gets_out }
+	}
+	modifier = {
+		factor = -0.25
+		country = { administration_spending = 0.3 immigration_policy = nobody_gets_out }
+	}
+	modifier = {
+		factor = -0.25
+		country = { administration_spending = 0.4 immigration_policy = nobody_gets_out }
+	}
+	modifier = {
+		factor = -0.25
+		country = { administration_spending = 0.5 immigration_policy = nobody_gets_out }
+	}
+	modifier = {
+		factor = -0.25
+		country = { administration_spending = 0.6 immigration_policy = nobody_gets_out }
+	}
+	modifier = {
+		factor = -0.25
+		country = { administration_spending = 0.7 immigration_policy = nobody_gets_out }
+	}
+	modifier = {
+		factor = -0.1
+		country = { administration_spending = 0.8 immigration_policy = nobody_gets_out }
+	}
+	modifier = {
+		factor = -0.25
+		country = { administration_spending = 0.9 immigration_policy = nobody_gets_out }
+	}
+	modifier = {
+		factor = -0.25
+		country = { administration_spending = 0.99 immigration_policy = nobody_gets_out }
+	}
+
+
+	modifier = {
+		factor = -0.25
+		country = { military_spending = 0.1 immigration_policy = nobody_gets_out }
+	}
+	modifier = {
+		factor = -0.25
+		country = { military_spending = 0.2 immigration_policy = nobody_gets_out }
+	}
+	modifier = {
+		factor = -0.25
+		country = { military_spending = 0.3 immigration_policy = nobody_gets_out }
+	}
+	modifier = {
+		factor = -0.25
+		country = { military_spending = 0.4 immigration_policy = nobody_gets_out }
+	}
+	modifier = {
+		factor = -0.25
+		country = { military_spending = 0.5 immigration_policy = nobody_gets_out }
+	}
+	modifier = {
+		factor = -0.25
+		country = { military_spending = 0.6 immigration_policy = nobody_gets_out }
+	}
+	modifier = {
+		factor = -0.25
+		country = { military_spending = 0.7 immigration_policy = nobody_gets_out }
+	}
+	modifier = {
+		factor = -0.25
+		country = { military_spending = 0.8 immigration_policy = nobody_gets_out }
+	}
+	modifier = {
+		factor = -0.25
+		country = { military_spending = 0.9 immigration_policy = nobody_gets_out }
+	}
+	modifier = {
+		factor = -0.25
+		country = { military_spending = 0.99 immigration_policy = nobody_gets_out }
+	}
+	
+
+	modifier = {
+		factor = -0.1
+		country = { social_spending = 0.1 immigration_policy = nobody_gets_out }
+	}
+	modifier = {
+		factor = -0.1
+		country = { social_spending = 0.2 immigration_policy = nobody_gets_out }
+	}
+	modifier = {
+		factor = -0.1
+		country = { social_spending = 0.3 immigration_policy = nobody_gets_out }
+	}
+	modifier = {
+		factor = -0.1
+		country = { social_spending = 0.4 immigration_policy = nobody_gets_out }
+	}
+	modifier = {
+		factor = -0.1
+		country = { social_spending = 0.5 immigration_policy = nobody_gets_out }
+	}
+	modifier = {
+		factor = -0.1
+		country = { social_spending = 0.6 immigration_policy = nobody_gets_out }
+	}
+	modifier = {
+		factor = -0.1
+		country = { social_spending = 0.7 immigration_policy = nobody_gets_out }
+	}
+	modifier = {
+		factor = -0.1
+		country = { social_spending = 0.8 immigration_policy = nobody_gets_out }
+	}
+	modifier = {
+		factor = -0.1
+		country = { social_spending = 0.9 immigration_policy = nobody_gets_out }
+	}
+	modifier = {
+		factor = -0.1
+		country = { social_spending = 0.99 immigration_policy = nobody_gets_out }
+	}
+	
+	
+	#modifier = {
+	#	factor = -20
+	#	has_pop_religion = animist
+	#	not = { literacy = 0.5 }
+	#	not = { country = { has_country_flag = animists_run } }
+	#}	
+}
+
+
+#general assimilation mtth, same for all pops
+assimilation_chance = 
+{
+	factor = 0.1
+	modifier = {
+		factor = -10000
+		NOT = { location = { controlled_by = owner } }
+	}	
+	#COMMODITY MODIFIERS
+	#MAX -0.5
+	modifier = {
+		factor = -0.5
+		NOT = { life_needs = 1 }
+	}	
+	
+	#MAX -0.5
+	modifier = {
+		factor = -0.1
+		NOT = { cash_reserves = 0.5 }
+	}
+	modifier = {
+		factor = -0.15
+		NOT = { cash_reserves = 0.75 }
+	}	
+	modifier = {
+		factor = -0.25
+		NOT = { cash_reserves = 1 }
+	}
+	
+	
+	#MAX 2.5
+	modifier = {
+		factor = 0.6
+		luxury_needs = 0.9
+	}
+	modifier = {
+		factor = 0.4
+		luxury_needs = 0.8
+	}
+	modifier = {
+		factor = 0.3
+		luxury_needs = 0.7
+	}
+	modifier = {
+		factor = 0.2
+		luxury_needs = 0.6
+	}
+	modifier = {
+		factor = 0.15
+		luxury_needs = 0.5
+	}
+	modifier = {
+		factor = 0.1
+		luxury_needs = 0.4
+	}
+	modifier = {
+		factor = 0.1
+		luxury_needs = 0.3
+	}
+	modifier = {
+		factor = 0.1
+		luxury_needs = 0.2
+	}
+	modifier = {
+		factor = 0.05
+		luxury_needs = 0.1
+	}
+	
+	#MAX 1
+	modifier = {
+		factor = 0.35
+		everyday_needs = 0.9
+	}
+	modifier = {
+		factor = 0.25
+		everyday_needs = 0.8
+	}
+	modifier = {
+		factor = 0.2
+		everyday_needs = 0.7			
+	}
+	modifier = {
+		factor = 0.15
+		everyday_needs = 0.6			
+	}
+	modifier = {
+		factor = 0.05
+		everyday_needs = 0.5
+	}
+	#END COMMODITIES
+	
+	#CONSCIOUSNESS
+	#MAX 0.5
+	modifier = {
+		factor = -0.1
+		NOT = { consciousness = 3 }
+	}
+	modifier = {
+		factor = -0.15
+		NOT = { consciousness = 2 }
+	}
+	modifier = {
+		factor = -0.25
+		NOT = { consciousness = 1 }
+	}
+	
+	#MILITANCY
+	#MAX 1
+	modifier = {
+		factor = -0.2
+		militancy = 3
+	}
+	modifier = {
+		factor = -0.3
+		militancy = 5
+	}
+	modifier = {
+		factor = -0.5
+		militancy = 7
+	}	
+	
+	#HIGHER STRATA BONUSES
+	modifier = {
+		factor = 0.3
+		strata = rich
+	}		
+	modifier = {
+		factor = 0.15
+		strata = middle
+	}	
+	
+	#LOWER STRATA MALUSES
+	modifier = {
+		factor = -0.15
+		strata = poor
+	}		
+	
+	#CITIZENSHIP MODIFIERS
+	modifier = {
+		factor = -1
+		country = { citizenship_policy = residency }
+	}
+	modifier = {
+		factor = -0.5
+		country = { citizenship_policy = limited_citizenship }
+		is_accepted_culture = no
+		is_primary_culture = no
+	}
+	modifier = {
+		factor = 0.15
+		country = { citizenship_policy = limited_citizenship }
+		is_accepted_culture = yes
+	}
+	modifier = {
+		factor = 0.25
+		country = { citizenship_policy = full_citizenship }
+		is_accepted_culture = yes
+	}	
+	modifier = {
+		factor = 0.5
+		country = { citizenship_policy = full_citizenship }
+		is_accepted_culture = no
+		is_primary_culture = no		
+	}
+	#END CITIZENSHIP
+	
+	#RELIGIOUS POLICY MODIFIERS
+	modifier = {
+		factor = -0.75
+		country = { religious_policy = moralism }
+		NOT = { religion = THIS }
+	}
+	modifier = {
+		factor = 0.15
+		country = { religious_policy = moralism }
+		religion = THIS 
+	}
+	modifier = {
+		factor = 0.2
+		country = { religious_policy = pluralism }
+		religion = THIS
+	}
+	modifier = {
+		factor = 0.1
+		country = { religious_policy = pluralism }
+		NOT = { religion = THIS }
+	}
+	modifier = {
+		factor = 0.2
+		country = { religious_policy = pro_atheism }
+	}
+	modifier = {
+		factor = 0.3
+		country = { religious_policy = secularized }
+	}
+	#END RELIGIOUS POLICY
+	
+	#PRIMARY CORE BRAKE
+	modifier = {
+    		factor = -10
+		location = { any_core = { is_primary_culture = THIS } }
+		NOT = { country = { citizenship_policy = forced_assimilation } }
+	}
+	modifier = {
+		factor = -5
+		location = { any_core = { is_primary_culture = THIS } }
+		country = { citizenship_policy = forced_assimilation }
+	}
+	
+	#CULTURAL MELTING POTS
+	#JEWISH IN ISRAEL
+	modifier = {
+		factor = 2.5
+		has_pop_religion = jewish
+		country = { religion = jewish }
+	}	
+	#NEO EURO IN EUROPE
+	modifier = {
+		factor = 2.5
+		OR = {
+			is_culture_group = neo_european_cultures
+			is_culture_group = american_cultures
+			is_culture_group = latin_american_cultures
+		}
+		location = { continent = europe }
+	}
+	#NON NEO EURO IN NEW WORLD
+	modifier = {
+		factor = 0.5
+		is_accepted_culture = no
+		NOT = {
+			is_culture_group = neo_european_cultures
+			is_culture_group = american_cultures
+			is_culture_group = latin_american_cultures
+		}		
+		OR = {
+			location = { continent = north_america }
+			location = { continent = south_america }
+			location = { continent = oceania }
+		}
+	}
+	modifier = {
+		factor = 0.25
+		is_accepted_culture = yes
+		NOT = {
+			is_culture_group = neo_european_cultures
+			is_culture_group = american_cultures
+			is_culture_group = latin_american_cultures
+		}
+		OR = {
+			location = { continent = north_america }
+			location = { continent = south_america }
+			location = { continent = oceania }
+		}
+	}		
+	#SIMILAR CULTURES BONUSES
+	modifier = {
+		factor = 0.1
+		country = {
+			OR = { 
+				is_culture_group = iberian
+				is_culture_group = latin_american_cultures
+			}
+		}
+		OR = {
+			is_culture_group = iberian
+			is_culture_group = latin_american_cultures
+		}
+	}
+	modifier = {
+		factor = 0.1
+		country = {
+			OR = {
+				is_culture_group = germanic
+				is_culture_group = beneluxian
+				is_culture_group = scandinavian
+				is_culture_group = british
+				is_culture_group = italian
+				is_culture_group = french
+				is_culture_group = pan_swiss
+				is_culture_group = american_cultures
+				is_culture_group = neo_european_cultures
+			}
+		}
+		OR = {
+			is_culture_group = germanic
+			is_culture_group = beneluxian
+			is_culture_group = scandinavian
+			is_culture_group = british
+			is_culture_group = italian
+			is_culture_group = french
+			is_culture_group = pan_swiss
+			is_culture_group = american_cultures
+			is_culture_group = neo_european_cultures
+		}
+	}
+	modifier = {
+		factor = 0.1
+		country = {
+			OR = {
+				is_culture_group = pan_romanian
+				is_culture_group = hungarian_culture_group
+				is_culture_group = polish_culture_group
+				is_culture_group = czecho_slovak_culture_group
+				is_culture_group = east_slavic
+				is_culture_group = baltic
+				is_culture_group = levantine
+			}
+		}		
+		OR = {
+			is_culture_group = pan_romanian
+			is_culture_group = hungarian_culture_group
+			is_culture_group = polish_culture_group
+			is_culture_group = czecho_slovak_culture_group
+			is_culture_group = east_slavic
+			is_culture_group = baltic
+			is_culture_group = levantine
+		}
+	}
+	modifier = {
+		factor = 0.1
+		country = {
+			OR = {
+				is_culture_group = turko_semitic
+				is_culture_group = arabic
+				is_culture_group = iranian_turanian
+			}
+		}
+		OR = {
+			is_culture_group = turko_semitic
+			is_culture_group = arabic
+			is_culture_group = iranian_turanian
+		}
+	}
+	modifier = {
+		factor = 0.1
+		country = {
+			OR = {
+				is_culture_group = central_asian
+				is_culture_group = southeast_asian
+				is_culture_group = east_asian
+				is_culture_group = far_east_asian
+			}
+		}
+		OR = {
+			is_culture_group = central_asian
+			is_culture_group = southeast_asian
+			is_culture_group = east_asian
+			is_culture_group = far_east_asian
+		}
+	}
+	#END MELTING POTS
+	
+	#FRENCH CULTURAL UNION
+	modifier = {
+			factor = 0.25
+			country = {
+				is_culture_group = french
+			}
+			is_culture_group = french
+	}
+	#END FRENCH CULTURAL UNION
+	
+	#AFRICAN DIASPORAS BRAKE
+	modifier = {
+		factor = -20
+		is_culture_group = african_diaspora_cultures
+		NOT = { continent = africa }
+	}	
+
+	#NATIVE BRAKE
+	modifier = {
+		factor = -10
+		OR = {
+			is_culture_group = native_american
+			is_culture_group = oceanic
+		}
+	}		
+	
+	#ASIAN BRAKE
+	modifier = {
+		factor = -2.5
+		NOT = {
+			country = {
+				OR = {
+					is_culture_group = central_asian
+					is_culture_group = southeast_asian
+					is_culture_group = east_asian
+					is_culture_group = far_east_asian
+					is_culture_group = indonesian
+				}
+			}
+		}
+		OR = {
+			is_culture_group = central_asian
+			is_culture_group = southeast_asian
+			is_culture_group = east_asian
+			is_culture_group = far_east_asian
+			is_culture_group = indonesian
+		}
+	}	
+	
+	#TURKIC-ARABIC BRAKE
+	modifier = {
+		factor = -1
+		NOT = {
+			country = {
+				OR = {
+					is_culture_group = iranian_turanian
+					is_culture_group = arabic
+					is_culture_group = turko_semitic
+				}
+			}
+		}
+		OR = {
+			is_culture_group = iranian_turanian
+			is_culture_group = arabic
+			is_culture_group = turko_semitic
+		}
+	}		
+	
+	#NON CIVILIZED BRAKE
+	modifier = {
+		factor = -2.5
+		country = { civilized = no }
+	}
+	
+	#LITERACY MALUSES
+	modifier = {
+		factor = -0.25
+		NOT = { literacy = 0.3 }
+	}
+	modifier = {
+		factor = -0.25
+		NOT = { literacy = 0.2 }
+	}
+	modifier = {
+		factor = -0.5
+		NOT = { literacy = 0.1 }
+	}
+	
+	#NATURALIZATION
+	
+	modifier = {
+		factor = 0.1
+		country = { administration_spending = 0.1 immigration_policy = naturalization }
+	}
+	modifier = {
+		factor = 0.1
+		country = { administration_spending = 0.2 immigration_policy = naturalization }
+	}
+	modifier = {
+		factor = 0.1
+		country = { administration_spending = 0.3 immigration_policy = naturalization }
+	}
+	modifier = {
+		factor = 0.1
+		country = { administration_spending = 0.4 immigration_policy = naturalization }
+	}
+	modifier = {
+		factor = 0.1
+		country = { administration_spending = 0.5 immigration_policy = naturalization }
+	}
+	modifier = {
+		factor = 0.1
+		country = { administration_spending = 0.6 immigration_policy = naturalization }
+	}
+	modifier = {
+		factor = 0.1
+		country = { administration_spending = 0.7 immigration_policy = naturalization }
+	}
+	modifier = {
+		factor = 0.1
+		country = { administration_spending = 0.8 immigration_policy = naturalization }
+	}
+	modifier = {
+		factor = 0.1
+		country = { administration_spending = 0.9 immigration_policy = naturalization }
+	}
+	modifier = {
+		factor = 0.1
+		country = { administration_spending = 0.99 immigration_policy = naturalization }
+	}
+	
+	modifier = {
+		factor = 0.05
+		country = { social_spending = 0.1 immigration_policy = naturalization }
+	}
+	modifier = {
+		factor = 0.05
+		country = { social_spending = 0.2 immigration_policy = naturalization }
+	}
+	modifier = {
+		factor = 0.05
+		country = { social_spending = 0.3 immigration_policy = naturalization }
+	}
+	modifier = {
+		factor = 0.05
+		country = { social_spending = 0.4 immigration_policy = naturalization }
+	}
+	modifier = {
+		factor = 0.05
+		country = { social_spending = 0.5 immigration_policy = naturalization }
+	}
+	modifier = {
+		factor = 0.05
+		country = { social_spending = 0.6 immigration_policy = naturalization }
+	}
+	modifier = {
+		factor = 0.05
+		country = { social_spending = 0.7 immigration_policy = naturalization }
+	}
+	modifier = {
+		factor = 0.05
+		country = { social_spending = 0.8 immigration_policy = naturalization }
+	}
+	modifier = {
+		factor = 0.05
+		country = { social_spending = 0.9 immigration_policy = naturalization }
+	}
+	modifier = {
+		factor = 0.05
+		country = { social_spending = 0.99 immigration_policy = naturalization }
+	}	
+	
+}
+
+#general conversion mtth, same for all pops
+conversion_chance = {
+	factor = 0.05
+	modifier = {
+		factor = -10000
+		NOT = { location = { controlled_by = owner } }
+	}	
+	modifier = {
+		factor = 0.2
+		NOT = { luxury_needs = 0.9 }
+	}
+	modifier = {
+		factor = 0.2
+		NOT = { luxury_needs = 0.7 }
+	}
+	modifier = {
+		factor = 0.2
+		NOT = { luxury_needs = 0.5 }
+	}
+
+	modifier = {
+    		factor = 0.5
+		country = { citizenship_policy = forced_assimilation }
+	}
+	modifier = {
+		factor = 1.5
+		OR = { 
+			strata = rich
+			strata = middle
+		}
+	}
+	
+	modifier = {
+		factor = -1
+		NOT = { consciousness = 5 }
+	}
+	modifier = {
+		factor = -2
+		NOT = { consciousness = 3 }
+	}
+	modifier = {
+		factor = -3
+		NOT = { consciousness = 1 }
+	}
+	
+	
+	modifier = {
+		factor = -0.75
+		militancy = 5
+	}
+	modifier = {
+		factor = -0.5
+		militancy = 3
+	}
+	modifier = {
+		factor = -0.25
+		militancy = 1
+	}
+	
+	modifier = {
+		factor = -10
+		has_pop_religion = jewish
+	}
+	modifier = {
+		factor = -10
+		has_pop_religion = mormon
+	}
+	modifier = {
+		factor = -5
+		OR = {
+			country = { religion = jewish }
+			country = { religion = shinto }
+		}
+	}	
+	modifier = {
+		factor = 2
+		has_pop_religion = animist
+		#location = { continent = africa }
+	}	
+	#modifier = {
+	#	factor = -1
+	#	continent = europe
+	#}
+
+	modifier = {
+		factor = 0.25
+		NOT = { life_needs = 0.9 }
+		NOT = { cash_reserves = 1 }
+	}
+	modifier = {
+		factor = 0.25
+		NOT = { life_needs = 0.8 }
+		NOT = { cash_reserves = 1 }
+	}
+	modifier = {
+		factor = 0.25
+		NOT = { life_needs = 0.7 }
+		NOT = { cash_reserves = 1 }
+	}
+
+	modifier = {
+		factor = 0.25
+		culture = THIS
+	}
+	modifier = {
+		factor = 1
+		country = { religious_policy = moralism }
+	}
+	modifier = {
+		factor = 0.5
+		country = { religious_policy = pluralism }
+	}
+	modifier = {
+		factor = -1.5
+		country = { religious_policy = secularized }
+	}	
+	modifier = {
+		factor = -2
+		country = { religious_policy = pro_atheism }
+	}
+	
+	modifier = {
+		factor = 0.1
+		unemployment = 0.1
+		NOT = { cash_reserves = 1 }
+	}
+	modifier = {
+		factor = 0.1
+		unemployment = 0.2
+		NOT = { cash_reserves = 1 }
+	}
+	modifier = {
+		factor = 0.1
+		unemployment = 0.3
+		NOT = { cash_reserves = 1 }
+	}
+
+	modifier = {
+		factor = -0.25
+		NOT = { literacy = 0.2 }
+	}
+	modifier = {
+		factor = -0.25
+		NOT = { literacy = 0.1 }
+	}
+}

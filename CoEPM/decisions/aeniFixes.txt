@@ -1,0 +1,31 @@
+political_decisions = {
+	claim_CSA = {
+		potential = {
+			tag = USA
+			CSA = { 
+				exists = yes
+				slavery = no_slavery
+			}
+			has_global_flag = american_civil_war_has_happened
+		}
+		allow = {
+			war = no
+			
+			CSA = {
+				in_sphere = USA
+				war = no
+				NOT = { truce_with = USA }
+				any_owned_province = { NOT = { is_core = USA } }
+			}
+		}
+		effect = {
+			CSA = {
+				any_owned = { add_core = USA }
+				country_event = 262426
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
